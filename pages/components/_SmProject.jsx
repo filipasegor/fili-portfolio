@@ -56,7 +56,7 @@ export default function SmProject(props){
 
   return(
     <>
-      <Link href={props.href}>
+      <Link href={props.href ?? " "}>
         <a className={styles.WrapperLink}
         target={props.type === "logo" && "_blank"}>
           <div className={styles.Wrapper}>
