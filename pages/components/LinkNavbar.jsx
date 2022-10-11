@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../../styles/LinkNavbar.module.scss'
 
@@ -13,13 +14,12 @@ function ActiveLink({ children, href }) {
     return(
       <>
        <nav className={styles.navbarContainer}>
-        <a href="/" className={styles.active}>
-          PROFILE
-        </a>
-        <a href="/Works" className={ styles.default}
-         >
-          WORKS
-        </a>
+        <Link href="/">
+          <a className={styles.active}>PROFILE</a>
+        </Link>
+        <Link href="/Works">
+          <a className={styles.default}>WORKS</a>
+        </Link>
       </nav>
       </>
     )
@@ -28,12 +28,12 @@ function ActiveLink({ children, href }) {
   return (
     <>
     <nav className={styles.navbarContainer}>
-      <a href="/" className={styles.default}>
-        PROFILE
-      </a>
-      <a href="/Works" className={ styles.active}>
-        WORKS
-      </a>
+      <Link href="/">
+        <a className={styles.default}>PROFILE</a>
+      </Link>
+      <Link href="/Works">
+        <a className={ styles.active}>WORKS</a>
+      </Link>
     </nav>
     </>
   )
