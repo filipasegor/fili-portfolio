@@ -1,0 +1,211 @@
+@import "mixins";
+
+
+.container {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.headline{
+  margin: 0px 0px;
+
+  font-family: "RooftopMedium";
+  font-size: 60px;
+}
+
+.par{
+  margin: 0px 0px 20px 0px;
+
+  font-family: "RooftopRegular";
+  font-size: 25px;
+}
+
+.button{
+  padding: 10px 14px;
+
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  background: #202020;
+
+  font-family: "RooftopRegular";
+  font-size: 15px;
+
+}
+
+.button:hover{
+  background: #6B6B6B;
+}
+
+
+.section{
+  display: flex;
+
+  width: 100%;
+  padding: 30px 15px 0px 0px;
+
+  justify-content: space-between;
+}
+
+.imgContainer{
+  width: 25%;
+  padding: 16px 0px;
+}
+
+.headlineContainer{
+  width: 35%;
+  margin-left: 290px;
+}
+
+.parContainer{
+  width: 30%;
+  padding: 10px 0px;
+}
+
+.buttonContainer{
+  width: 10%;
+
+  text-align: right;
+}
+
+.mainSection{
+  display:flex;
+
+  width: 100%;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.linksContainer{
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 20%;
+
+  align-content: space-between;
+  align-items: center;
+}
+
+.linksContainer a{
+  position: absolute;
+
+  margin: 15px;
+  padding: 10px 25px;
+
+  color: #000000;
+  border-radius: 10px;
+  background: #FD4C00;
+
+  font-family: "BergenMono-SemiBold";
+  font-size: 20px;
+
+}
+
+.linkMainSectionInst{
+  top: 567px;
+  left: 324.19px;
+
+  transform: rotate(5.46deg);
+}
+
+.linkMainSectionMail{
+  top: 664px;
+  left: 177px;
+
+  transform: rotate(12.44deg);;
+}
+
+.linkMainSectionTg{
+  top: 803px;
+  left: 356px;
+
+  transform: rotate(-9.79deg);
+}
+
+.Geo{
+  position: absolute;
+  top: 673px;
+  left: 534.92px;
+
+  display: flex;
+
+  width: 201px;
+
+  transform: rotate(6.64deg);
+
+  color: #FD4C00;
+
+  font-family: "BergenMono-SemiBold";
+  font-size: 20px;
+}
+
+.Geo p{
+  margin-left: 10px;
+}
+
+.SkillTitle{
+  margin-bottom: 35px;
+
+  font-family: "RooftopBold";
+  font-size: 50px;
+  line-height: 120%;
+}
+
+.SkillDesc{
+  font-family: "RooftopRegular";
+  font-size: 25px;
+  line-height: 130%;
+}
+
+.Skill{
+  display: flex;
+
+  width: 95%;
+  margin: 0px auto 20px auto;
+  padding: 40px 80px;
+
+  color: #000000;
+  border-radius: 22px;
+  background: #E8E8E8;
+
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+
+
+.SkillDescContainer{
+  width: 45%
+}
+
+
+.footerContainer{
+  display: flex;
+
+  width: 100%;
+  margin: 100px auto 0px auto;
+  padding: 0px 40px 0px 40px;
+
+  background: #E8E8E8;
+
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footerContainer p{
+  color: #000000;
+
+  font-family: "RooftopRegular";
+  font-size: 15px;
+}
+
+.footerRights{
+  text-align: right;
+}
+
+.SkillImageContainer{
+  display: block;
+}

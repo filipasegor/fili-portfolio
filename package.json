@@ -9,12 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "next": "12.2.5",
+    "next-videos": "^1.5.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.54.9",
+    "typescript": "^4.8.3",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
     "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.1.0",
+    "url-loader": "^4.1.1",
+    "xxxxx": "^1.0.3"
   }
 }

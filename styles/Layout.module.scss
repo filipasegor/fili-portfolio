@@ -1,0 +1,32 @@
+@import "mixins";
+
+
+.imgContainer{
+  position: absolute;
+  z-index: 11;
+  top: 20px;
+
+  width: 25%;
+  padding: 16px 0px;
+}
+
+.logo{
+  mix-blend-mode: difference;
+}
+
+
+
+@include phone(){
+  .imgContainer{
+    position: relative;
+
+    margin-top: -5px;
+    margin-bottom: 20px;
+  }
+}
+
+@include tablet(){
+  .imgContainer{
+    position: absolute;
+  }
+}

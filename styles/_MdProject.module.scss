@@ -1,0 +1,131 @@
+@import "mixins";
+
+
+
+  .Wrapper{
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 45px;
+
+    align-items: flex-start;
+  }
+
+  .Desc{
+    width: 200px;
+    margin-right: 10px;
+  }
+
+  .WrapperLink:hover {
+    color: red;
+    background-color: red;
+  }
+
+
+  .WrapperLink:hover .Button{
+    width: 100px;
+
+    background-color: red;
+  }
+
+
+  .Desc h1{
+    margin-bottom: 8px;
+
+    font-family: "RooftopMedium";
+    font-size: 20px;
+  }
+
+
+  .Desc p{
+    color: #898989;
+
+    font-family: "RooftopRegular";
+    font-size: 15px;
+  }
+
+  .ProjectImage img{
+    width: 100%;
+
+    border-radius: 10px;
+  }
+
+  .Button {
+    display: block;
+    display: flex;
+    flex-direction: row;
+
+    width: 80px;
+    padding: 10px 5px;
+
+    transition: width 0.3s;
+
+    border-radius: 10px;
+    background: #000000;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .mediaWrapper{
+    width: 100%;
+  }
+
+  .video{
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+
+  }
+
+  @include phone(){
+    .Desc h1{
+      margin: 10px 0px;
+    }
+
+    .Desc{
+      width: 600px;
+    }
+
+    .Wrapper{
+      flex-direction: column-reverse;
+
+      width: 100%;
+      margin-bottom: 45px;
+    }
+  }
+
+  @include tablet(){
+
+    .Desc h1{
+      margin: 10px 0px;
+    }
+
+    .Desc{
+      width: 600px;
+    }
+
+    .Wrapper{
+      flex-direction: column-reverse;
+
+      width: 100%;
+      margin-bottom: 45px;
+    }
+
+  }
+
+  @include desktop(){
+
+    .Wrapper{
+      flex-direction: row;
+    }
+
+    .Desc{
+      width: 200px;
+    }
+
+  }
