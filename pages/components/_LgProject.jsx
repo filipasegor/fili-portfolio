@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-// import ProjectButton from './ProjectButton'
+import {useState} from "react"
+
 import styles from '../../styles/_LgProject.module.scss'
 import arrow from '../../public/arrow.svg'
 import als from '../../public/als.svg'
+
 
 const logoButton = (
   <div className={styles.Button}>
@@ -33,6 +35,14 @@ const arrowButton = (
 
 
 export default function LgProject(props){
+
+  const [loaded, setLoaded] = useState(false);
+
+  const onLoadedData = () => {
+    setLoaded(true);
+  };
+
+
   const img = (
       <div className={styles.mediaWrapper}>
         <Image
@@ -48,7 +58,15 @@ export default function LgProject(props){
 
   const video = (
     <div className={styles.mediaWrapper}>
-      <video autoPlay muted loop className={styles.video}>
+      <div
+       className={styles.thumb}
+       style={{ display: loaded ? "block" : "none" }}>
+       </div>
+      <video autoPlay muted loop
+      className={styles.video}
+      onLoadedData={onLoadedData}
+      style={{ display: loaded ? "none" : "block" }}
+      >
       <source src={props.src} />
       </video>
     </div>

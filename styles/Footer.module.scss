@@ -1,0 +1,46 @@
+@import "mixins";
+
+.footerContainer{
+  display: flex;
+
+  width: 100%;
+  margin: 0px auto 0px auto;
+
+  background: #FD4C00;
+
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footerContainer p{
+  padding-bottom: 10px;
+
+  color: #000000;
+
+  font-family: "RooftopRegular";
+  font-size: 15px;
+}
+
+.footerRights{
+  text-align: right;
+}
+
+.SkillImageContainer{
+  display: block;
+}
+
+.footerImg{
+  width: 4%;
+}
+
+@include phone(){
+  .footerContainer{
+    padding: 5px 10px 0px 10px;
+  }
+}
+
+@include tablet(){
+  .footerContainer{
+    padding: 0px 60px 0px 60px;
+  }
+}

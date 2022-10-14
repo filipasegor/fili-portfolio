@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from '../components/Header'
 
 import TaskDesc from '../components/works/TaskDesc'
 import MainTitle from '../components/works/MainTitle'
@@ -16,6 +15,13 @@ import logoBlack from '../../public/works/som/logo-black.png'
 import som1 from '../../public/works/som/som1.png'
 import som2 from '../../public/works/som/som2.png'
 import som3 from '../../public/works/som/som3.png'
+import card from '../../public/works/som/card.png'
+import phonecase from '../../public/works/som/case.png'
+import flaers from '../../public/works/som/flaers.png'
+import oil from '../../public/works/som/oil.png'
+import post from '../../public/works/som/post.png'
+import site from '../../public/works/som/site.png'
+import templates from '../../public/works/som/templates.png'
 
 
 
@@ -61,7 +67,7 @@ export default function Projects(props) {
           </DescriptionPar>
         </DescriptionLayout>
 
-        <div className={styles.imgWrapper}>
+        <div className={styles.mediaWrapper}>
           <Image
             className={styles.fullWidth}
            alt="som1"
@@ -71,7 +77,7 @@ export default function Projects(props) {
           />
         </div>
 
-        <div className={styles.imgWrapper}>
+        <div className={styles.mediaWrapper}>
           <Image
             className={styles.fullWidth}
            alt="som2"
@@ -81,7 +87,7 @@ export default function Projects(props) {
           />
         </div>
 
-        <div className={styles.imgWrapper}>
+        <div className={styles.mediaWrapper}>
           <Image
             className={styles.fullWidth}
            alt="som3"
@@ -89,6 +95,88 @@ export default function Projects(props) {
            placeholder="blur"
            layout="responsive"
           />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="card"
+           src={card}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="phonecase"
+           src={phonecase}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="flaers"
+           src={flaers}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="oil"
+           src={oil}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="post"
+           src={post}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="templates"
+           src={templates}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <Image
+            className={styles.fullWidth}
+           alt="site"
+           src={site}
+           placeholder="blur"
+           layout="responsive"
+          />
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <video autoPlay muted loop className={styles.video}>
+          <source src={require('../../public/works/som/prew.mp4')} />
+          </video>
+        </div>
+
+        <div className={styles.mediaWrapper}>
+          <video autoPlay muted loop className={styles.video}>
+          <source src={require('../../public/works/som/stories.mp4')} />
+          </video>
         </div>
 
       </section>

@@ -90,19 +90,6 @@ export default function Home() {
         placeholder="blur"
         />
       </section>
-      <footer className={styles.footerContainer}>
-        <p>@fili 2022</p>
-        <div className={styles.footerImg}>
-          <Image
-           alt="footer-logo"
-           src={footerLogo}
-           layout="intrinsic"
-           width={1000}
-           height={100}
-          />
-        </div>
-        <p className={styles.footerRights}>All Rights Reserved</p>
-      </footer>
     </div>
   )
 }

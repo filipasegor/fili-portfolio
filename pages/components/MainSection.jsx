@@ -12,17 +12,17 @@ export default function MainSection(props) {
     <>
     <section className={styles.mainSection}>
       <div className={styles.linksContainer}>
-        <Link   href="/">
+        <Link href="https://instagram.com/filipasssss?igshid=YmMyMTA2M2Y=">
           <a className={styles.linkMainSectionInst}>
           INST:@filipassss
           </a>
         </Link>
-        <Link href="/" >
+        <Link href="mailto:filipasegor@gmail.com">
           <a className={styles.linkMainSectionMail}>
           filipas@gmail.com
           </a>
         </Link>
-        <Link href="/" >
+        <Link href="https://teleg.run/filipas" >
           <a className={styles.linkMainSectionTg}>
           TG:@filipas
           </a>

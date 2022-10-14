@@ -180,32 +180,3 @@
 .SkillDescContainer{
   width: 45%
 }
-
-
-.footerContainer{
-  display: flex;
-
-  width: 100%;
-  margin: 100px auto 0px auto;
-  padding: 0px 40px 0px 40px;
-
-  background: #E8E8E8;
-
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.footerContainer p{
-  color: #000000;
-
-  font-family: "RooftopRegular";
-  font-size: 15px;
-}
-
-.footerRights{
-  text-align: right;
-}
-
-.SkillImageContainer{
-  display: block;
-}
