@@ -38,13 +38,9 @@ export default function LgProject(props){
 
   const [loading, setLoading] = useState(false);
 
-  useEffect(() =>{
-    setLoading(true);
-    setTimeout(() =>{
-      setLoading(false)
-    }, 3000)
-  }, [])
-
+  function giveMassage(){
+    console.log("loaded");
+  }
 
   const img = (
       <div className={styles.mediaWrapper}>
@@ -72,8 +68,11 @@ export default function LgProject(props){
          objectFit="cover"
        />
       </div>
-      <video autoPlay muted loop
+      <video autoPlay muted loop playsInline
       className={styles.video}
+      onLoadedData={() => {
+          giveMassage();
+        }}
       style={{ display: loading ? "none" : "block" }}
       >
       <source src={props.src} />
