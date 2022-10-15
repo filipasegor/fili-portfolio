@@ -59,7 +59,7 @@ export default function LgProject(props){
     <div className={styles.mediaWrapper}>
       <div
       className={styles.thumbWrapper}
-      style={{ display: loading ? "block" : "none" }}>
+      style={{ display: loading ? "none" : "block" }}>
         <Image
          className={styles.thumb}
          alt={props.altThumb}
@@ -73,7 +73,7 @@ export default function LgProject(props){
       onLoadedData={() => {
           giveMassage();
         }}
-      style={{ display: loading ? "none" : "block" }}
+      style={{ display: loading ? "block" : "none" }}
       >
       <source src={props.src} />
       </video>
