@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 import styles from '../../styles/_LgProject.module.scss'
 import arrow from '../../public/arrow.svg'
@@ -36,11 +36,14 @@ const arrowButton = (
 
 export default function LgProject(props){
 
-  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onLoadedData = () => {
-    setLoaded(true);
-  };
+  useEffect(() =>{
+    setLoading(true);
+    setTimeout(() =>{
+      setLoading(false)
+    }, 3000)
+  }, [])
 
 
   const img = (
@@ -59,13 +62,19 @@ export default function LgProject(props){
   const video = (
     <div className={styles.mediaWrapper}>
       <div
-       className={styles.thumb}
-       style={{ display: loaded ? "block" : "none" }}>
-       </div>
+      className={styles.thumbWrapper}
+      style={{ display: loading ? "block" : "none" }}>
+        <Image
+         className={styles.thumb}
+         alt={props.altThumb}
+         src={props.srcThumb}
+         layout="responsive"
+         objectFit="cover"
+       />
+      </div>
       <video autoPlay muted loop
       className={styles.video}
-      onLoadedData={onLoadedData}
-      style={{ display: loaded ? "none" : "block" }}
+      style={{ display: loading ? "none" : "block" }}
       >
       <source src={props.src} />
       </video>

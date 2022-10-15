@@ -19,6 +19,7 @@ import lk from '../public/lk.png'
 import bionum from '../public/bionum.png'
 import cil from '../public/cil.png'
 import pack from '../public/pack.png'
+import thumbShmot from '../public/thumbShmot.png'
 
 
 export default function Projects(props) {
@@ -42,7 +43,10 @@ export default function Projects(props) {
         </div>
 
         <LgProject href="https://www.artlebedev.ru/narayone/"
-        src={require("../public/videos/narayone.mp4")} type="logo" media="video">
+        srcThumb={thumbShmot} altThumb="thumbShmot"
+        src={require("../public/videos/narayone.mp4")}
+        type="logo"
+        media="video">
           <h1>Сайт проекта «На районе»</h1>
           <p>Работа студии Артемия Лебедева</p>
         </LgProject>
