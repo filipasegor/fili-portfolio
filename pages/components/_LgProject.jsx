@@ -39,7 +39,7 @@ export default function LgProject(props){
   const [loading, setLoading] = useState(false);
 
   function giveMassage(){
-    console.log("loaded");
+    setLoading(true);
   }
 
   const img = (
