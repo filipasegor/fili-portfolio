@@ -1,13 +1,33 @@
-
-.Wrapper{
-  width: 80vw;
-}
+@import "../mixins";
 
 
 .Wrapper p{
-  width: 80%;
-
   font-family: "RooftopRegular";
   font-size: 20px;
   line-height: 120%;
+}
+
+
+@include phone(){
+
+  .Wrapper{
+    width: auto;
+  }
+
+
+}
+
+@include tablet(){
+  .Wrapper{
+    width: auto;
+  }
+
+}
+
+@include desktop(){
+
+  .Wrapper{
+    width: 80vw;
+  }
+
 }

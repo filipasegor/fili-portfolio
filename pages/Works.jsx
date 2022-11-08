@@ -6,9 +6,10 @@ import LgProject from './components/_LgProject'
 import MdProject from './components/_MdProject'
 import SmProject from './components/_SmProject'
 import styles from '../styles/Works.module.scss'
+
 import blackLogo from '../public/black-logo.svg'
 import rkeeper from '../public/rkeeper.png'
-import charus from '../public/charus.png'
+import charus_site from '../public/charus_site.png'
 import bashnya from '../public/bashnya.png'
 import som from '../public/som.png'
 import olimpatlet from '../public/olimp_atlet.png'
@@ -19,7 +20,16 @@ import lk from '../public/lk.png'
 import bionum from '../public/bionum.png'
 import cil from '../public/cil.png'
 import pack from '../public/pack.png'
+
 import thumbShmot from '../public/thumbShmot.png'
+import thumbCharus from '../public/thumbCharus.png'
+import thumbNhs from '../public/thumbNhs.png'
+import thumbBezlimit from '../public/thumbBezlimit.png'
+import thumbDeff from '../public/thumbDeff.png'
+import thumbIir from '../public/thumbIir.png'
+import thumbMMS from '../public/thumbMMS.png'
+import thumbRunup from '../public/thumbRunup.png'
+
 
 
 export default function Projects(props) {
@@ -37,12 +47,12 @@ export default function Projects(props) {
       <div className={styles.Projects}>
         <div className={styles.headlineContainer}>
           <h1 className={styles.headline}>
-          Successful and interesting businesses come to me
+            Все, кому я помог улучшить свои продукты и бизнес
           </h1>
-          <button className={styles.button}>RUS</button>
         </div>
 
-        <LgProject href="https://www.artlebedev.ru/narayone/"
+        <LgProject
+        href="https://www.artlebedev.ru/narayone/"
         srcThumb={thumbShmot} altThumb="thumbShmot"
         src={require("../public/videos/narayone.mp4")}
         type="logo"
@@ -57,8 +67,20 @@ export default function Projects(props) {
           <p>Работа студии Артемия Лебедева</p>
         </LgProject>
 
-        <MdProject href="/" src={charus} type="arrow" media="img">
-        <h1>Айдентика<br /> для компании Чарус</h1>
+        <MdProject href="/works/CharusSite"
+        srcThumb={charus_site} altThumb="charus_site"
+        src={require("../public/works/charus_site/header_media.mp4")}
+        type="arrow"
+        media="video">
+          <h1>Сайт Чаруса</h1>
+        </MdProject>
+
+        <MdProject href="/works/CharusLogo"
+        srcThumb={thumbCharus} altThumb="thumbCharus"
+        src={require("../public/videos/charus.mp4")}
+        type="arrow"
+        media="video">
+          <h1>Айдентика<br /> для компании Чарус</h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -67,23 +89,36 @@ export default function Projects(props) {
             <p>Работа студии Артемия Лебедева</p>
           </SmProject>
 
-          <SmProject href="/" alt="deff" src={require('../public/videos/deff.mp4')} type="arrow" media="video">
+          <SmProject
+          href="/works/Deff"
+          srcThumb={thumbDeff} altThumb="thumbDeff"
+          alt="deff" src={require('../public/videos/deff.mp4')}
+          type="arrow" media="video">
             <h1>Айдентика производителя сантехники Дефф</h1>
           </SmProject>
         </div>
 
-        <MdProject href="/works/Som" src={som} type="arrow" media="img">
+        <MdProject
+        href="/works/Som"
+        srcThumb={som} altThumb="thumbDeff"
+        src={require('../public/videos/som.mp4')}
+        type="arrow" media="video">
         <h1>Айдентика<br /> для интеренет издания Сом</h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
-          <SmProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={require("../public/videos/iir.mp4")} type="arrow" media="video">
+          <SmProject
+          href="/works/Iir"
+          srcThumb={thumbIir} altThumb="thumbIir"
+          alt="rkeeper-img" src={require("../public/videos/iir.mp4")} type="arrow" media="video">
             <h1>
             Интерфейсы<br /> для мобильного приложения Сбера
             </h1>
           </SmProject>
 
-          <SmProject href="/"
+          <SmProject
+          href="/works/Mms"
+          srcThumb={thumbMMS} altThumb="thumbMMS"
           src={require("../public/videos/mms.mp4")}
           alt="deff" type="arrow" media="video">
             <h1>
@@ -93,6 +128,7 @@ export default function Projects(props) {
         </div>
 
         <MdProject href="/works/Som"
+        srcThumb={thumbNhs} altThumb="thumbNhs"
         src={require("../public/videos/nhs.mp4")}
          type="logo" media="video">
           <h1>Сайт компании «Найтхок солюшнс»</h1>
@@ -100,7 +136,9 @@ export default function Projects(props) {
         </MdProject>
 
         <div className={styles.SmContainer}>
-          <SmProject href="https://www.artlebedev.ru/runup/"
+          <SmProject
+          srcThumb={thumbRunup} altThumb="thumbRunup"
+          href="https://www.artlebedev.ru/runup/"
           alt="runup-img"
           src={require("../public/videos/runup.mp4")} type="logo"
           media="video">
@@ -121,12 +159,6 @@ export default function Projects(props) {
           </SmProject>
         </div>
 
-        <MdProject href="https://www.artlebedev.ru/bezlimit/site/"
-        src={require("../public/videos/bezlimit.mp4")}
-         type="logo" media="video">
-          <h1>Сайт «Безлимита»</h1>
-          <p>Работа студии Артемия Лебедева</p>
-        </MdProject>
 
         <div className={styles.SmContainer}>
           <SmProject href="https://www.artlebedev.ru/beans/"
@@ -150,26 +182,29 @@ export default function Projects(props) {
           </SmProject>
         </div>
 
-        <MdProject href=""
-        src={neo}
-         type="arrow"
-         media="img">
-          <h1>Айдентика НЭО</h1>
+        <MdProject
+        href="https://www.artlebedev.ru/bezlimit/site/"
+        srcThumb={thumbBezlimit} altThumb="thumbBezlimit"
+        src={require("../public/videos/bezlimit.mp4")}
+         type="logo" media="video">
+          <h1>Сайт «Безлимита»</h1>
+          <p>Работа студии Артемия Лебедева</p>
         </MdProject>
 
         <div className={styles.SmContainer}>
-          <SmProject href=" "
-          alt="beans-img"
+          <SmProject
+          href="/works/Lkneo"
+          alt="lk"
           src={lk}
           type="arrow"
           media="img">
             <h1>
-            Интерфейс<br />для личного кабинета НЭО
+            Интерфейс<br />для личного кабинета НЭО-Бюро
             </h1>
           </SmProject>
 
           <SmProject
-          href="https://www.artlebedev.ru/levoshich-i-partnery/"
+          href="/works/Bionum"
           src={bionum}
           alt="bionum-img"
           type="arrow"
@@ -180,7 +215,8 @@ export default function Projects(props) {
           </SmProject>
         </div>
 
-        <MdProject href="https://www.artlebedev.ru/bezlimit/site/"
+        <MdProject
+        href="/works/Trimyas"
         src={pack}
          type="arrow"
          media="img">
@@ -188,15 +224,14 @@ export default function Projects(props) {
         </MdProject>
 
         <div className={styles.SmContainer}>
-          <SmProject href=" "
-          alt="beans-img"
+          <SmProject href="/works/Coffeiludi"
+          alt="coffeiludi"
           src={cil}
           type="arrow"
           media="img">
             <h1>
             Айдентика<br /> для кофейни Кофе и Люди
             </h1>
-            <p>Работа студии Артемия Лебедева</p>
           </SmProject>
         </div>
       </div>

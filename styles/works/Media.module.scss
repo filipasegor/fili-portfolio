@@ -1,0 +1,54 @@
+@import "../mixins";
+
+
+.thumb{
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+}
+
+.textWrapper{
+  max-width: 700px;
+}
+
+.video{
+  width: 100%;
+  height: 100%;
+
+  border-radius: 7px;
+}
+
+
+
+.labelWrapper{
+  display: flex;
+
+  width: 100%;
+  padding: 0px 0px 16px 0px;
+
+  font-family: "RooftopRegular";
+  font-size: 22px;
+
+}
+
+@include phone(){
+
+  .mediaWrapper{
+    margin: 20px 0px;
+  }
+
+}
+
+@include tablet(){
+  .mediaWrapper{
+    margin: 20px 0px;
+  }
+}
+
+@include desktop(){
+
+  .mediaWrapper{
+    margin: 40px 0px;
+  }
+}

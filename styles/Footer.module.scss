@@ -13,6 +13,7 @@
 }
 
 .footerContainer p{
+  width: 50%;
   padding-bottom: 10px;
 
   color: #000000;
@@ -30,7 +31,7 @@
 }
 
 .footerImg{
-  width: 4%;
+  width: 6%;
 }
 
 @include phone(){

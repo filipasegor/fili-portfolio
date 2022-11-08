@@ -18,8 +18,6 @@ const router = useRouter()
            alt="logo"
            src={router.asPath === "/Works" ? blacklogo : logo}
            layout="intrinsic"
-           width={167}
-           height={59}
          />
         </div>
         <ActiveLink />

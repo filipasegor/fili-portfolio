@@ -12,6 +12,12 @@
   }
 };
 
+@mixin phoneLg(){
+  @media(min-width: 430px){
+    @content;
+  }
+};
+
 @mixin phone(){
   @media(min-width: 10px){
     @content;

@@ -2,16 +2,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import styles from '../../styles/Project.module.scss'
+
+import HeadMedia from '../components/works/HeadMedia'
 import TaskDesc from '../components/works/TaskDesc'
+import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
 import DescriptionPar from '../components/works/DescriptionPar'
 import DescriptionTitle from '../components/works/DescriptionTitle'
-import styles from '../../styles/Project.module.scss'
-
+import MdProject from '../components/_MdProject'
+import Suggested from '../components/works/Suggested'
+import ProjectFooter from '../components/works/ProjectFooter'
 
 import headSom from '../../public/works/som/head-som.png'
 import logoBlack from '../../public/works/som/logo-black.png'
+import som from '../../public/som.png'
 import som1 from '../../public/works/som/som1.png'
 import som2 from '../../public/works/som/som2.png'
 import som3 from '../../public/works/som/som3.png'
@@ -22,11 +28,11 @@ import oil from '../../public/works/som/oil.png'
 import post from '../../public/works/som/post.png'
 import site from '../../public/works/som/site.png'
 import templates from '../../public/works/som/templates.png'
+import thumbCharus from '../../public/thumbCharus.png'
 
 
 
-export default function Projects(props) {
-
+export default function Project(props) {
   return (
     <>
     <div className={styles.container}>
@@ -36,27 +42,31 @@ export default function Projects(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Image
-         alt="head-som"
-         src={headSom}
-         placeholder="blur"
-         layout="responsive"
-        />
-        <section className={styles.content}>
-        <div className={styles.textWrapper}>
-          <TaskDesc>
-          <p>Разработать айдентику и логотип<br /> для цифрового журнала</p>
-          </TaskDesc>
-          <MainTitle>
-            <h1>Сом — цифровой журнал, рассказывает про культурные события, моду, еду, сериалы, фильмы и про все, что волнует  милиниалов и зумеров в Самаре. Волжский гедонизм в каждой строчке.</h1>
-          </MainTitle>
-        </div>
-        <Image
-          className={styles.fullWidth}
-         alt="head-som"
-         src={logoBlack}
-         placeholder="blur"
-         layout="responsive"
+      <HeadMedia
+       media="video"
+       alt="head-som"
+       src={require('../../public/videos/som.mp4')}
+      />
+
+      <section className={styles.content}>
+        <TaskDesc
+        taskName="Задача"
+        taskDesc="Разработать айдентику для цифрового журнала"
+
+        href="https://vk.com/somsomsom_io"
+        linkName="Посмотреть в реальной жизни"
+        linkDesc="Айдентика используется заказчиком самостоятельно"
+        >
+        </TaskDesc>
+
+        <MainTitle>
+          <h1>Сом — медиа о культурных событиях, моде, еде, сериалы, фильмы и про все, что волнует  милиниалов и зумеров в Самаре. Волжский гедонизм в каждой строчке.</h1>
+        </MainTitle>
+
+        <Media
+          label="none"
+          media="img"
+          src={logoBlack}
         />
         <DescriptionLayout>
           <DescriptionTitle>
@@ -67,120 +77,91 @@ export default function Projects(props) {
           </DescriptionPar>
         </DescriptionLayout>
 
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="som1"
-           src={som1}
-           placeholder="blur"
-           layout="responsive"
+        <Media
+          label="none"
+          media="video"
+          src={require('../../public/works/som/prew.mp4')}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={som1}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={som2}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={card}
+        />
+
+        <Media
+          label="none"
+          media="img"
+          src={som}
+        />
+
+        <Media
+          label="true"
+          media="img"
+          src={phonecase}
+          left="left"
+        >
+        <p>На сайте продемонстрированы все услуги, которые оказываает компания.</p>
+        </Media>
+
+        <Media
+          label="none"
+          media="img"
+          src={flaers}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={oil}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={post}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={templates}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={site}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={post}
+        />
+        <Media
+          label="none"
+          media="video"
+          src={require('../../public/works/som/stories.mp4')}
           />
-        </div>
+          <ProjectFooter date="21.09.2020" />
+        </section>
 
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="som2"
-           src={som2}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
+        <Suggested>
+          <MdProject href="/works/CharusLogo"
+          srcThumb={thumbCharus} altThumb="thumbCharus"
+          src={require("../../public/videos/charus.mp4")}
+          type="arrow"
+          media="video">
+            <h1>Айдентика<br /> для компании Чарус</h1>
+          </MdProject>
+        </Suggested>
 
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="som3"
-           src={som3}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="card"
-           src={card}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="phonecase"
-           src={phonecase}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="flaers"
-           src={flaers}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="oil"
-           src={oil}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="post"
-           src={post}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="templates"
-           src={templates}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <Image
-            className={styles.fullWidth}
-           alt="site"
-           src={site}
-           placeholder="blur"
-           layout="responsive"
-          />
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <video autoPlay muted loop className={styles.video}>
-          <source src={require('../../public/works/som/prew.mp4')} />
-          </video>
-        </div>
-
-        <div className={styles.mediaWrapper}>
-          <video autoPlay muted loop className={styles.video}>
-          <source src={require('../../public/works/som/stories.mp4')} />
-          </video>
-        </div>
-
-      </section>
-    </div>
+      </div>
     </>
-  )
-};
+  );
+}

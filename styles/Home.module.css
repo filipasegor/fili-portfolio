@@ -1,10 +1,13 @@
 
 @media (min-width: 10px) {
 
+  .container {
+    padding-bottom: 30px;
+  }
+
   .mainSection{
     width: 170%;
   }
-
 
 
   .headline{
@@ -115,7 +118,7 @@
   }
 
   .container {
-    margin-top: 0px;
+    padding-bottom: 40px;
   }
 
 
@@ -222,6 +225,10 @@
 
 @media (min-width: 1024px) {
 
+  .container{
+    padding-bottom: 60px;
+  }
+
   .section{
     flex-direction: row;
 
@@ -326,15 +333,20 @@
 
 
 @media (min-width: 1300px) {
+
+  .container{
+    padding-bottom: 80px;
+  }
+
   .headline{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 40px 0px 0px;
 
     font-size: 60px;
   }
 
   .headlineContainer{
     width: 35%;
-    margin-left: 240px;
+    margin-left: 350px;
   }
 
   .linksContainer a{

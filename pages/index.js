@@ -26,22 +26,21 @@ export default function Home() {
       <Header>
       <div className={styles.headlineContainer}>
         <h1 className={styles.headline}>
-        My name is Egor Filipas and I am a designer
+          Меня зовут Егор Филипас,<br /> я дизайнер
         </h1>
       </div>
       <div className={styles.parContainer}>
         <Par>
-          I help businesses solve complex problems through design
+          Я помогаю бизнесу решать задачи с помощью дизайна.
         </Par>
         <Par>
-          For example: to draw attention to a product, design user experience and interface for app, develop and launch a website
+          Например: привлечь внимание к продукту, разработать пользовательский опыт и интерфейс для приложения, разработать и запустить сайт.
         </Par>
         <Par>
-          Ultimately, I help businesses make money from their own products
+          В конечном счете, я помогаю компаниям зарабатывать больше, улучшая их продукты и сервисы.
         </Par>
       </div>
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>RUS</button>
       </div>
       </Header>
 

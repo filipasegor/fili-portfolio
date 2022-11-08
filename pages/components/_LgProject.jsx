@@ -38,7 +38,7 @@ export default function LgProject(props){
 
   const [loading, setLoading] = useState(false);
 
-  function giveMassage(){
+  function loadingData(){
     setLoading(true);
   }
 
@@ -71,7 +71,7 @@ export default function LgProject(props){
       <video autoPlay muted loop playsInline
       className={styles.video}
       onLoadedData={() => {
-          giveMassage();
+          loadingData();
         }}
       style={{ display: loading ? "block" : "none" }}
       >

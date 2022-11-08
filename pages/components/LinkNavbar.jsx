@@ -15,10 +15,10 @@ function ActiveLink({ children, href }) {
       <>
        <nav className={styles.navbarContainer}>
         <Link href="/">
-          <a className={styles.active}>PROFILE</a>
+          <a className={styles.active}>ПРОФИЛЬ</a>
         </Link>
         <Link href="/Works">
-          <a className={styles.default}>WORKS</a>
+          <a className={styles.default}>РАБОТЫ</a>
         </Link>
       </nav>
       </>
@@ -29,10 +29,10 @@ function ActiveLink({ children, href }) {
     <>
     <nav className={styles.navbarContainer}>
       <Link href="/">
-        <a className={styles.default}>PROFILE</a>
+        <a className={styles.default}>ПРОФИЛЬ</a>
       </Link>
       <Link href="/Works">
-        <a className={ styles.active}>WORKS</a>
+        <a className={ styles.active}>РАБОТЫ</a>
       </Link>
     </nav>
     </>

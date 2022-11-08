@@ -1,15 +1,44 @@
-
+@import "../mixins";
 
 
 .Wrapper {
-  width: 60vw;
-  margin-right: 50px;
+  font-family: "RooftopMedium";
+  font-size: 40px;
+  line-height: 180%;
 
 }
 
 
-.Wrapper h2{
-  font-family: "RooftopMedium";
-  font-size: 40px;
-  line-height: 120%;
+@include phone(){
+
+  .Wrapper{
+    width: auto;
+    margin: 0px 20px 20px 0px;
+
+    font-size: 18px;
+  }
+
+}
+
+@include tablet(){
+  .Wrapper {
+    width: auto;
+    margin: 0px 0px 20px 0px;
+
+    font-size: 25px;
+  }
+
+}
+
+@include desktop(){
+
+  .Wrapper {
+    width: 60vw;
+    margin: 0px 50px 0px 0px;
+
+    font-size: 30px;
+  }
+
+
+
 }

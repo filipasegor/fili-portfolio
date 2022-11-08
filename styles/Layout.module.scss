@@ -4,10 +4,10 @@
 .imgContainer{
   position: absolute;
   z-index: 11;
-  top: 20px;
 
-  width: 25%;
-  padding: 16px 0px;
+  display: flex;
+
+  width: 100%;
 }
 
 .logo{
@@ -22,14 +22,28 @@
 @include phone(){
   .imgContainer{
     position: relative;
+    top: 0px;
 
-    margin-top: -5px;
+    height: 70px;
+    margin-top: 0px;
     margin-bottom: 20px;
+    padding: 15px 0px;
+
+    justify-content: center;
   }
+
 }
 
 @include tablet(){
   .imgContainer{
     position: absolute;
+    top: 20px;
+
+    height: auto;
+    margin-bottom: 20px;
+    padding: 16px 0px;
+
+    justify-content: flex-start;
   }
+
 }

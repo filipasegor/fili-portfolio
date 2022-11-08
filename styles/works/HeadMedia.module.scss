@@ -1,0 +1,65 @@
+@import "../mixins";
+
+
+.headMedia{
+  width: 100%;
+}
+
+.headImageWrapper{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.headMediaWrapper{
+  width: 100%;
+
+}
+
+.video{
+  width: 100%;
+
+  object-fit: cover;
+}
+
+
+
+@include phone(){
+
+  .headImageWrapper{
+    top: 0;
+
+    height: auto;
+
+  }
+
+  .video{
+    height: auto;
+  }
+
+}
+
+@include tablet(){
+  .headImageWrapper{
+    position: relative;
+    top: 0;
+
+    height: auto;
+
+  }
+
+  .video{
+    top: 0;
+
+    height: 800px;
+  }
+
+}
+
+@include desktop(){
+  .headImageWrapper{
+    height: auto;
+
+  }
+}
