@@ -84,7 +84,12 @@ export default function Projects(props) {
         </MdProject>
 
         <div className={styles.SmContainer}>
-          <SmProject href="https://www.artlebedev.ru/rkeeper/interface/"        alt="rkeeper-img" src={bashnya} type="logo" media="img">
+          <SmProject
+          href="https://www.artlebedev.ru/bashnya-v-tsaritsino/"
+          alt="rkeeper-img"
+          src={bashnya}
+          type="logo"
+          media="img">
             <h1>Логотип мини-отеля «Башня<br /> в Царицыно»</h1>
             <p>Работа студии Артемия Лебедева</p>
           </SmProject>
@@ -127,7 +132,8 @@ export default function Projects(props) {
           </SmProject>
         </div>
 
-        <MdProject href="/works/Som"
+        <MdProject
+        href="https://nhsol.github.io/hey/"
         srcThumb={thumbNhs} altThumb="thumbNhs"
         src={require("../public/videos/nhs.mp4")}
          type="logo" media="video">

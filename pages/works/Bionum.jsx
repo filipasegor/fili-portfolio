@@ -108,7 +108,7 @@ export default function Project(props){
           />
 
           <Media
-            label="left"
+            label="true"
             media="video"
             src={require("../../public/works/bionum/search.mp4")}
             right="right"

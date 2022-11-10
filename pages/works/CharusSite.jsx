@@ -20,6 +20,10 @@ import pages from '../../public/works/charus_site/pages.png'
 import ds from '../../public/works/charus_site/ds.mp4'
 import pies from '../../public/works/charus_site/pies.png'
 
+import thumbMain_Page from '../../public/works/charus_site/thumbMain_Page.png'
+import thumbPages from '../../public/works/charus_site/thumbPages.png'
+import thumbDs from '../../public/works/charus_site/thumbDs.png'
+
 import thumbCharus from '../../public/thumbCharus.png'
 
 
@@ -54,6 +58,7 @@ export default function Project(props){
           </MainTitle>
 
           <Media
+            srcThumb={thumbMain_Page} altThumb="thumbMain_Page"
             label="false"
             media="video"
             src={require('../../public/works/charus_site/main_page.mp4')}
@@ -69,6 +74,7 @@ export default function Project(props){
           </Media>
 
           <Media
+            srcThumb={thumbPages} altThumb="thumbMain_Page"
             label="true"
             media="video"
             src={require('../../public/works/charus_site/pages_video.mp4')}
@@ -87,6 +93,7 @@ export default function Project(props){
           </DescriptionLayout>
 
           <Media
+            srcThumb={thumbDs} altThumb="thumbDs"
             label="false"
             media="video"
             src={ds}

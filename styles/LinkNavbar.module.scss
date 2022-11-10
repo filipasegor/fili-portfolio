@@ -87,7 +87,7 @@
   .navbarContainer{
     position: fixed;
     top: 465px;
-    left: -70px;
+    left: -80px;
 
     width: auto;
 
@@ -112,7 +112,7 @@
 
 @include desktop(){
   .navbarContainer{
-    left: -60px;
+    left: -70px;
   }
 
 }

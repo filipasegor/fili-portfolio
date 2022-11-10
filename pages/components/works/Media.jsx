@@ -29,15 +29,25 @@ export default function Media(props){
   );
 
   const video = (
-    <div className={styles.videoWrapper}>
-      
+    <div
+    className={styles.videoWrapper}>
+      <div
+      className={styles.thumbWrapper}
+      style={{ display: loading ? "none" : "block" }}>
+        <Image
+         className={styles.thumb}
+         alt={props.altThumb}
+         src={props.srcThumb}
+         layout="responsive"
+         objectFit="cover"
+       />
+      </div>
       <video autoPlay muted loop playsInline
       className={styles.video}
       onLoadedData={() => {
           loadingData();
         }}
-      style={{ display: loading ? "block" : "none" }}
-      >
+      style={{ display: loading ? "block" : "none" }}>
       <source src={props.src} />
       </video>
     </div>

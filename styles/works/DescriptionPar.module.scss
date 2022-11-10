@@ -3,7 +3,6 @@
 
 .Wrapper p{
   font-family: "RooftopRegular";
-  font-size: 20px;
   line-height: 120%;
 }
 
@@ -12,6 +11,8 @@
 
   .Wrapper{
     width: auto;
+
+    font-size: 20px;
   }
 
 
@@ -20,6 +21,9 @@
 @include tablet(){
   .Wrapper{
     width: auto;
+    padding-top: 0px;
+
+    font-size: 25px;
   }
 
 }
@@ -27,7 +31,8 @@
 @include desktop(){
 
   .Wrapper{
-    width: 80vw;
+    width: 60vw;
+    padding-top: 10px;
   }
 
 }
