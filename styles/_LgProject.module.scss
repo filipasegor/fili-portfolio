@@ -32,6 +32,8 @@
 .Desc h1{
   margin-bottom: 8px;
 
+  color:#FFFFFF;
+
   font-family: "RooftopMedium";
   font-size: 20px;
 }
@@ -62,7 +64,7 @@
   transition: width 0.3s;
 
   border-radius: 10px;
-  background: #000000;
+  background: #404040;
 
   justify-content: center;
   align-items: center;
@@ -76,21 +78,20 @@
 }
 
 @keyframes color {
-    0%   { background: #F1F1F1; }
-    50% { background: #D6D6D6; }
-    100%   { background: #F1F1F1; }
+  0%   { background: #0E0E0E; }
+  50% { background: #1F1F1F; }
+  100%   { background: #0E0E0E; }
 
   }
 
 
 .mediaWrapper{
-
   width: 100%;
 
   animation: color 1.5s infinite linear;
 
-  border-radius: 10px;
-  background: #F1F1F1;
+  border: 1px solid #222222;
+  border-radius: 12px;
 }
 
 .video{
@@ -109,7 +110,7 @@
   }
 
   .Desc{
-    width: 300px;
+    width: 100%;
   }
 
   .Wrapper{

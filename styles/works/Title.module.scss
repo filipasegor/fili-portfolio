@@ -1,8 +1,6 @@
 @import "../mixins";
 
 .Wrapper{
-  margin: 20px 0px 70px 0px;
-
   font-family: "RooftopRegular";
   line-height: 180%;
 }
@@ -12,6 +10,8 @@
 @include phone(){
 
   .Wrapper{
+    margin: 0px 0px 70px 0px;
+
     font-size: 20px;
   }
 

@@ -17,6 +17,7 @@ import ProjectFooter from '../components/works/ProjectFooter'
 
 import headSom from '../../public/works/som/head-som.png'
 import logoBlack from '../../public/works/som/logo-black.png'
+import stickers from '../../public/works/som/stickers.png'
 import som from '../../public/som.png'
 import som1 from '../../public/works/som/som1.png'
 import som2 from '../../public/works/som/som2.png'
@@ -70,18 +71,24 @@ export default function Project(props) {
         />
         <DescriptionLayout>
           <DescriptionTitle>
-          Шрифт в духе текущего времени и отсылкой на старую кириллицу
+            В духе текущего времени с отсылкой на старую кириллицу
           </DescriptionTitle>
           <DescriptionPar>
-          Ознакомлюсь с тем, какую идею бизнесу важно донести до людей и придумаю бренд-стратегию. Помогу определить, что, как и кому рассказать, чтобы получился запоминающийся и узнаваемый образ бизнеса. Разработаю логотип и фирменный стиль, и систематизирую это все в брендбуке, чтобы помочь правильно и легко пользоваться айдентикой
+            <p>
+              Сом рассказывает про то, что волнует молодую адиторию в Самарской области. Поэтому в основе логотипа лежат традицонные элементы из старославянской письменности, которые переосмысленны и преобразованы в современную и трендовую пластику букв.
+            </p>
+            <p>
+             Таким образом, в логотипе раскрывается история русской типографики, и при этом зумерам нестыдно наклеить стикер с логотипом на свой девайс
+            </p>
           </DescriptionPar>
         </DescriptionLayout>
 
         <Media
-          label="none"
-          media="video"
-          src={require('../../public/works/som/prew.mp4')}
+          label="false"
+          media="img"
+          src={phonecase}
         />
+
         <Media
           label="none"
           media="img"
@@ -95,6 +102,11 @@ export default function Project(props) {
         <Media
           label="none"
           media="img"
+          src={stickers}
+        />
+        <Media
+          label="none"
+          media="img"
           src={card}
         />
 
@@ -104,29 +116,35 @@ export default function Project(props) {
           src={som}
         />
 
-        <Media
-          label="true"
-          media="img"
-          src={phonecase}
-          left="left"
-        >
-        <p>На сайте продемонстрированы все услуги, которые оказываает компания.</p>
-        </Media>
+
+        <DescriptionLayout>
+          <DescriptionTitle>
+            Фирменная графика
+          </DescriptionTitle>
+          <DescriptionPar>
+            Также был придуман фирменный элемент для графики, напоминающий движение реки Волги. С помощью этого фирменного элемента любой пост в соцсетях визуально выделяется из общего потока и стновится интересным
+          </DescriptionPar>
+        </DescriptionLayout>
 
         <Media
           label="none"
-          media="img"
-          src={flaers}
-        />
-        <Media
-          label="none"
-          media="img"
-          src={oil}
+          media="video"
+          src={require('../../public/works/som/prew.mp4')}
         />
         <Media
           label="none"
           media="img"
           src={post}
+        />
+        <Media
+          label="none"
+          media="video"
+          src={require('../../public/works/som/stories.mp4')}
+        />
+        <Media
+          label="none"
+          media="img"
+          src={flaers}
         />
         <Media
           label="none"
@@ -141,13 +159,9 @@ export default function Project(props) {
         <Media
           label="none"
           media="img"
-          src={post}
+          src={oil}
         />
-        <Media
-          label="none"
-          media="video"
-          src={require('../../public/works/som/stories.mp4')}
-          />
+
           <ProjectFooter date="21.09.2020" />
         </section>
 

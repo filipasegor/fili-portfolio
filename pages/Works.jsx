@@ -14,7 +14,6 @@ import bashnya from '../public/bashnya.png'
 import som from '../public/som.png'
 import olimpatlet from '../public/olimp_atlet.png'
 import beans from '../public/beans.png'
-import lip from '../public/lip.png'
 import neo from '../public/neo.png'
 import lk from '../public/lk.png'
 import bionum from '../public/bionum.png'
@@ -28,6 +27,7 @@ import thumbBezlimit from '../public/thumbBezlimit.png'
 import thumbDeff from '../public/thumbDeff.png'
 import thumbIir from '../public/thumbIir.png'
 import thumbMMS from '../public/thumbMMS.png'
+import thumbLip from '../public/thumbLip.png'
 import thumbRunup from '../public/thumbRunup.png'
 
 
@@ -179,8 +179,9 @@ export default function Projects(props) {
 
           <SmProject
           href="https://www.artlebedev.ru/levoshich-i-partnery/"
-          src={lip}
-          alt="lip-img" type="logo" media="img">
+          srcThumb={thumbLip} altThumb="thumbLip"
+          src={require("../public/videos/lip.mp4")}
+          type="logo" media="video">
             <h1>
             Логотип фирмы «Левошич<br />и партнеры»
             </h1>

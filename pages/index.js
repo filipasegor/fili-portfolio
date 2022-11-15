@@ -20,13 +20,18 @@ export default function Home() {
       <Head>
         <title>Fili</title>
         <meta name="description" />
+        <meta property="og:title" content="Portfolio"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://vercel.com/filipasegor/fili-portfolio/public/Opengraph.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header>
       <div className={styles.headlineContainer}>
         <h1 className={styles.headline}>
-          Меня зовут Егор Филипас,<br /> я дизайнер
+          Меня зовут<br />  Егор Филипас,<br /> я дизайнер
         </h1>
       </div>
       <div className={styles.parContainer}>

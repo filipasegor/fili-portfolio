@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {useState, useEffect} from "react"
+import {useState, useEffect, useCallback} from "react"
 import { useRouter } from 'next/router'
 import logo from '../../public/logo.svg'
 import blacklogo from '../../public/black-logo.svg'
@@ -10,22 +10,33 @@ import ActiveLink from "./LinkNavbar"
 export default function Layout(props) {
 const router = useRouter()
 
-const [isMobile, setIsMobile] = useState(false);
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
 
-useEffect(() => {
-  if(typeof window !== "undefined" && router.asPath !== "/"){
-    window.innerWidth <= 768 ? setIsMobile(true) : setIsMobile(false);
-  }
-});
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
 
-function detectWindowSize() {
-    window.innerWidth <= 768 ? setIsMobile(true) : setIsMobile(false);
- }
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
 
 
-if(typeof window !== "undefined"){
-  window.onresize = detectWindowSize;
-}
+const isBreakpoint = useMediaQuery(768);
 
   const withBlackLogo = (
     <div className={router.asPath === "/" ? styles.body : ""}>
@@ -58,17 +69,13 @@ if(typeof window !== "undefined"){
   );
 
   if(router.asPath === "/Works"){
-    return withBlackLogo
-  }
-
-  if(isMobile){
-
-    return withBlackLogo
-
+    return withWhiteLogo
   }
   if(router.asPath === "/" ){
     return withWhiteLogo
-
+  }
+  if(isBreakpoint){
+    return withBlackLogo
   } else {
     return withWhiteLogo
   }

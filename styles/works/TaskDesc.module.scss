@@ -39,6 +39,9 @@
 
   .innerWrapper{
     max-width: 450px;
+  }
+
+  .innerWrapper:first-child{
     margin: 15px 0px;
   }
 
@@ -51,7 +54,7 @@
     margin: 25px 0px 0px 40px;
   }
 
-  .innerWrapper{
+  .innerWrapper:first-child{
     margin: 0px 0px;
   }
 
