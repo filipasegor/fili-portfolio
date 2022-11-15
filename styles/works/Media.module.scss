@@ -14,7 +14,7 @@
 
 .thumb{
   width: 100%;
-  height: 100%;
+  height: auto;
 
   border-radius: 10px;
 }
@@ -28,7 +28,7 @@
 
 .thumbWrapper{
   width: 100%;
-  height: 70vh;
+  height: auto;
 
   animation: color 1.5s infinite linear;
 

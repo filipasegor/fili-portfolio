@@ -1,5 +1,10 @@
 @import "../mixins";
 
+@keyframes color {
+  0%   { background: #F4F4F4; }
+  50% { background: #E0E0E0; }
+  100%   { background: #F4F4F4; }
+}
 
 .headMedia{
   width: 100%;
@@ -15,6 +20,7 @@
 .headMediaWrapper{
   width: 100%;
 
+  animation: color 1.5s infinite linear;
 }
 
 .video{

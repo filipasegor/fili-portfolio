@@ -68,8 +68,23 @@ const isBreakpoint = useMediaQuery(768);
     </div>
   );
 
+  const blackBg = (
+    <div className={styles.body}>
+      <div className={styles.imgContainer}>
+        <Image
+          className={styles.logo}
+         alt="logo"
+         src={logo}
+       />
+      </div>
+      <ActiveLink />
+      {props.children}
+      <Footer />
+    </div>
+  );
+
   if(router.asPath === "/Works"){
-    return withWhiteLogo
+    return blackBg
   }
   if(router.asPath === "/" ){
     return withWhiteLogo

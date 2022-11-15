@@ -23,7 +23,7 @@ export default function Home() {
         <meta property="og:title" content="Portfolio"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
-        <meta property="og:image" content="https://vercel.com/filipasegor/fili-portfolio/public/Opengraph.jpg" />
+        <meta property="og:image" content="https://filipas-portfolio.vercel.app/public/Opengraph.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
