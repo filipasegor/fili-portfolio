@@ -17,6 +17,10 @@ import ProjectFooter from '../components/works/ProjectFooter'
 
 import scenarios from '../../public/works/iir/scenarios.png'
 import head from '../../public/works/iir/head.png'
+import thumbProfile from '../../public/works/iir/thumbProfile.png'
+import thumbParams from '../../public/works/iir/thumbParams.png'
+import thumbProceed from '../../public/works/iir/thumbProceed.png'
+import thumbProducts  from '../../public/works/iir/thumbProducts.png'
 
 import charus_site from '../../public/charus_site.png'
 
@@ -50,6 +54,7 @@ export default function Project(props){
           </MainTitle>
 
           <Media
+            srcThumb={thumbProfile} altThumb="thumbProfile"
             label="true"
             media="video"
             left="left"
@@ -61,6 +66,7 @@ export default function Project(props){
           </Media>
 
           <Media
+            srcThumb={thumbParams} altThumb="thumbParams"
             label="true"
             right="right"
             media="video"
@@ -86,12 +92,14 @@ export default function Project(props){
           </DescriptionLayout>
 
           <Media
+            srcThumb={thumbProducts} altThumb="thumbProducts"
             label="false"
             media="video"
             src={require("../../public/works/iir/products.mp4")}
           />
 
           <Media
+            srcThumb={thumbProceed} altThumb="thumbProceed"
             label="true"
             right="right"
             media="video"

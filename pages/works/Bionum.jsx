@@ -21,6 +21,10 @@ import head from '../../public/works/bionum/head-present.png'
 import logo from '../../public/works/bionum/logo.png'
 import billboard from '../../public/works/bionum/billboard.png'
 import book from '../../public/works/bionum/book.png'
+import thumbArticle from '../../public/works/bionum/thumbArticle.png'
+import thumbGargage from '../../public/works/bionum/thumbGargage.png'
+import thumbSearch from '../../public/works/bionum/thumbSearch.png'
+import thumbSlider from '../../public/works/bionum/thumbSlider.png'
 
 import som from '../../public/som.png'
 
@@ -79,18 +83,21 @@ export default function Project(props){
           />
 
           <Media
+            srcThumb={thumbGargage} altThumb="thumbGargage"
             label="false"
             media="video"
             src={require("../../public/works/bionum/gargage.mp4")}
           />
 
           <Media
+            srcThumb={thumbSearch} altThumb="thumbSearch"
             label="false"
             media="video"
             src={require("../../public/works/bionum/circle.mp4")}
           />
 
           <Media
+            srcThumb={thumbSlider} altThumb="thumbSlider"
             label="true"
             media="video"
             src={require("../../public/works/bionum/slider.mp4")}
@@ -102,12 +109,14 @@ export default function Project(props){
           </Media>
 
           <Media
+            srcThumb={thumbArticle} altThumb="thumbArticle"
             label="false"
             media="video"
             src={require("../../public/works/bionum/article.mp4")}
           />
 
           <Media
+            srcThumb={thumbSearch} altThumb="thumbSearch"
             label="true"
             media="video"
             src={require("../../public/works/bionum/search.mp4")}
