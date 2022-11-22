@@ -31,6 +31,8 @@ import site from '../../public/works/som/site.png'
 import templates from '../../public/works/som/templates.png'
 import thumbCharus from '../../public/thumbCharus.png'
 
+import neo from '../../public/neo.png'
+
 
 
 export default function Project(props) {
@@ -173,6 +175,23 @@ export default function Project(props) {
           media="video">
             <h1>Айдентика<br /> для компании Чарус</h1>
           </MdProject>
+
+          <MdProject href="/works/Mms"
+          src={require("../../public/works/mms/head.mp4")}
+          type="arrow"
+          media="video">
+            <h1>
+              Айдентика миграционного центра ММС
+            </h1>
+          </MdProject>
+
+          <MdProject
+          href="/works/Neo"
+          src={neo}
+          type="arrow" media="img">
+          <h1>Айдентика<br /> для HЭО-Бюро</h1>
+          </MdProject>
+
         </Suggested>
 
       </div>

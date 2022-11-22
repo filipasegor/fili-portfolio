@@ -27,6 +27,7 @@ import thumbSearch from '../../public/works/bionum/thumbSearch.png'
 import thumbSlider from '../../public/works/bionum/thumbSlider.png'
 
 import som from '../../public/som.png'
+import neo from '../../public/neo.png'
 
 export default function Project(props){
   return (
@@ -135,6 +136,15 @@ export default function Project(props){
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
             <h1>Айдентика<br /> для интеренет издания Сом</h1>
           </MdProject>
+
+          <MdProject
+          href="/works/Neo"
+          src={neo}
+          type="arrow" media="img">
+          <h1>Айдентика<br /> для HЭО-Бюро</h1>
+          </MdProject>
+
+
         </Suggested>
 
       </div>

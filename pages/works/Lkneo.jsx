@@ -13,12 +13,16 @@ import DescriptionLayout from '../components/works/DescriptionLayout'
 import DescriptionPar from '../components/works/DescriptionPar'
 import DescriptionTitle from '../components/works/DescriptionTitle'
 import MdProject from '../components/_MdProject'
+import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
 import head from '../../public/works/lkneo/lk-head-present 1.png'
 import site from '../../public/works/lkneo/site.png'
-import som from '../../public/som.png'
+
+import charus_site from '../../public/charus_site.png'
+import thumbNhs from '../../public/thumbNhs.png'
+import rkeeper from '../../public/rkeeper.png'
 
 export default function Project(props){
   return (
@@ -105,9 +109,18 @@ export default function Project(props){
         </section>
 
         <Suggested>
-          <MdProject href="/works/Som" src={som} type="arrow" media="img">
-            <h1>Айдентика<br /> для интеренет издания Сом</h1>
+          <MdProject href="/works/CharusSite"
+          srcThumb={charus_site} altThumb="charus_site"
+          src={require("../../public/works/charus_site/header_media.mp4")}
+          type="arrow"
+          media="video">
+            <h1>Сайт Чаруса</h1>
           </MdProject>
+
+          <LgProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={rkeeper} type="logo" media="img">
+            <h1>Интерфейс приложения «Эркипер»</h1>
+            <p>Работа студии Артемия Лебедева</p>
+          </LgProject>
         </Suggested>
 
       </div>

@@ -116,15 +116,12 @@
   margin: 60px 0px;
 }
 
-.Projects p{
-  margin-bottom: 10px;
-}
 
 
 @include phone(){
 
   .headline {
-    max-width: 500px;
+    max-width: 600px;
 
     font-size:35px;
 
@@ -175,7 +172,7 @@
   }
 
   .headline {
-    max-width: 800px;
+    max-width: 1000px;
 
     font-size: 60px;
   }

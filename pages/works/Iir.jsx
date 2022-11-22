@@ -11,6 +11,7 @@ import DescriptionLayout from '../components/works/DescriptionLayout'
 import DescriptionPar from '../components/works/DescriptionPar'
 import DescriptionTitle from '../components/works/DescriptionTitle'
 import MdProject from '../components/_MdProject'
+import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
@@ -23,7 +24,7 @@ import thumbProceed from '../../public/works/iir/thumbProceed.png'
 import thumbProducts  from '../../public/works/iir/thumbProducts.png'
 
 import charus_site from '../../public/charus_site.png'
-
+import rkeeper from '../../public/rkeeper.png'
 
 
 export default function Project(props){
@@ -133,6 +134,12 @@ export default function Project(props){
           media="video">
             <h1>Сайт Чаруса</h1>
           </MdProject>
+
+          <LgProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={rkeeper} type="logo" media="img">
+            <h1>Интерфейс приложения «Эркипер»</h1>
+            <p>Работа студии Артемия Лебедева</p>
+          </LgProject>
+
         </Suggested>
 
       </div>

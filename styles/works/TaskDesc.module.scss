@@ -3,7 +3,7 @@
 .Wrapper{
   display: flex;
 
-  padding: 5px 0px;
+  padding: 10px 0px;
 
   justify-content: flex-start;
 
@@ -22,7 +22,7 @@
   p{
     max-width: 250px;
     margin-right: 30px;
-    padding: 10px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
 
     color: #565656;
 
@@ -35,6 +35,8 @@
 
   .Wrapper{
     flex-direction: column;
+
+    margin-bottom: 10px;
   }
 
   .innerWrapper{

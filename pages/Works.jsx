@@ -29,6 +29,7 @@ import thumbIir from '../public/thumbIir.png'
 import thumbMMS from '../public/thumbMMS.png'
 import thumbLip from '../public/thumbLip.png'
 import thumbRunup from '../public/thumbRunup.png'
+import thumbNeosite from '../public/thumbNeosite.png'
 
 
 
@@ -47,7 +48,7 @@ export default function Projects(props) {
       <div className={styles.Projects}>
         <div className={styles.headlineContainer}>
           <h1 className={styles.headline}>
-            Все, кому я помог улучшить свои продукты и бизнес
+            Придумываю, проектирую, дизайню, разрабатываю и держусь молодцом
           </h1>
         </div>
 
@@ -133,7 +134,7 @@ export default function Projects(props) {
         </div>
 
         <MdProject
-        href="https://nhsol.github.io/hey/"
+        href="https://www.artlebedev.ru/nighthawk-solutions/site/"
         srcThumb={thumbNhs} altThumb="thumbNhs"
         src={require("../public/videos/nhs.mp4")}
          type="logo" media="video">
@@ -164,6 +165,13 @@ export default function Projects(props) {
             <p>Работа студии Артемия Лебедева</p>
           </SmProject>
         </div>
+
+        <MdProject
+        href="/works/Neo"
+        src={neo}
+        type="arrow" media="img">
+        <h1>Айдентика<br /> для HЭО-Бюро</h1>
+        </MdProject>
 
 
         <div className={styles.SmContainer}>
@@ -200,13 +208,14 @@ export default function Projects(props) {
 
         <div className={styles.SmContainer}>
           <SmProject
-          href="/works/Lkneo"
+          href="/works/Neosite"
           alt="lk"
-          src={lk}
+          srcThumb={thumbNeosite} altThumb="thumbNeosite"
+          src={require("../public/videos/neosite.mp4")}
           type="arrow"
-          media="img">
+          media="video">
             <h1>
-            Интерфейс<br />для личного кабинета НЭО-Бюро
+            Промо-страница для НЭО-Бюро
             </h1>
           </SmProject>
 
@@ -231,6 +240,17 @@ export default function Projects(props) {
         </MdProject>
 
         <div className={styles.SmContainer}>
+          <SmProject
+          href="/works/Lkneo"
+          alt="lk"
+          src={lk}
+          type="arrow"
+          media="img">
+            <h1>
+            Интерфейс<br />для личного кабинета НЭО-Бюро
+            </h1>
+          </SmProject>
+
           <SmProject href="/works/Coffeiludi"
           alt="coffeiludi"
           src={cil}
@@ -241,6 +261,7 @@ export default function Projects(props) {
             </h1>
           </SmProject>
         </div>
+
       </div>
     </div>
     </>

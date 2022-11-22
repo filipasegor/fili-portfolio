@@ -113,6 +113,14 @@ export default function Project(props){
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
             <h1>Айдентика<br /> для интеренет издания Сом</h1>
           </MdProject>
+
+          <MdProject href="/works/CharusLogo"
+          src={require("../../public/videos/charus.mp4")}
+          type="arrow"
+          media="video">
+            <h1>Айдентика<br /> для компании Чарус</h1>
+          </MdProject>
+          
         </Suggested>
 
       </div>

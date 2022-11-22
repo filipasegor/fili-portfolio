@@ -22,6 +22,32 @@
 
 }
 
+.ImageWrapper{
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+
+.ArrowLink{
+  margin: 0px 4px;
+
+  color: #000000;
+  border-radius: 10px;
+
+  &:hover{
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+}
+
+
+
 .active {
   margin: 0px 3px;
   padding: 10px 10px;
@@ -46,6 +72,14 @@
 }
 
 @include phone(){
+
+  .ArrowLink{
+    padding: 3px 15px;
+  }
+
+  .Image{
+    rotate: 0deg;
+  }
 
  .navbarContainer{
    position: sticky;
@@ -84,12 +118,20 @@
 
 @include tablet(){
 
+  .ArrowLink{
+    padding: 3px 3px;
+  }
+
+  .Image{
+    rotate: -90deg;
+  }
+
   .navbarContainer{
     position: fixed;
     top: 465px;
-    left: -80px;
+    left: -100px;
 
-    width: auto;
+    width: 270px;
 
     transform: rotate(90deg);
 
@@ -112,7 +154,7 @@
 
 @include desktop(){
   .navbarContainer{
-    left: -70px;
+    left: -95px;
   }
 
 }

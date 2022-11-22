@@ -26,6 +26,7 @@ import paper from '../../public/works/deff/paper.png'
 import sink from '../../public/works/deff/sink.png'
 
 import som from '../../public/som.png'
+import pack from '../../public/pack.png'
 
 export default function Project(props){
   return (
@@ -136,9 +137,19 @@ export default function Project(props){
         </section>
 
         <Suggested>
+
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
             <h1>Айдентика<br /> для интеренет издания Сом</h1>
           </MdProject>
+          
+          <MdProject
+          href="/works/Trimyas"
+          src={pack}
+           type="arrow"
+           media="img">
+            <h1>Дизайн упаковки мясокомбината Тримяс</h1>
+          </MdProject>
+
         </Suggested>
 
       </div>

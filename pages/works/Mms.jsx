@@ -196,6 +196,13 @@ export default function Project(props){
           media="video">
             <h1>Айдентика<br /> для компании Чарус</h1>
           </MdProject>
+
+          <MdProject href="/works/Deff"
+          src={require("../../public/works/deff/deff.mp4")}
+          type="arrow" media="video">
+            <h1>Айдентика производителя сантехники Дефф</h1>
+          </MdProject>
+          
         </Suggested>
 
       </div>

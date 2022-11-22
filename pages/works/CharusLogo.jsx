@@ -23,7 +23,10 @@ import box from '../../public/works/charus_logo/box.png'
 import label from '../../public/works/charus_logo/label.png'
 import textbook from '../../public/works/charus_logo/textbook.png'
 import pipe from '../../public/works/charus_logo/pipe.png'
+
+
 import som from '../../public/som.png'
+import neo from '../../public/neo.png'
 
 export default function Project(props){
   return (
@@ -117,6 +120,22 @@ export default function Project(props){
         <Suggested>
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
             <h1>Айдентика<br /> для интеренет издания Сом</h1>
+          </MdProject>
+
+          <MdProject href="/works/Mms"
+          src={require("../../public/works/mms/head.mp4")}
+          type="arrow"
+          media="video">
+            <h1>
+              Айдентика миграционного центра ММС
+            </h1>
+          </MdProject>
+
+          <MdProject
+          href="/works/Neo"
+          src={neo}
+          type="arrow" media="img">
+          <h1>Айдентика<br /> для HЭО-Бюро</h1>
           </MdProject>
         </Suggested>
 
