@@ -5,7 +5,6 @@ import { useRouter } from "next/router"
 import { useEffect, useRef } from "react"
 
 export default function App({ Component, pageProps }) {
-  usePreserveScroll()
   return (
   <>
     <Layout>
