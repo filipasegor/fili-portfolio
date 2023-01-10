@@ -1,6 +1,34 @@
 
 @media (min-width: 10px) {
 
+  .eyesWrapper{
+    position: absolute;
+    bottom: -25%;
+    left: 3%;
+
+    display: flex;
+
+    width: 80%;
+    padding: 5px 10px 20px 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    transform: rotate(-3deg);
+
+    color: #000000;
+    border-radius: 15px;
+    background: #FD4C00;
+
+    font-family: "BergenMono-Regular";
+
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .eyesTitle{
+    width: 200px;
+  }
+
   .container {
     padding-bottom: 30px;
   }
@@ -76,11 +104,17 @@
     width: 100%;
   }
 
+  .skillsWrapper{
+    position: relative;
+  }
+
   .Skill{
     flex-direction: column;
 
     width: 95%;
     padding: 15px 15px;
+
+    box-shadow: 0px -6px 24px rgba(0, 0, 0, 0.25);
   }
 
   .Skill:nth-child(2n){
@@ -119,6 +153,16 @@
 
   .container {
     padding-bottom: 40px;
+  }
+
+  .eyesWrapper{
+    bottom: -25%;
+    left: 41%;
+
+    width: 450px;
+    padding: 5px 10px 20px 10px;
+
+    font-size: 20px;
   }
 
 
@@ -230,6 +274,19 @@
     padding-bottom: 60px;
   }
 
+  .eyesWrapper{
+    bottom: -16%;
+    left: 50%;
+
+    padding: 5px 20px 70px 20px;
+
+    font-size: 30px;
+  }
+
+  .eyesWrapper:hover{
+    bottom: -13%;
+  }
+
   .section{
     flex-direction: row;
 
@@ -333,6 +390,11 @@
 
   .container{
     padding-bottom: 80px;
+  }
+
+  .eyesWrapper{
+    bottom: -16%;
+    left: 61%;
   }
 
   .section{

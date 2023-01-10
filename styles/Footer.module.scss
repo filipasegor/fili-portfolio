@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0px auto 0px auto;
 
-  background: #FD4C00;
+  background: radial-gradient(112.23% 90.87% at 50% 100%, #FF5C00 0%, rgba(255, 92, 0, 0) 100%);
 
   justify-content: space-between;
   align-items: flex-end;
@@ -36,12 +36,12 @@
 
 @include phone(){
   .footerContainer{
-    padding: 5px 10px 0px 10px;
+    padding: 300px 10px 0px 10px;
   }
 }
 
 @include tablet(){
   .footerContainer{
-    padding: 0px 60px 0px 60px;
+    padding: 400px 60px 0px 60px;
   }
 }

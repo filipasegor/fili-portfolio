@@ -15,7 +15,7 @@ export default function TaskDesc(props) {
       </div>
       <div className={styles.innerWrapper}>
         <Link href={props.href ?? ""}>
-          <a className={styles.name}>
+          <a className={styles.link}>
           {props.linkName}
           </a>
         </Link>
