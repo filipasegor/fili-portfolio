@@ -52,7 +52,6 @@ export default function Home() {
 
 
       <MainSection />
-      <Eyes />
       <section className={styles.skillsWrapper}>
         <section className={styles.Skill}>
           <SkillDesc side="left"
