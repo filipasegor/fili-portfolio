@@ -1,0 +1,54 @@
+@import "../mixins";
+
+.Wrapper {
+    width: 100%;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.smallBubble{
+    width: 30%;
+    background-color: #F1F1F1;
+    padding: 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.largeBubble{
+    width: 70%;
+    background-color: #F1F1F1;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.headerWrapper {
+    font-size: 17px;
+    font-family: "RooftopBold";
+}
+
+.textWrapper{
+    font-size: 20px;
+    font-family: "RooftopRegular";
+    margin: 10px 0px;
+}
+
+.textWrapperInner {
+    font-size: 20px;
+    font-family: "RooftopRegular";
+    margin: 10px 0px;
+}
+
+
+
+@include phone(){
+
+   
+  
+  }
+  
+  @include tablet(){
+  
+    
+    
+  }
+  

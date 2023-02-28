@@ -1,0 +1,37 @@
+@import "../mixins";
+
+.Wrapper h3{
+  color: #000000;
+
+  font-family: "RooftopBold";
+
+}
+
+.Wrapper{
+  width: 100%;
+}
+
+
+@include phone(){
+
+  .Wrapper{
+    padding: 100px 0px 50px 0px;
+  }
+  
+  .Wrapper h3{
+    font-size: 25px;
+  } 
+
+}
+
+@include tablet(){
+
+  .Wrapper{
+    padding: 100px 0px 50px 0px;
+  }
+
+  .Wrapper h3{
+    font-size: 35px;
+  }
+  
+}

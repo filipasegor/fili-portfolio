@@ -25,6 +25,8 @@ import packs from '../../public/works/trimyas/packs.png'
 import posters from '../../public/works/trimyas/posters.png'
 import salami from '../../public/works/trimyas/salami.png'
 import shop from '../../public/works/trimyas/shop.png'
+import wood from '../../public/works/trimyas/wood.png'
+import meatroll from '../../public/works/trimyas/meatroll.png'
 
 import som from '../../public/som.png'
 
@@ -104,13 +106,19 @@ export default function Project(props){
           <Media
             label="false"
             media="img"
-            src={shop}
+            src={billboard1}
           />
 
           <Media
             label="false"
             media="img"
-            src={billboard1}
+            src={wood}
+          />
+
+          <Media
+            label="false"
+            media="img"
+            src={meatroll}
           />
 
           <Media

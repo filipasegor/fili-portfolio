@@ -19,7 +19,10 @@ import lk from '../public/lk.png'
 import bionum from '../public/bionum.png'
 import cil from '../public/cil.png'
 import pack from '../public/pack.png'
+import test from '../public/test.png'
 
+
+import thumbSber from '../public/thumbSber.png'
 import thumbShmot from '../public/thumbShmot.png'
 import thumbCharus from '../public/thumbCharus.png'
 import thumbNhs from '../public/thumbNhs.png'
@@ -51,6 +54,15 @@ export default function Projects(props) {
             Придумываю, проектирую, дизайню, разрабатываю и держусь молодцом
           </h1>
         </div>
+
+
+        {/* <MdProject href="/works/SberSpp"
+        srcThumb={thumbSber} altThumb="thumbSber"
+        src={require("../public/videos/SberCover.mp4")}
+        type="arrow"
+        media="video">
+          <h1>Интерфейсы цифровой системы для сотрудников Сбера</h1>
+        </MdProject> */}
 
         <LgProject
         href="https://www.artlebedev.ru/narayone/"
@@ -109,7 +121,7 @@ export default function Projects(props) {
         srcThumb={som} altThumb="thumbDeff"
         src={require('../public/videos/som.mp4')}
         type="arrow" media="video">
-        <h1>Айдентика<br /> для интеренет издания Сом</h1>
+        <h1>Айдентика<br /> для интернет издания Сом</h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
