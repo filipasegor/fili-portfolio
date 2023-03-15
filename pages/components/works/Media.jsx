@@ -15,6 +15,17 @@ export default function Media(props){
     setLoading(true);
   }
 
+  // const video = document.getElementById('video');
+  // const videoWorks = !!document.createElement('video').canPlayType;
+  
+  // function removeControls(){
+  //   if (videoWorks) {
+  //     video.controls = false;
+  //     videoControls.classList.remove('hidden');
+  //   }
+  // }
+
+
   const img = (
       <div className={styles.imgWraper}>
         <Image
@@ -42,7 +53,7 @@ export default function Media(props){
          objectFit="cover"
        />
       </div>
-      <video autoPlay muted loop playsInline
+      <video id="video" autoPlay muted loop playsInline
       className={styles.video}
       onLoadedData={() => {
           loadingData();
@@ -53,6 +64,7 @@ export default function Media(props){
     </div>
   );
 
+
   const label = (
     <div className={styles.labelWrapper}
     style ={{justifyContent: props.left ? "flex-start" : "flex-end"}}
@@ -62,7 +74,7 @@ export default function Media(props){
       </div>
     </div>
   )
-
+  
   return(
     <>
       <div
@@ -73,5 +85,5 @@ export default function Media(props){
         {props.media === "video" ? video : img}
       </div>
     </>
-  )
+  );
 }

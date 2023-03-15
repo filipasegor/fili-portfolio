@@ -56,13 +56,13 @@ export default function Projects(props) {
         </div>
 
 
-        {/* <MdProject href="/works/SberSpp"
+        <MdProject href="/works/SberSpp"
         srcThumb={thumbSber} altThumb="thumbSber"
         src={require("../public/videos/SberCover.mp4")}
         type="arrow"
         media="video">
           <h1>Интерфейсы цифровой системы для сотрудников Сбера</h1>
-        </MdProject> */}
+        </MdProject>
 
         <LgProject
         href="https://www.artlebedev.ru/narayone/"

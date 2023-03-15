@@ -27,11 +27,20 @@
 @include tablet(){
 
   .Wrapper{
-    padding: 100px 0px 50px 0px;
+    padding: 100px 0px 50px 40px;
   }
 
   .Wrapper h3{
     font-size: 35px;
+  }
+  
+}
+
+
+@include desktop(){
+
+  .Wrapper{
+    padding: 100px 0px 50px 40px;
   }
   
 }

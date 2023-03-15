@@ -7,15 +7,12 @@
 }
 
 .smallBubble{
-    width: 30%;
     background-color: #F1F1F1;
     padding: 15px;
     border-radius: 20px;
-    margin-right: 10px;
 }
 
 .largeBubble{
-    width: 70%;
     background-color: #F1F1F1;
     padding: 15px;
     border-radius: 20px;
@@ -42,13 +39,41 @@
 
 @include phone(){
 
+    .Wrapper{
+        flex-direction: column;
+      }
+    
+    .smallBubble{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .largeBubble{
+        width: 100%;
+    }
+    
    
   
-  }
+}
   
-  @include tablet(){
+@include tablet(){
   
+    .Wrapper{
+      padding-left: 40px;
+      flex-direction: row;
+    }
+
+    .smallBubble{
+        width: 50%;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    .largeBubble{
+        width: 50%;
+    }
     
     
-  }
+}
   
