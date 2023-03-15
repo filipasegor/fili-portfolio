@@ -137,6 +137,12 @@ export default function Project(props){
           </DescriptionLayout>
 
           <Media
+            label="false"
+            media="video"
+            src={require('../../public/works/sberspp/building.mp4')}
+          />
+
+          <Media
             srcThumb={thumb_ds} 
             altThumb="thumb_ds"
             label="false"
