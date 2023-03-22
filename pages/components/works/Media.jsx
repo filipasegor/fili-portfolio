@@ -40,8 +40,7 @@ export default function Media(props){
   );
 
   const video = (
-    <div
-    className={styles.videoWrapper}>
+    <div className={styles.videoWrapper}>
       <div
       className={styles.thumbWrapper}
       style={{ display: loading ? "none" : "block" }}>

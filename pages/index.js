@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Fili</title>
+        <title>Egor Filipas</title>
         <meta name="description" />
         <meta property="og:title" content="Portfolio"/>
         <meta property="og:type" content="website" />

@@ -3,30 +3,47 @@ import Image from 'next/image'
 
 import {useState, useEffect, useRef} from "react"
 
-import styles from '../../../styles/works/Media.module.scss'
+import styles from '../../../styles/works/Video.module.scss'
 
 
 
 export default function Video(props){
 
   const [loading, setLoading] = useState(false);
+  const [currentVideoTime, setCurrentVideoTime] = useState(0);
   const [progress, setProgress] = useState(0);
 
   function loadingData(){
     setLoading(true);
   }
 
+
   const ref = useRef(null);
+
 
   useEffect(() => {
     const video = ref.current;
-    console.log(video);
-    console.log(video.id);
     video.controls = false;
+    video.currentTime = currentVideoTime;
+    setCurrentVideoTime(Math.floor(video.currentTime));
 
-    setProgress((video.currentTime / video.duration) * 100)
-  }, []);
+    const intervalId = setInterval(() => {
+      setCurrentVideoTime(prev => video.currentTime + 1);
+    }, 1000)
 
+    return () => {
+      clearInterval(intervalId)
+    }
+    
+
+  },  [currentVideoTime]);
+
+
+
+  function handleProgressChange(e){
+    setCurrentVideoTime(Number(e.target.value))
+
+  }
 
   const label = (
     <div className={styles.labelWrapper}
@@ -36,34 +53,45 @@ export default function Video(props){
        {props.children}
       </div>
     </div>
-  )
+  );
   
   return(
     <>
       <div className={styles.mediaWrapper} style={{marginTop: props.label === "true" ? "60px" : "0px"}} >
         {props.label === "true" && label}
-        <div className={styles.videoWrapper} >
-        <div
+        <div className={styles.videoWrapper}>
+          <div
             className={styles.thumbWrapper}
             style={{ display: loading ? "none" : "block" }}>
-          <Image
-          className={styles.thumb}
-          alt={props.altThumb}
-          src={props.srcThumb}
-          layout="responsive"
-          objectFit="cover"
-        />
-        </div>
-        <video ref={ref} id="video" autoPlay muted loop playsInline controls
-          className={styles.video}
-          onLoadedData={() => {
+              <Image
+              className={styles.thumb}
+              alt={props.altThumb}
+              src={props.srcThumb}
+              layout="responsive"
+              objectFit="cover"
+            />
+          </div>
+          <video 
+            onLoadedData={() => {
               loadingData();
             }}
-          style={{ display: loading ? "block" : "none" }}>
-          <source src={props.src} />
-        </video>
-        {progress}
-      </div>
+            ref={ref}
+            autoPlay muted loop playsInline controls 
+            className={styles.video}
+            style={{ display: loading ? "block" : "none" }}>
+            >
+            <source src={props.src} />
+          </video>
+          <div className={styles.currentTimeWrapper}>{currentVideoTime < 10 ? `0:0${currentVideoTime}` : `0:${currentVideoTime}`}</div>
+          <input
+              className={styles.progressBarInput}
+              type="range"
+              min="0"
+              max="30"
+              value={currentVideoTime}
+              onChange={(e) => handleProgressChange(e)}
+            />
+        </div>
       </div>
     </>
   );

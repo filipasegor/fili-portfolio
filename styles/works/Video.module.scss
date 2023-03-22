@@ -1,0 +1,195 @@
+@import "../mixins";
+
+
+.textWrapper{
+  max-width: 600px;
+}
+
+@keyframes color {
+    0%   { background: #F1F1F1; }
+    50% { background: #D1D1D1; }
+    100%   { background: #F1F1F1; }
+}
+
+
+.thumb{
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+}
+
+.video{
+  width: 100%;
+  border-radius: 7px;
+}
+
+.progressBar{
+  height: 10px;
+  background-color: aqua;
+  transition: width 0.3s;
+}
+
+.progressBarInput{
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.progressBarInput  {
+  height: 21px;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.progressBarInput:focus {
+  outline: none;
+}
+
+.progressBarInput::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #000000;
+  border-radius: 50px;
+  border: 0px solid #000000;
+}
+
+.progressBarInput::-webkit-slider-thumb {
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 30px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+.progressBarInput:focus::-webkit-slider-runnable-track {
+  background: #000000;
+}
+
+
+.progressBarInput::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #000000;
+  border-radius: 50px;
+  border: 0px solid #000000;
+}
+.progressBarInput::-moz-range-thumb {
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 30px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+.progressBarInput::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.progressBarInput::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #000000;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px #000000;
+}
+.progressBarInput::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #000000;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px #000000;
+}
+.progressBarInput::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 30px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.progressBarInput :focus::-ms-fill-lower {
+  background: #000000;
+}
+.progressBarInput :focus::-ms-fill-upper {
+  background: #000000;
+}
+
+.currentTimeWrapper{
+  width: 100%;
+  margin-top: 5px 0px;
+  text-align: center;
+}
+
+
+.thumbWrapper{
+  width: 100%;
+  height: auto;
+
+  animation: color 1.5s infinite linear;
+
+  border-radius: 10px;
+  background: #F1F1F1;
+
+}
+
+
+.videoWrapper{
+  width: 100%;
+}
+
+
+
+.labelWrapper{
+  display: flex;
+
+  width: 100%;
+  padding: 0px 0px 16px 0px;
+
+  font-family: "RooftopRegular";
+
+}
+
+@include phone(){
+
+  .mediaWrapper{
+    margin: 20px 0px;
+  }
+
+  .labelWrapper{
+    font-size: 20px;
+  }
+
+}
+
+@include tablet(){
+  .mediaWrapper{
+    margin: 20px 0px;
+  }
+  .labelWrapper{
+    font-size: 25px;
+  }
+}
+
+@include desktop(){
+
+  .mediaWrapper{
+    margin: 40px 0px;
+  }
+}

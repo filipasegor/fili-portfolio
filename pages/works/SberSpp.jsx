@@ -91,14 +91,18 @@ export default function Project(props){
           />
 
 
-          {/* <Video
-            label="false"
+          <Video
+            label="true"
             media="video"
-            right="right"
+            left="left"
             srcThumb={thumb_start} 
             altThumb="start"
             src={require('../../public/works/sberspp/start.mp4')}
-          /> */}
+          >
+          <p>
+            Типичный сценарий обслуживания
+          </p>
+          </Video> 
 
 
           <Media
