@@ -104,20 +104,6 @@ export default function Project(props){
           </p>
           </Video> 
 
-
-          <Media
-            label="true"
-            media="video"
-            right="right"
-            srcThumb={thumb_start} 
-            altThumb="start"
-            src={require('../../public/works/sberspp/start.mp4')}
-          >
-          <p>
-            Типичный сценарий обслуживания
-          </p>
-          </Media>
-
           <Media
             label="true"
             media="video"
