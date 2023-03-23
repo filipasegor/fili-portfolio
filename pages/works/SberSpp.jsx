@@ -17,7 +17,6 @@ import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 import SubHeading from '../components/works/SubHeading'
 import Bubble from '../components/works/Bubble'
-import Video from '../components/works/Video'
 
 import thumbMain_Page from '../../public/works/charus_site/thumbMain_Page.png'
 import thumbPages from '../../public/works/charus_site/thumbPages.png'
@@ -89,7 +88,7 @@ export default function Project(props){
             src={tasks}
             alt="tasks"
           />
-
+{/* 
 
           <Video
             label="true"
@@ -102,7 +101,7 @@ export default function Project(props){
           <p>
             Типичный сценарий обслуживания
           </p>
-          </Video> 
+          </Video>  */}
 
 
           <Media
