@@ -79,7 +79,6 @@ export default function Video(props){
             autoPlay muted loop playsInline controls 
             className={styles.video}
             style={{ display: loading ? "block" : "none" }}>
-            >
             <source src={props.src} />
           </video>
           <div className={styles.currentTimeWrapper}>{currentVideoTime < 10 ? `0:0${currentVideoTime}` : `0:${currentVideoTime}`}</div>
