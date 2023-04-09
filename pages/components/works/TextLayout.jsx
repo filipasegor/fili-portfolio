@@ -1,6 +1,6 @@
 import styles from '../../../styles/works/TextLayout.module.scss'
 
-export default function (props) {
+export default function TextLayout(props) {
 
   return (
     <>
