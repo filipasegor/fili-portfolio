@@ -12,6 +12,9 @@
   margin-bottom: 25px;
 }
 
+.TextWrapper {
+  display: flex;
+}
 
 
 @include phone(){
@@ -38,7 +41,7 @@
 @include desktop(){
 
   .Wrapper{
-    width: 60vw;
+    width: 40vw;
     padding-top: 10px;
   }
 

@@ -11,15 +11,13 @@ export default function Video(props){
 
   const [loading, setLoading] = useState(false);
   const [currentVideoTime, setCurrentVideoTime] = useState(0);
-  const [progress, setProgress] = useState(0);
+ 
 
   function loadingData(){
     setLoading(true);
   }
 
-
   const ref = useRef(null);
-
 
   useEffect(() => {
     const video = ref.current;
@@ -28,16 +26,14 @@ export default function Video(props){
     setCurrentVideoTime(Math.floor(video.currentTime));
 
     const intervalId = setInterval(() => {
-      setCurrentVideoTime(prev => video.currentTime + 1);
+      setCurrentVideoTime(video.currentTime + 1);
     }, 1000)
 
     return () => {
       clearInterval(intervalId)
-    }
-    
-
+    }    
+  
   },  [currentVideoTime]);
-
 
 
   function handleProgressChange(e){
@@ -71,25 +67,26 @@ export default function Video(props){
               objectFit="cover"
             />
           </div>
+          <div style={{ display: loading ? "block" : "none" }}>
           <video 
             onLoadedData={() => {
               loadingData();
             }}
             ref={ref}
             autoPlay muted loop playsInline controls 
-            className={styles.video}
-            style={{ display: loading ? "block" : "none" }}>
+            className={styles.video}>
             <source src={props.src} />
           </video>
           <div className={styles.currentTimeWrapper}>{currentVideoTime < 10 ? `0:0${currentVideoTime}` : `0:${currentVideoTime}`}</div>
           <input
               className={styles.progressBarInput}
               type="range"
-              min="0"
-              max="30"
+              min={props.min}
+              max={props.max}
               value={currentVideoTime}
               onChange={(e) => handleProgressChange(e)}
             />
+          </div>
         </div>
       </div>
     </>

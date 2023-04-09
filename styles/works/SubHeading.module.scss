@@ -3,7 +3,7 @@
 .Wrapper h3{
   color: #000000;
 
-  font-family: "RooftopBold";
+  font-family: "RooftopMedium";
 
 }
 
@@ -15,7 +15,8 @@
 @include phone(){
 
   .Wrapper{
-    padding: 100px 0px 50px 0px;
+    width: 80%;
+    padding: 30px 0px 20px 0px;
   }
   
   .Wrapper h3{
@@ -27,7 +28,8 @@
 @include tablet(){
 
   .Wrapper{
-    padding: 100px 0px 50px 40px;
+    width: 80%;
+    padding: 50px 0px 20px 0px;
   }
 
   .Wrapper h3{
@@ -40,7 +42,8 @@
 @include desktop(){
 
   .Wrapper{
-    padding: 100px 0px 50px 40px;
+    width: 40%;
+    padding: 100px 0px 50px 0px;
   }
   
 }

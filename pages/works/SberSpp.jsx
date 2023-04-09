@@ -9,6 +9,7 @@ import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
+import TextLayout from '../components/works/TextLayout'
 import DescriptionPar from '../components/works/DescriptionPar'
 import DescriptionTitle from '../components/works/DescriptionTitle'
 import MdProject from '../components/_MdProject'
@@ -62,16 +63,16 @@ export default function Project(props){
         <section className={styles.content}>
           <TaskDesc
           taskName="Задача"
-          taskDesc="Сделать систему, с помощью которой сотрудники могли бы рассказывать про все 214 услуг и сервисы Сбера клиентам, которые пришли в оффлайн офис."
+          taskDesc="Сделать цифровую систему для сотрудников Сбера"
           >
           </TaskDesc>
 
           <DescriptionLayout>
             <DescriptionTitle>
-            Объединение всех действий менеджера в&nbsp;одну систему
+              Объединение всех действий менеджера в&nbsp;одну систему
             </DescriptionTitle>
             <DescriptionPar>
-            СБОЛ Про&nbsp;&mdash; это цифровая система работы для сотрудников, с&nbsp;помощью которой они консультируют клиентов, продают услуги и&nbsp;сервисы Сбера, ведут учет продаж, оформляют сделки, анализируют информацию о&nbsp;клиенте и&nbsp;выполняют все остальные функции, которые могут понадобиться для клиента.
+              СБОЛ Про&nbsp;&mdash; это цифровая система работы для сотрудников, с&nbsp;помощью которой они консультируют клиентов, продают услуги и&nbsp;сервисы Сбера, ведут учет продаж, оформляют сделки, анализируют информацию о&nbsp;клиенте и&nbsp;выполняют все остальные функции, которые могут понадобиться для клиента.
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -93,29 +94,31 @@ export default function Project(props){
 
           <Video
             label="true"
-            media="video"
             left="left"
             srcThumb={thumb_start} 
             altThumb="start"
             src={require('../../public/works/sberspp/start.mp4')}
+            min="0"
+            max="26"
           >
           <p>
             Типичный сценарий обслуживания
           </p>
-          </Video> 
+          </Video>
 
-          <Media
+          <Video
             label="true"
-            media="video"
             left="left"
             srcThumb={thumb_alloperations} 
             altThumb="alloperations"
             src={require('../../public/works/sberspp/alloperations.mp4')}
+            min="0"
+            max="49"
           >
           <p>
             Все продукты в одном месте
           </p>
-          </Media>
+          </Video>
 
           <DescriptionLayout>
             <DescriptionTitle>
@@ -142,35 +145,38 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Продуктовые решения
+              СберПрайм — подписка на сервисы партнёров Сбера
             </DescriptionTitle>
-            <DescriptionPar>
-            По&nbsp;отдельным важным продуктам были созданы сценарии и&nbsp;интерфейсы отличающиеся из&nbsp;системных пользовательских сценариев
-            </DescriptionPar>
+
+            <TextLayout>
+              <DescriptionPar heading="heading">
+                Задача
+              </DescriptionPar>
+              <DescriptionPar lastChild="lastChild">
+                Рассказать про подписку СберПрайм и ее премущества
+              </DescriptionPar>
+              <DescriptionPar heading="heading">
+                Проблемы
+              </DescriptionPar>
+              <DescriptionPar>
+                Продукт сложный, поэтому про него сложно рассказывать менеджерам
+              </DescriptionPar>
+              <DescriptionPar>
+                Много тратиться времени и сил на рассказ
+              </DescriptionPar>
+              <DescriptionPar>
+                Менеджеру сложно изначально понять в&nbsp;чем польза от&nbsp;прайма для конкретного клиента
+              </DescriptionPar>
+            </TextLayout>
           </DescriptionLayout>
-
-          <SubHeading>
-            СберПрайм
-          </SubHeading>
           
-          <Bubble 
-          small_H="ЗАДАЧА"
-          small_P="Рассказать про подписку СберПрайм и ее премущества"
-          large_H="ПРОБЛЕМЫ"
-          > 
-            <ul className={styles.ulList}>
-              <li>Продукт сложный, поэтому про него сложно рассказывать менеджерам</li>
-              <li>Много тратиться времени и сил на рассказ</li>
-              <li>Менеджеру сложно изначально понять в&nbsp;чем польза от&nbsp;прайма для конкретного клиента</li>
-            </ul>
-          </Bubble>
 
-          <Media
+          <Video
             srcThumb={thumb_prime} 
             altThumb="prime"
-            label="false"
-            media="video"
             src={require('../../public/works/sberspp/prime.mp4')}
+            min="0"
+            max="25"
           />
 
           <SubHeading>
@@ -184,50 +190,70 @@ export default function Project(props){
             alt="tasks"
           />
 
-          <SubHeading>
-            Вклады
-          </SubHeading>
+          <DescriptionLayout>
+            <DescriptionTitle>
+              Вклады и прочие финансовые продукты Сбера в одном месте 
+            </DescriptionTitle>
 
-          <Bubble 
-          small_H="ЗАДАЧА"
-          small_P="Сделать объединяющую страницу по всем вкладам"
-          large_H="ПРОБЛЕМЫ"
-          > 
-            <ul className={styles.ulList}>
-              <li>У&nbsp;сотрудниников не&nbsp;было такого инструмента, где&nbsp;бы они могли рассказать про все варианты вкладов и&nbsp;их&nbsp;условия всего</li>
-              <li>А&nbsp;клиент не&nbsp;мог оценить весь массив предложений и&nbsp;из&nbsp;него выбрать подходящий</li>
-            </ul>
-          </Bubble>
+            <TextLayout>
+              <DescriptionPar heading="heading">
+                Задача
+              </DescriptionPar>
+              <DescriptionPar lastChild="lastChild">
+                Сделать объединяющую страницу по всем вкладам
+              </DescriptionPar>
+              <DescriptionPar heading="heading">
+                Проблемы
+              </DescriptionPar>
+              <DescriptionPar>
+                У&nbsp;сотрудниников не&nbsp;было такого инструмента, где&nbsp;бы они могли рассказать про все варианты вкладов и&nbsp;их&nbsp;условия всего
+              </DescriptionPar>
+              <DescriptionPar>
+                А&nbsp;клиент не&nbsp;мог оценить весь массив предложений и&nbsp;из&nbsp;него выбрать подходящий
+              </DescriptionPar>
+            </TextLayout>
+          </DescriptionLayout>
 
-          <Media
+          <Video
             srcThumb={thumb_desposits} 
             altThumb="deposits"
-            label="false"
-            media="video"
             src={require('../../public/works/sberspp/deposits.mp4')}
+            min="0"
+            max="38"
           />
 
-          <SubHeading>
-            Конструктор страховок
-          </SubHeading>
 
-          <Bubble 
-          small_H="ЗАДАЧА"
-          small_P="Сделать конструктор страховок"
-          large_H="ПРОБЛЕМЫ"
-          > 
-            <ul className={styles.ulList}>
-              <li>Клиенты приходят в&nbsp;офис не&nbsp;за&nbsp;одной конкретной страховкой, а&nbsp;с&nbsp;потребоностью закрыть несколько сфер жизни: здоровье, финансы, недвижимость</li>
-              <li>А&nbsp;менеджерам трудно оформить сразу несколько страховок, рассказать про условия и&nbsp;посчитать стоимость для каждой</li>
-            </ul>
-          </Bubble>
+          <DescriptionLayout>
+            <DescriptionTitle>
+              Конструктор страховок, покрывающий все виды рисков
+            </DescriptionTitle>
 
-          <Media
+            <TextLayout>
+              <DescriptionPar heading="heading">
+                Задача
+              </DescriptionPar>
+              <DescriptionPar lastChild="lastChild">
+                Сделать конструктор страховок
+              </DescriptionPar>
+              <DescriptionPar heading="heading">
+                Проблемы
+              </DescriptionPar>
+              <DescriptionPar>
+                Клиенты приходят в&nbsp;офис не&nbsp;за&nbsp;одной конкретной страховкой, а&nbsp;с&nbsp;потребоностью закрыть несколько сфер жизни: здоровье, финансы, недвижимость
+              </DescriptionPar>
+              <DescriptionPar>
+                А&nbsp;менеджерам трудно оформить сразу несколько страховок, рассказать про условия и&nbsp;посчитать стоимость для каждой
+              </DescriptionPar>
+            </TextLayout>
+          </DescriptionLayout>
+
+          <Video
+            label="false"
             srcThumb={thumb_zls} 
             altThumb="zls"
-            label="false"
-            media="video"
             src={require('../../public/works/sberspp/zls.mp4')}
+            min="0"
+            max="36"
           />
 
           <Media
@@ -253,18 +279,20 @@ export default function Project(props){
             alt="Crosses"
           />
 
-          <Media
+          <Video
             label="true"
-            media="video"
             left="left"
             srcThumb={thumb_crosses} 
-            altThumb="crosses"
+            altThumb="none"
             src={require('../../public/works/sberspp/crosses.mp4')}
+            min="0"
+            max="40"
           >
-          <p>
-            Пример сложносочининнего сценария с кросспродажами
-          </p>
-          </Media>
+            <p>
+              Пример сложносочининнего сценария с кросспродажами
+            </p>
+          </Video> 
+
 
           <SubHeading>
             Показатели проделанной работы
@@ -280,6 +308,7 @@ export default function Project(props){
           <SubHeading>
             Всего было сделано более 320 страниц
           </SubHeading>
+
           <Media
             label="false"
             media="img"

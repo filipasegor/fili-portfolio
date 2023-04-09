@@ -65,7 +65,7 @@ function ActiveLink({ children, href }) {
         <a className={styles.default}>ПРОФИЛЬ</a>
       </Link>
       <Link href="/Works">
-        <a className={ styles.active}>РАБОТЫ</a>
+        <a className={styles.active}>РАБОТЫ</a>
       </Link>
     </nav>
     </>

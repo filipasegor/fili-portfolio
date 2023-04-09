@@ -1,0 +1,29 @@
+@import "../mixins";
+
+
+@include phone(){
+
+  .Wrapper{
+
+    margin: 30px 0px;
+  }
+
+
+}
+
+@include tablet(){
+  .Wrapper{
+    margin: 20px 0px 30px 0px;
+  }
+
+}
+
+@include desktop(){
+
+  .Wrapper{
+
+    margin: 0px 0 30px 0;
+
+  }
+
+}
