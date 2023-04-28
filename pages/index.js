@@ -5,15 +5,13 @@ import styles from '../styles/Home.module.css'
 import Header from './components/Header'
 
 import MainSection from './components/MainSection'
+import Media from './components/works/Media'
+import IndexMedia from './components/works/IndexMedia'
 import SkillDesc from './components/SkillDesc'
 import SkillImage from './components/SkillImage'
 import Par from './components/Par.jsx'
 import Eyes from './components/Eyes.jsx'
-import app from '../public/app-mob.png'
-import print from '../public/print.png'
-import ds from '../public/ds.png'
-import footerLogo from '../public/footer-logo.svg'
-import logo from '../public/logo.svg'
+import thumbDevelop from '../public/thumbDevelop.png'
 
 export default function Home() {
   return (
@@ -59,21 +57,15 @@ export default function Home() {
           descFirst="Изучу, что важно клиентам и придумаю, как донести до них пользу продукта или услуги. Спроектирую понятную логику сайта или приложения с удобным интерфейсом, чтобы посетители покупали или обращались в компанию"
           descSecond="Помогу с разработкой и запуском, чтобы итоговый результат приносил прибыль бизнесу, а пользователям — радость">
           </SkillDesc>
-          <SkillImage className={styles.SkillImage}
-          alt="app"
-          src={app}
-          objectFit="cover"
-          layout="responsive"
-          placeholder="blur"
+          <IndexMedia
+            altThumb="thumb_ds"
+            src={require('../public/videos/graf.mp4')}
           />
         </section>
         <section className={styles.Skill}>
-          <SkillImage className={styles.SkillImage}
-          alt="print"
-          src={print}
-          objectFit="cover"
-          layout="responsive"
-          placeholder="blur"
+          <IndexMedia
+            altThumb="thumb_ds"
+            src={require('../public/videos/sites.mp4')}
           />
           <SkillDesc side="right"
           title="Айдентинка и графический дизайн"
@@ -88,13 +80,12 @@ export default function Home() {
           descSecond="Например: в процессе проектирования сайтов или приложений я создаю дизайн-систему всех элементов интерфейса и композиций, поэтому страницы быстро и легко собираются"
           descThird="Навыки программирования помогают мне воплощать макеты в жизнь и делать дизайн, который не требует больших ресурсов на разработку и запуск">
           </SkillDesc>
-          <SkillImage className={styles.SkillImage}
-          alt="app"
-          src={ds}
-          objectFit="cover"
-          layout="responsive"
-          placeholder="blur"
+
+          <IndexMedia
+            srcThumb={thumbDevelop} altThumb="thumbCharus"
+            src={require('../public/videos/develop.mp4')}
           />
+
         </section>
       </section>
     </div>

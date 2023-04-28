@@ -44,7 +44,7 @@ export default function Projects(props) {
     <div className={styles.gradient}>
     </div>
       <Head>
-        <title>Fili</title>
+        <title>Egor Filipas</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

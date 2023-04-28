@@ -37,7 +37,7 @@ export default function Project(props){
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
