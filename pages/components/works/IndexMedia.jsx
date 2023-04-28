@@ -29,33 +29,6 @@ export default function IndexMedia(props){
     </div>
 );
 
-
-// const video = (
-//   <div className={styles.videoWrapper}
-//     >
-//     <video id="video" autoPlay muted loop playsInline
-//     onLoadedData={handleMediaLoading}
-//     style={{backgroundColor: loaded ? "red" : "green" }}
-//     className={styles.video}>
-//     <source src={props.src} />
-//     </video>
-//   </div>
-// );
-
-
-  // const video = (
-  //   <div className={styles.videoWrapper}>
-  //     <video id="video" autoPlay muted loop playsInline
-  //     className={styles.video}
-  //     onLoadedData={() => {
-  //         loadingData();
-  //       }}
-  //     style={{ display: loading ? "block" : "none" }}>
-  //     <source src={props.src} />
-  //     </video>
-  //   </div>
-  // );
-
   
   return(
     <>
@@ -63,7 +36,7 @@ export default function IndexMedia(props){
       <div className={styles.videoWrapper}>
         <video id="video" autoPlay muted loop playsInline
         onLoadedData={handleMediaLoading}
-        style={{backgroundColor: loaded ? "red" : "green" }}
+        style={{animation: loaded ? "none" : "color 1.5s infinite linear" }}
         className={styles.video}>
         <source src={props.src} />
         </video>

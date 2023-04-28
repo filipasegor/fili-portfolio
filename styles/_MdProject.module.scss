@@ -106,6 +106,12 @@
   }
 
   @include phone(){
+
+    .Button{
+      display: none;
+    }
+
+
     .Desc h1{
       margin: 10px 0px;
     }
@@ -126,6 +132,10 @@
 
     .Desc h1{
       margin: 10px 0px;
+    }
+
+    .Button{
+      display: block;
     }
 
     .Desc{

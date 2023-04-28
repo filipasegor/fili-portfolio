@@ -68,7 +68,6 @@
   }
 
   .Button {
-    display: block;
     display: flex;
     flex-direction: row;
 
@@ -114,6 +113,12 @@
 
 
   @include phone(){
+
+    .Button{
+      display: none;
+    }
+
+
     .Desc h1{
       margin: 10px 0px;
 
@@ -144,6 +149,10 @@
       font-size: 20px;
     }
 
+    .Button{
+      display: block;
+    }
+
 
     .Wrapper{
       flex-direction: column-reverse;
@@ -155,6 +164,7 @@
   }
 
   @include desktop(){
+
 
     .Wrapper{
       flex-direction: row;
