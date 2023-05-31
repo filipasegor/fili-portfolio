@@ -1,6 +1,23 @@
 @import "mixins";
 
 
+.select{
+  font-family: "BergenMono-Regular";
+  font-size: 20px;
+  backdrop-filter: blur(4px);
+  border-radius: 11px;
+  padding: 10px 27px 10px 9px;
+  border: none;
+  background: rgba(205, 205, 205, 0.4);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../public/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px)center;
+  background-size: 13px;
+}
+
 .imgContainer{
   position: absolute;
   z-index: 11;
@@ -34,7 +51,11 @@
     margin-bottom: 20px;
     padding: 15px 0px;
 
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .select{
+    margin: 0px 10px 0px 10px;
   }
 
 
@@ -45,15 +66,35 @@
   .logoWrapper{
     width: 100%;
   }
+
   .imgContainer{
     position: absolute;
     top: 20px;
+
+    flex-direction: row;
 
     height: auto;
     margin-bottom: 20px;
     padding: 16px 0px;
 
+    margin: 0px;
+
     justify-content: flex-start;
+  }
+
+  .select{
+    margin: 0px 30px 0px 30px;
+  }
+
+  @include desktop(){
+
+    .imgContainer{
+      flex-direction: column;
+    }
+
+    .select{
+      margin: 130px 10px 10px 10px;
+    }
   }
 
 }

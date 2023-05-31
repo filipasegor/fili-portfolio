@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -15,6 +14,8 @@ import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
 
 import scenarios from '../../public/works/iir/scenarios.png'
 import head from '../../public/works/iir/head.png'
@@ -27,12 +28,15 @@ import charus_site from '../../public/charus_site.png'
 import rkeeper from '../../public/rkeeper.png'
 
 
+import { FormattedMessage } from "react-intl";
+
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -44,14 +48,21 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Спроектировать интерфейсы для инвестиционного продукта Сбера"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="iirTaskDesc" /> 
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>В приложении СберБанк Онлайн клиент может получить профессиональную рекомендацию, куда инвестировать</h1>
+            <h1>
+              <FormattedMessage id="iirHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -62,7 +73,7 @@ export default function Project(props){
             src={require("../../public/works/iir/profile.mp4")}
           >
           <p>
-            Сначала клиент проходит короткий тест на знание экономики и рассказывает про свой опыт. По результатам ответов алгоритм понимает какой перед ним инвестор. Это нужно, чтобы инвестиционная рекомендация подходила клиенту
+            <FormattedMessage id="iirTest" /> 
           </p>
           </Media>
 
@@ -74,20 +85,20 @@ export default function Project(props){
             src={require("../../public/works/iir/params.mp4")}
           >
           <p>
-            Клиенту предлагается настроить портфель под себя
+            <FormattedMessage id="iirSettings" /> 
           </p>
           </Media>
 
           <DescriptionLayout>
             <DescriptionTitle>
-             Инвестиционная<br/> стратегия
+             <FormattedMessage id="iirPortfolio" /> 
             </DescriptionTitle>
             <DescriptionPar>
              <p>
-              По итогу клиенту предлагается портфель состоящий из разных ценных бумаг. Этот портфель соответствует профилю клиента и его пожеланиям.
+              <FormattedMessage id="iirPortfolioPar1" />
              </p>
              <p>
-              В инвестицонной стратегии клиенту демострируются, какие именно бумаги входят в портфель и в каких долях, прогноз доходности, а также историческая доходность. Все это помогает клиенту оценить риски и принять решение о покупке.
+              <FormattedMessage id="iirPortfolioPar2" />
              </p>
             </DescriptionPar>
           </DescriptionLayout>
@@ -107,7 +118,7 @@ export default function Project(props){
             src={require("../../public/works/iir/proceed.mp4")}
           >
           <p>
-            Портфель оформляется удобно и быстро в несколько кликов
+            <FormattedMessage id="iirProceed" />
           </p>
           </Media>
 
@@ -118,7 +129,7 @@ export default function Project(props){
             src={scenarios}
           >
           <p>
-            Также было спроектировано несколько версий сценариев и они разрабатывались по мере готовности. Таким образом, заказчик смог запустить продукт в самые короткие сроки, а не разрабатывать первую версию несколько лет.
+            <FormattedMessage id="iirUx" />
           </p>
           </Media>
 
@@ -132,12 +143,18 @@ export default function Project(props){
           src={require("../../public/works/charus_site/header_media.mp4")}
           type="arrow"
           media="video">
-            <h1>Сайт Чаруса</h1>
+            <h1>
+              <FormattedMessage id="worksCharusSite" />
+            </h1>
           </MdProject>
 
           <LgProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={rkeeper} type="logo" media="img">
-            <h1>Интерфейс приложения «Эркипер»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksRkeeper" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </LgProject>
 
         </Suggested>

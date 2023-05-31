@@ -5,7 +5,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -15,6 +14,10 @@ import MdProject from '../components/_MdProject'
 import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
+
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
 
 
 import pages from '../../public/works/charus_site/pages.png'
@@ -29,13 +32,15 @@ import thumbCharus from '../../public/thumbCharus.png'
 import thumbNhs from '../../public/thumbNhs.png'
 import thumbShmot from '../../public/thumbShmot.png'
 
+import { FormattedMessage } from "react-intl";
+
 
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -47,17 +52,32 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Спроектировать сайт для инженерной компнии"
-          href="https://www.charus.ru/"
-          linkName="Charus.ru"
-          linkDesc="Собирается заказчиком самостоятельно"
-          >
-          </TaskDesc>
+    
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="charusTaskDesc" /> 
+              </p>
+            </TaskDesc>
+            <TaskLink>
+              <Link href="https://www.charus.ru/">
+                <a className={styles.TaskDescLink}>
+                  Charus.ru
+                </a>
+              </Link>
+                <p>
+                  <FormattedMessage id="charuslinkDesc" /> 
+                </p>
+            </TaskLink>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>Чарус проектирует и устанавливает системы коммунникации и водоснабжения, поставляет и ремонтирует сантехнику</h1>
+            <h1>
+              <FormattedMessage id="charusSiteMainHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -73,7 +93,9 @@ export default function Project(props){
             src={pages}
             right="right"
           >
-          <p>На сайте продемонстрированы все услуги, которые оказываает компания</p>
+          <p>
+           <FormattedMessage id="charusSiteHomePage" /> 
+          </p>
           </Media>
 
           <Media
@@ -83,15 +105,17 @@ export default function Project(props){
             src={require('../../public/works/charus_site/pages_video.mp4')}
             left="left"
           >
-          <p>Посетителя сайта встречает крутая заставка на страницах услуг</p>
+          <p>
+            <FormattedMessage id="charusSiteScreenSaver" /> 
+          </p>
           </Media>
 
           <DescriptionLayout>
             <DescriptionTitle>
-            Дизайн система и автоматизация сборки страниц
+              <FormattedMessage id="charusSiteDS" /> 
             </DescriptionTitle>
             <DescriptionPar>
-            Была разработана система компонентов, из которых собираются все страницы на сайте. Таким образом экономится куча времени и ресурсов на сборку страниц. Благодря этой дизайн-системе заказчику будет легко самостоятельно добавлять новые услуги в будущем.
+              <FormattedMessage id="charusSiteComponents" /> 
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -109,8 +133,7 @@ export default function Project(props){
             right="right"
           >
           <p>
-            Также было задизайнено куча вспомогательных страниц и адаптив
-            под мобильные устройства
+            <FormattedMessage id="charusSiteAdditionalPages" /> 
           </p>
           </Media>
           <ProjectFooter date="15.07.2022" />
@@ -122,7 +145,9 @@ export default function Project(props){
           src={require("../../public/videos/charus.mp4")}
           type="arrow"
           media="video">
-            <h1>Айдентика<br /> для компании Чарус</h1>
+            <h1>
+              <FormattedMessage id="worksCharusLogo" />
+            </h1>
           </MdProject>
 
           <LgProject
@@ -131,8 +156,12 @@ export default function Project(props){
           src={require("../../public/videos/narayone.mp4")}
           type="logo"
           media="video">
-            <h1>Сайт проекта «На районе»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksNarayone" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </LgProject>
 
           <MdProject
@@ -140,8 +169,12 @@ export default function Project(props){
           srcThumb={thumbNhs} altThumb="thumbNhs"
           src={require("../../public/videos/nhs.mp4")}
            type="logo" media="video">
-            <h1>Сайт компании «Найтхок солюшнс»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksNhs" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </MdProject>
         </Suggested>
 

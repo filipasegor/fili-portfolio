@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+
+
+const nextTranslate = require('next-translate');
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -6,4 +10,9 @@ const nextConfig = {
 
 const withVideos = require('next-videos')
 
-module.exports = withVideos(), nextConfig
+
+module.exports = 
+  withVideos(),
+  nextConfig
+
+

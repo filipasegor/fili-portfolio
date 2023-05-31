@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -14,6 +13,8 @@ import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
 
 import logo from '../../public/works/charus_logo/logo.png'
 import paper from '../../public/works/charus_logo/paper.png'
@@ -28,12 +29,14 @@ import pipe from '../../public/works/charus_logo/pipe.png'
 import som from '../../public/som.png'
 import neo from '../../public/neo.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -45,15 +48,21 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработать айдентику и логотип для инженерной компании"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="charusTaskName" /> 
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <MainTitle>
             <h1>
-            Чарус проектирует и устанавливает системы водоснабжения с 1995 года. Новый логотип и айдентика раскрывают и передают суть их инженерного бизнеса и уверенность на рынке.</h1>
+              <FormattedMessage id="charusLogoHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -81,7 +90,7 @@ export default function Project(props){
             right="right"
           >
           <p>
-            Латинская версия логотипа
+           <FormattedMessage id="charusLogoEng" /> 
           </p>
           </Media>
 
@@ -110,7 +119,7 @@ export default function Project(props){
             right="left"
           >
           <p>
-            Знак великолепно себя чувствует в материальном мире, поэтому любой невзрачный объект или предмет становится заметным, когда на нем логотип Чаруса
+            <FormattedMessage id="charusEnd" /> 
           </p>
           </Media>
 
@@ -119,7 +128,9 @@ export default function Project(props){
 
         <Suggested>
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
-            <h1>Айдентика<br /> для интеренет издания Сом</h1>
+            <h1>
+              <FormattedMessage id="worksSom" /> 
+            </h1>
           </MdProject>
 
           <MdProject href="/works/Mms"
@@ -127,7 +138,7 @@ export default function Project(props){
           type="arrow"
           media="video">
             <h1>
-              Айдентика миграционного центра ММС
+              <FormattedMessage id="worksMmc" /> 
             </h1>
           </MdProject>
 
@@ -135,7 +146,9 @@ export default function Project(props){
           href="/works/Neo"
           src={neo}
           type="arrow" media="img">
-          <h1>Айдентика<br /> для HЭО-Бюро</h1>
+            <h1>
+              <FormattedMessage id="worksNeo" /> 
+            </h1>
           </MdProject>
         </Suggested>
 

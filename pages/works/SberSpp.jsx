@@ -5,7 +5,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -19,6 +18,10 @@ import ProjectFooter from '../components/works/ProjectFooter'
 import SubHeading from '../components/works/SubHeading'
 import Bubble from '../components/works/Bubble'
 import Video from '../components/works/Video'
+
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
 
 import thumbMain_Page from '../../public/works/charus_site/thumbMain_Page.png'
 import thumbPages from '../../public/works/charus_site/thumbPages.png'
@@ -42,13 +45,15 @@ import thumbCharus from '../../public/thumbCharus.png'
 import thumbNhs from '../../public/thumbNhs.png'
 import thumbShmot from '../../public/thumbShmot.png'
 
+import { FormattedMessage } from "react-intl";
+
 
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -61,18 +66,23 @@ export default function Project(props){
         
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Сделать цифровую систему для сотрудников Сбера"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3>
+                <FormattedMessage id="taskName" />
+              </h3>
+              <p>
+               <FormattedMessage id="sberTaskDesc" />
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Объединение всех действий менеджера в&nbsp;одну систему
+              <FormattedMessage id="sberH1" />
             </DescriptionTitle>
             <DescriptionPar>
-              СБОЛ Про&nbsp;&mdash; это цифровая система работы для сотрудников, с&nbsp;помощью которой они консультируют клиентов, продают услуги и&nbsp;сервисы Сбера, ведут учет продаж, оформляют сделки, анализируют информацию о&nbsp;клиенте и&nbsp;выполняют все остальные функции, которые могут понадобиться для клиента.
+              <FormattedMessage id="sberP1" />
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -102,7 +112,7 @@ export default function Project(props){
             max="26"
           >
           <p>
-            Типичный сценарий обслуживания
+           <FormattedMessage id="sberP2" />
           </p>
           </Video>
 
@@ -116,16 +126,16 @@ export default function Project(props){
             max="49"
           >
           <p>
-            Все продукты в одном месте
+            <FormattedMessage id="sberP3" />
           </p>
           </Video>
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Автоматизация<br /> и системность
+              <FormattedMessage id="sberH2" />
             </DescriptionTitle>
             <DescriptionPar>
-            Задач и&nbsp;продуктов много, в&nbsp;день может выходить по&nbsp;несколько новый лендингов для разных продуктов. Чтобы поддерживать быстрые темпы создания дизайна и&nbsp;разработки, была создана дизайн система и&nbsp;правила по&nbsp;которым собираются презентации продуктов
+              <FormattedMessage id="sberP4" />
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -145,27 +155,27 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-              СберПрайм — подписка на сервисы партнёров Сбера
+              <FormattedMessage id="sberH3" />
             </DescriptionTitle>
 
             <TextLayout>
               <DescriptionPar heading="heading">
-                Задача
+                <FormattedMessage id="worksTask" />
               </DescriptionPar>
               <DescriptionPar lastChild="lastChild">
-                Рассказать про подписку СберПрайм и ее премущества
+                <FormattedMessage id="sberP16" />
               </DescriptionPar>
               <DescriptionPar heading="heading">
-                Проблемы
+                <FormattedMessage id="worksProblems" />
               </DescriptionPar>
               <DescriptionPar>
-                Продукт сложный, поэтому про него сложно рассказывать менеджерам
+                <FormattedMessage id="sberP5" />
               </DescriptionPar>
               <DescriptionPar>
-                Много тратиться времени и сил на рассказ
+                <FormattedMessage id="sberP6" />
               </DescriptionPar>
               <DescriptionPar>
-                Менеджеру сложно изначально понять в&nbsp;чем польза от&nbsp;прайма для конкретного клиента
+                <FormattedMessage id="sberP7" />
               </DescriptionPar>
             </TextLayout>
           </DescriptionLayout>
@@ -180,7 +190,7 @@ export default function Project(props){
           />
 
           <SubHeading>
-            Результаты:
+            <FormattedMessage id="sberH4" />
           </SubHeading>
 
           <Media
@@ -191,25 +201,25 @@ export default function Project(props){
           />
 
           <DescriptionLayout>
-            <DescriptionTitle>
-              Вклады и прочие финансовые продукты Сбера в одном месте 
+            <DescriptionTitle> 
+              <FormattedMessage id="sberH5" />
             </DescriptionTitle>
 
             <TextLayout>
               <DescriptionPar heading="heading">
-                Задача
+                <FormattedMessage id="worksTask" />
               </DescriptionPar>
               <DescriptionPar lastChild="lastChild">
-                Сделать объединяющую страницу по всем вкладам
+                <FormattedMessage id="sberTask2" />
               </DescriptionPar>
               <DescriptionPar heading="heading">
-                Проблемы
+                <FormattedMessage id="worksProblems" />
               </DescriptionPar>
               <DescriptionPar>
-                У&nbsp;сотрудниников не&nbsp;было такого инструмента, где&nbsp;бы они могли рассказать про все варианты вкладов и&nbsp;их&nbsp;условия всего
+                <FormattedMessage id="sberP8" />
               </DescriptionPar>
               <DescriptionPar>
-                А&nbsp;клиент не&nbsp;мог оценить весь массив предложений и&nbsp;из&nbsp;него выбрать подходящий
+                <FormattedMessage id="sberP9" />
               </DescriptionPar>
             </TextLayout>
           </DescriptionLayout>
@@ -225,24 +235,24 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Конструктор страховок, покрывающий все виды рисков
+              <FormattedMessage id="sberH6" />
             </DescriptionTitle>
 
             <TextLayout>
               <DescriptionPar heading="heading">
-                Задача
+                <FormattedMessage id="worksTask" />
               </DescriptionPar>
               <DescriptionPar lastChild="lastChild">
-                Сделать конструктор страховок
+                <FormattedMessage id="sberContructorTask" />
               </DescriptionPar>
               <DescriptionPar heading="heading">
-                Проблемы
+                <FormattedMessage id="worksProblems" />
               </DescriptionPar>
               <DescriptionPar>
-                Клиенты приходят в&nbsp;офис не&nbsp;за&nbsp;одной конкретной страховкой, а&nbsp;с&nbsp;потребоностью закрыть несколько сфер жизни: здоровье, финансы, недвижимость
+                <FormattedMessage id="sberP10" />
               </DescriptionPar>
               <DescriptionPar>
-                А&nbsp;менеджерам трудно оформить сразу несколько страховок, рассказать про условия и&nbsp;посчитать стоимость для каждой
+                <FormattedMessage id="sberP11" />
               </DescriptionPar>
             </TextLayout>
           </DescriptionLayout>
@@ -265,10 +275,10 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Кросспродажи и персональные предложение
+              <FormattedMessage id="sberH7" />
             </DescriptionTitle>
             <DescriptionPar>
-              Система подбора эволюционировала и&nbsp;становилась умнее со&nbsp;временем. Поэтому появилась внутренняя система персональных предложений:
+              <FormattedMessage id="sberP12" />
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -289,13 +299,12 @@ export default function Project(props){
             max="40"
           >
             <p>
-              Пример сложносочининнего сценария с кросспродажами
+              <FormattedMessage id="sberP13" />
             </p>
           </Video> 
 
-
           <SubHeading>
-            Показатели проделанной работы
+            <FormattedMessage id="sberH8" />
           </SubHeading>
 
           <Media
@@ -306,7 +315,7 @@ export default function Project(props){
           />
 
           <SubHeading>
-            Всего было сделано более 320 страниц
+            <FormattedMessage id="sberH8" />
           </SubHeading>
 
           <Media
@@ -325,7 +334,9 @@ export default function Project(props){
           src={require("../../public/videos/charus.mp4")}
           type="arrow"
           media="video">
-            <h1>Айдентика<br /> для компании Чарус</h1>
+            <h1>
+              <FormattedMessage id="worksCharusLogo" />
+            </h1>
           </MdProject>
 
           <LgProject
@@ -334,8 +345,12 @@ export default function Project(props){
           src={require("../../public/videos/narayone.mp4")}
           type="logo"
           media="video">
-            <h1>Сайт проекта «На районе»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksNarayone" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </LgProject>
 
           <MdProject
@@ -343,8 +358,12 @@ export default function Project(props){
           srcThumb={thumbNhs} altThumb="thumbNhs"
           src={require("../../public/videos/nhs.mp4")}
            type="logo" media="video">
-            <h1>Сайт компании «Найтхок солюшнс»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksNhs" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </MdProject>
         </Suggested>
 

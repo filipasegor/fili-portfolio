@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -14,6 +13,8 @@ import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
 
 import logo from '../../public/works/deff/logo.png'
 import box from '../../public/works/deff/box.png'
@@ -28,12 +29,14 @@ import sink from '../../public/works/deff/sink.png'
 import som from '../../public/som.png'
 import pack from '../../public/pack.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -45,14 +48,21 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработать айдентику и оформление упаковки"
-          >
+        <TaskDescLayout>
+          <TaskDesc>
+            <h3 className={styles.TaskDescName}>
+              <FormattedMessage id="taskName" /> 
+            </h3>
+            <p>
+              <FormattedMessage id="deffTaskDesc" /> 
+            </p>
           </TaskDesc>
+        </TaskDescLayout>
 
           <MainTitle>
-            <h1>Дефф производит удобную и эстетичную сантехнику. Разработанная айдентика помогает бизнесу быть узнаваемым и контрастным на прилавках по сравнению с остальными брендами</h1>
+            <h1>
+              <FormattedMessage id="deffHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -63,14 +73,14 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-            Идея айдентики и как она работает мире
+             <FormattedMessage id="deffIdea" /> 
             </DescriptionTitle>
             <DescriptionPar>
             <p>
-              В знаке сочетаются красивый водоворот и первая буква в названии бренда, образуя уникальный элемент. Таким образом логотип передает суть того, для чего нужна сантехника в доме.
+              <FormattedMessage id="deffIdeaPar1" /> 
             </p>
             <p>
-              А еще этот элемент легко подстраивается под любой физический носитель и делает его контрастным к прочим  и узнаваемым для зрителя
+              <FormattedMessage id="deffIdeaPar2" /> 
             </p>
             </DescriptionPar>
           </DescriptionLayout>
@@ -101,7 +111,7 @@ export default function Project(props){
             src={boxes}
           >
           <p>
-            Фирменные элементы оформляют упаковку и легко подстраиваются под разные типы упаковки: премиум товары, небольшие размеры сантехники или товары запакованные в простой пакет или бумагу
+            <FormattedMessage id="deffElements" /> 
           </p>
           </Media>
 
@@ -117,7 +127,7 @@ export default function Project(props){
             src={cardboard}
           >
           <p>
-            Людям нравятся коробочки на всех этапах покупки, они нетерпеливо ждут доставку, чтобы ее поскорее распаковать
+            <FormattedMessage id="deffPeopleLike" /> 
           </p>
           </Media>
 
@@ -139,7 +149,9 @@ export default function Project(props){
         <Suggested>
 
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
-            <h1>Айдентика<br /> для интеренет издания Сом</h1>
+            <h1>
+              <FormattedMessage id="worksSom" /> 
+            </h1>
           </MdProject>
           
           <MdProject
@@ -147,7 +159,9 @@ export default function Project(props){
           src={pack}
            type="arrow"
            media="img">
-            <h1>Дизайн упаковки мясокомбината Тримяс</h1>
+            <h1>
+              <FormattedMessage id="worksTrimyas" />
+            </h1>
           </MdProject>
 
         </Suggested>

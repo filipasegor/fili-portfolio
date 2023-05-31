@@ -7,7 +7,7 @@ export default function Footer(props) {
   return (
     <>
     <footer className={styles.footerContainer}>
-      <p>@fili 2022</p>
+      <p>@fili 2023</p>
       <div className={styles.footerImg}>
         <Image
          alt="footer-logo"

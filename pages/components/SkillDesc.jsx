@@ -6,10 +6,11 @@ export default function SkillDesc(props) {
     <>
       <div className={styles.SkillDescContainer}>
        <div className={props.side === "right" ? styles.right : styles.left}>
-        <h2 className={styles.SkillTitle}>{props.title}</h2>
-        <p className={styles.SkillDesc}>{props.descFirst}</p>
-        <p className={styles.SkillDesc}>{props.descSecond}</p>
-        <p className={styles.SkillDesc}>{props.descThird}</p>
+        {/* <div className={styles.SkillTitle}>{props.children}</div>
+        <div className={styles.SkillDesc}>{props.children}</div>
+        <div className={styles.SkillDesc}>{props.children}</div>
+        <div className={styles.SkillDesc}>{props.children}</div> */}
+        {props.children}
        </div>
       </div>
     </>

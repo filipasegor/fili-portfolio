@@ -1,0 +1,53 @@
+@import "../mixins";
+
+.Wrapper{
+  display: flex;
+
+  padding: 10px 0px;
+
+  justify-content: flex-start;
+
+
+  a{
+    text-decoration: underline;
+
+  }
+
+  p{
+    max-width: 250px;
+    margin-right: 30px;
+    padding: 5px 0px 0px 0px;
+
+    color: #565656;
+
+    font-family: "RooftopRegular";
+  }
+}
+
+
+@include phone(){
+
+  .Wrapper{
+    flex-direction: column;
+
+    margin-bottom: 10px;
+  }
+
+}
+
+@include tablet(){
+  .Wrapper{
+    flex-direction: row;
+
+    margin: 25px 0px 0px 40px;
+  }
+
+}
+
+@include desktop(){
+
+  .Wrapper{
+    margin: 25px 0px 0px 0px;
+  }
+
+}

@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -13,6 +12,10 @@ import DescriptionTitle from '../components/works/DescriptionTitle'
 import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
+
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
 
 import head from '../../public/works/neo/head.png'
 import logo from '../../public/works/neo/logo.png'
@@ -33,12 +36,14 @@ import logos from '../../public/works/neo/logos.png'
 import thumbCharus from '../../public/thumbCharus.png'
 import som from '../../public/som.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -50,14 +55,20 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработать логотип и фирменный стиль"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="neoTaskDesc" /> 
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>Компания НЭО-Бюро занимается независимой оценкой и экспертизой всех видов имущества. Работает в рамках судебных и досудебных споров или для сделок с имуществом
+            <h1>
+              <FormattedMessage id="neoHeadline" /> 
             </h1>
           </MainTitle>
 
@@ -69,15 +80,14 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-            Уверернный и четкий знак, чтобы везде смотрелось хорошо
+              <FormattedMessage id="neoTask" />
             </DescriptionTitle>
             <DescriptionPar>
             <p>
-            Фирменные элементы НЭО-Бюро могут встречаться
-            в самых неожиданных местах: в бланке отчестности у судьи, в брошюрах у нотариальной конторы или в буклете списков партнеров риелтора. И часто качество этих носителей и дизайна не самое лучшее
+              <FormattedMessage id="neoTaskPar1" />
             </p>
             <p>
-              Поэтому логотип НЭО-Бюро должен быть заметен и уверено смотреться везде,  даже если секретарша без навыков дизайна решит самостоятельно заверстать буклет со списком партнеров компании. А массивная и немного вытянутая пластика с маленькими просветами между буквами передают инженерно-технический профиль компании
+              <FormattedMessage id="neoTaskPar2" />
             </p>
             </DescriptionPar>
           </DescriptionLayout>
@@ -95,7 +105,7 @@ export default function Project(props){
             src={logos}
           >
           <p>
-            Знак смотрится уверенно и четко в любом контексте, даже в сочетании логотипов других компаний, которые при этом сверстаны не очень аккуратно
+            <FormattedMessage id="neoContex" />
           </p>
           </Media>
 
@@ -112,7 +122,7 @@ export default function Project(props){
             src={paper}
           >
           <p>
-            Новый логотип выдержит плохое качество печати, а также хорошо смотрится, если нужно разместить маленький размер логотипа
+            <FormattedMessage id="neoPrint" />
           </p>
           </Media>
 
@@ -124,14 +134,14 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-              Идея фирменного стиля
+              <FormattedMessage id="neoIdea" />
             </DescriptionTitle>
             <DescriptionPar>
             <p>
-              НЭО-Бюро измеряет ущерб, стоимость или  габариты имущества. Поэтому в основе фирменного стиля лежит шкала разных измерительных приборов, которыми пользуются эксперты
+              <FormattedMessage id="neoIdeaPar1" />
             </p>
             <p>
-              Такой фирменный стиль отлично сочетается с новым логотипом
+              <FormattedMessage id="neoIdeaPar2" />
             </p>
             </DescriptionPar>
           </DescriptionLayout>
@@ -211,7 +221,9 @@ export default function Project(props){
           src={require("../../public/videos/charus.mp4")}
           type="arrow"
           media="video">
-            <h1>Айдентика<br /> для компании Чарус</h1>
+            <h1>
+              <FormattedMessage id="worksCharusLogo" />
+            </h1>
           </MdProject>
 
           <MdProject href="/works/Mms"
@@ -219,7 +231,7 @@ export default function Project(props){
           type="arrow"
           media="video">
             <h1>
-              Айдентика миграционного центра ММС
+            <FormattedMessage id="worksMmc" />
             </h1>
           </MdProject>
 
@@ -228,7 +240,9 @@ export default function Project(props){
           srcThumb={som} altThumb="thumbSom"
           src={require('../../public/videos/som.mp4')}
           type="arrow" media="video">
-          <h1>Айдентика<br /> для интеренет издания Сом</h1>
+            <h1>
+            <FormattedMessage id="worksSom" />
+            </h1>
           </MdProject>
 
         </Suggested>

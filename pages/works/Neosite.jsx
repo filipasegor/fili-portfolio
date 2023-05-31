@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -14,18 +13,24 @@ import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
+
 import thumbCast from '../../public/works/neosite/thumbCast.png'
 import head from '../../public/works/neosite/head.png'
 
 import charus_site from '../../public/charus_site.png'
 import thumbNhs from '../../public/thumbNhs.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -37,17 +42,30 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработать сайт"
-          href="https://www.msk.neoburo.ru"
-          linkName="Msk.neoburo.ru"
-          linkDesc="Наполняется заказчиком самостоятельно"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="neoPromoPageTaskDesc" /> 
+              </p>
+            </TaskDesc>
+            <TaskLink>
+              <Link href="https://Msk.neoburo.ru">
+                <a className={styles.TaskDescLink}>
+                  Msk.neoburo.ru
+                </a>
+              </Link>
+                <p>
+                  <FormattedMessage id="neoPromoPageLinkDesc" /> 
+                </p>
+            </TaskLink>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>Компания НЭО-Бюро занимается независимой оценкой и экспертизой всех видов имущества. Для них была сделана промо-страница, на которой рассказывается про их услуги
+            <h1>
+              <FormattedMessage id="neoPromoPageHeadline" /> 
             </h1>
           </MainTitle>
 
@@ -68,7 +86,9 @@ export default function Project(props){
           src={require("../../public/works/charus_site/header_media.mp4")}
           type="arrow"
           media="video">
-            <h1>Сайт Чаруса</h1>
+            <h1>
+              <FormattedMessage id="worksCharusSite" />
+            </h1>
           </MdProject>
 
           <MdProject
@@ -76,8 +96,12 @@ export default function Project(props){
           srcThumb={thumbNhs} altThumb="thumbNhs"
           src={require("../../public/videos/nhs.mp4")}
            type="logo" media="video">
-            <h1>Сайт компании «Найтхок солюшнс»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksNhs" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </MdProject>
 
         </Suggested>

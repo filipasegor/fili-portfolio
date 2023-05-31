@@ -6,7 +6,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -16,6 +15,9 @@ import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
 
 import head from '../../public/works/trimyas/head-present.png'
 import animals from '../../public/works/trimyas/animals.png'
@@ -27,8 +29,11 @@ import salami from '../../public/works/trimyas/salami.png'
 import shop from '../../public/works/trimyas/shop.png'
 import wood from '../../public/works/trimyas/wood.png'
 import meatroll from '../../public/works/trimyas/meatroll.png'
+import thumbSausages from '../../public/works/trimyas/thumbSausages.png'
 
 import som from '../../public/som.png'
+
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -49,14 +54,31 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработать дизайн упаковки"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="trimyasTaskName" /> 
+              </p>
+            </TaskDesc>
+            <TaskLink>
+              <Link href="https://tolyatty.ru/text/longread/2021/11/02/70230482/">
+                <a className={styles.TaskDescLink}>
+                  <FormattedMessage id="trimyasLinkName" /> 
+                </a>
+              </Link>
+                <p>
+                  <FormattedMessage id="trimyasLinkDesc" /> 
+                </p>
+            </TaskLink>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>Тримяс и Золушка Металлист производят и продают колбасы, салями, полуфабрикаты и всякие другие мясные продукты. Для их продукции был сделан дизайн этикеток</h1>
+            <h1>
+              <FormattedMessage id="trimyasHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -67,10 +89,10 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-             Задача<br /> и цель дизайна
+              <FormattedMessage id="trimyasTask" /> 
             </DescriptionTitle>
             <DescriptionPar>
-              Основная задача графики — показать, что продукция сделана из настоящего мяса для тех, кто его любит. Поэтому за основу взяты наскальные рисунки, которые отсылают к традициям наших предков. Такая графика хорошо выделяет продукт на полке магазина и ассоциирует с брендом.
+              <FormattedMessage id="trimyasTaskPar1" /> 
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -93,7 +115,7 @@ export default function Project(props){
             right="right"
           >
           <p>
-            Фирменная графика может использоваться не только на самой упаковке. Она распространяется и хорошо ложится на все носители компании.
+            <FormattedMessage id="trimyasUsage" /> 
           </p>
           </Media>
 
@@ -122,6 +144,7 @@ export default function Project(props){
           />
 
           <Media
+            srcThumb={thumbSausages} altThumb="thumbCast"
             label="false"
             media="video"
             src={require("../../public/works/trimyas/sausages.mp4")}
@@ -132,13 +155,17 @@ export default function Project(props){
 
         <Suggested>
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
-            <h1>Айдентика<br /> для интеренет издания Сом</h1>
+            <h1>
+              <FormattedMessage id="worksSom" />               
+            </h1>
           </MdProject>
 
           <MdProject href="/works/Deff"
           src={require("../../public/works/deff/deff.mp4")}
           type="arrow" media="video">
-            <h1>Айдентика производителя сантехники Дефф</h1>
+            <h1>
+              <FormattedMessage id="worksDeff" />              
+            </h1>
           </MdProject>
 
         </Suggested>

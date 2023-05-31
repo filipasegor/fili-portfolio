@@ -5,7 +5,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -14,6 +13,10 @@ import DescriptionTitle from '../components/works/DescriptionTitle'
 import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
+
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+import TaskLink from '../components/works/TaskLink'
 
 import headSom from '../../public/works/som/head-som.png'
 import logoBlack from '../../public/works/som/logo-black.png'
@@ -33,6 +36,8 @@ import thumbCharus from '../../public/thumbCharus.png'
 
 import neo from '../../public/neo.png'
 
+import { FormattedMessage } from "react-intl";
+
 
 
 export default function Project(props) {
@@ -40,7 +45,7 @@ export default function Project(props) {
     <>
     <div className={styles.container}>
       <Head>
-        <title>Fili</title>
+        <title>Egor Filipas</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -52,18 +57,31 @@ export default function Project(props) {
       />
 
       <section className={styles.content}>
-        <TaskDesc
-        taskName="Задача"
-        taskDesc="Разработать айдентику для цифрового журнала"
-
-        href="https://vk.com/somsomsom_io"
-        linkName="Посмотреть в реальной жизни"
-        linkDesc="Айдентика используется заказчиком самостоятельно"
-        >
-        </TaskDesc>
+        <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="somTaskDesc" /> 
+              </p>
+            </TaskDesc>
+            <TaskLink>
+              <Link href="https://vk.com/somsomsom_io">
+                <a className={styles.TaskDescLink}>
+                  <FormattedMessage id="somLinkName" /> 
+                </a>
+              </Link>
+                <p>
+                  <FormattedMessage id="somLinkDesc" /> 
+                </p>
+            </TaskLink>
+        </TaskDescLayout>
 
         <MainTitle>
-          <h1>Сом — медиа о культурных событиях, моде, еде, сериалы, фильмы и про все, что волнует  милиниалов и зумеров в Самаре. Волжский гедонизм в каждой строчке.</h1>
+          <h1>
+            <FormattedMessage id="somHeadline" />
+          </h1>
         </MainTitle>
 
         <Media
@@ -73,14 +91,14 @@ export default function Project(props) {
         />
         <DescriptionLayout>
           <DescriptionTitle>
-            В духе текущего времени с отсылкой на старую кириллицу
+            <FormattedMessage id="somSymbol" />
           </DescriptionTitle>
           <DescriptionPar>
             <p>
-              Сом рассказывает про то, что волнует молодую адиторию в Самарской области. Поэтому в основе логотипа лежат традицонные элементы из старославянской письменности, которые переосмысленны и преобразованы в современную и трендовую пластику букв.
+              <FormattedMessage id="somSymbolPar1" />
             </p>
             <p>
-             Таким образом, в логотипе раскрывается история русской типографики, и при этом зумерам нестыдно наклеить стикер с логотипом на свой девайс
+              <FormattedMessage id="somSymbolPar2" />
             </p>
           </DescriptionPar>
         </DescriptionLayout>
@@ -121,10 +139,10 @@ export default function Project(props) {
 
         <DescriptionLayout>
           <DescriptionTitle>
-            Фирменная графика
+            <FormattedMessage id="somGraphic" />
           </DescriptionTitle>
           <DescriptionPar>
-            Также был придуман фирменный элемент для графики, напоминающий движение реки Волги. С помощью этого фирменного элемента любой пост в соцсетях визуально выделяется из общего потока и стновится интересным
+            <FormattedMessage id="somGraphicPar" />
           </DescriptionPar>
         </DescriptionLayout>
 
@@ -173,7 +191,9 @@ export default function Project(props) {
           src={require("../../public/videos/charus.mp4")}
           type="arrow"
           media="video">
-            <h1>Айдентика<br /> для компании Чарус</h1>
+            <h1>
+              <FormattedMessage id="worksCharusLogo" />
+            </h1>
           </MdProject>
 
           <MdProject href="/works/Mms"
@@ -181,7 +201,7 @@ export default function Project(props) {
           type="arrow"
           media="video">
             <h1>
-              Айдентика миграционного центра ММС
+              <FormattedMessage id="worksMmc" />
             </h1>
           </MdProject>
 
@@ -189,7 +209,9 @@ export default function Project(props) {
           href="/works/Neo"
           src={neo}
           type="arrow" media="img">
-          <h1>Айдентика<br /> для HЭО-Бюро</h1>
+            <h1>
+              <FormattedMessage id="worksNeo" />
+              </h1>
           </MdProject>
 
         </Suggested>

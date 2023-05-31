@@ -6,7 +6,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -17,6 +16,9 @@ import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
+
 import head from '../../public/works/lkneo/lk-head-present 1.png'
 import site from '../../public/works/lkneo/site.png'
 
@@ -24,12 +26,14 @@ import charus_site from '../../public/charus_site.png'
 import thumbNhs from '../../public/thumbNhs.png'
 import rkeeper from '../../public/rkeeper.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -41,15 +45,20 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Спроектировать интерфейсы и дизайн сайта"
-          >
-          </TaskDesc>
+          <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="lkTaskDesc" /> 
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <MainTitle>
             <h1>
-            Компания НЭО-Бюро занимается независимой оценкой и экспертизой всех видов имущества. А личный кабинет это их сервис, в котором партнеры бюро оставляют заявки на нужные услуги
+              <FormattedMessage id="lkHeadline" /> 
             </h1>
           </MainTitle>
 
@@ -60,7 +69,7 @@ export default function Project(props){
             src={require("../../public/works/lkneo/main.mp4")}
           >
             <p>
-              В личном кабинете можно легко и быстро оставлять заявки на нужные услуги, загружать необходимые фотки и документы и вводить данные клиента
+              <FormattedMessage id="lkUX" />               
             </p>
           </Media>
 
@@ -72,7 +81,7 @@ export default function Project(props){
             src={require("../../public/works/lkneo/creation.mp4")}
           >
             <p>
-              Все созданные заявки находятся в одном месте. Их удобно контролировать и проверять готовность. Также, можно добавлять новые файлы.
+              <FormattedMessage id="lkRequests" /> 
             </p>
           </Media>
 
@@ -89,7 +98,7 @@ export default function Project(props){
             src={require("../../public/works/lkneo/mobile.mp4")}
           >
             <p>
-              Интерфейс личного кабинета спроектирован так, чтобы им было удобно пользоваться на смартфоне
+              <FormattedMessage id="lkUi" /> 
             </p>
           </Media>
 
@@ -101,7 +110,7 @@ export default function Project(props){
             src={site}
           >
             <p>
-              Также, была задизайнена страница, на которой понятно рассказывается про все преимущества личного кабинета
+              <FormattedMessage id="lkPromoPage" /> 
             </p>
           </Media>
 
@@ -114,12 +123,18 @@ export default function Project(props){
           src={require("../../public/works/charus_site/header_media.mp4")}
           type="arrow"
           media="video">
-            <h1>Сайт Чаруса</h1>
+            <h1>
+              <FormattedMessage id="worksCharusSite" /> 
+            </h1>
           </MdProject>
 
           <LgProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={rkeeper} type="logo" media="img">
-            <h1>Интерфейс приложения «Эркипер»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1>
+              <FormattedMessage id="worksRkeeper" /> 
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </LgProject>
         </Suggested>
 

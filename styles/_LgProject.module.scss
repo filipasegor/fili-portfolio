@@ -56,8 +56,7 @@
 }
 
 .Button {
-  display: block;
-  display: flex;
+ 
   flex-direction: row;
 
   width: 80px;
@@ -140,7 +139,7 @@
   }
 
   .Button{
-    display: block;
+    display: flex;
   }
 
   .Wrapper{

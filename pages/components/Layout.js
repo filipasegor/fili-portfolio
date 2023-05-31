@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import {useState, useEffect, useCallback} from "react"
-import { useRouter } from 'next/router'
+import React, {useState, useEffect, useCallback} from "react"
 import logo from '../../public/logo.svg'
 import blacklogo from '../../public/black-logo.svg'
 import styles from '../../styles/Layout.module.scss'
@@ -8,9 +7,22 @@ import Footer from "./Footer"
 // import Suggested from "../Suggested"
 import ActiveLink from "./LinkNavbar"
 import Link from 'next/link'
+import { useRouter } from "next/router";
+
+import { FormattedMessage } from "react-intl";
+import { LOCALES } from "../i18n/locales";
+
 
 export default function Layout(props) {
-const router = useRouter()
+let router = useRouter();
+
+const languages = [
+  { name: "EN", code: LOCALES.EN },
+  { name: "RU", code: LOCALES.RU },
+];
+
+
+
 
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -52,6 +64,16 @@ const isBreakpoint = useMediaQuery(768);
        />
       </a>
       </Link>
+      <div>
+          {/* Language switch dropdown */}
+          <select className={styles.select} onChange={props.handleChange} value={props.currentLocale}>
+            {languages.map(({ name, code }) => (
+              <option key={code} value={code}>
+                {name}
+              </option>
+            ))}
+          </select>
+          </div>
       </div>
       <ActiveLink />
       {props.children}
@@ -71,10 +93,19 @@ const isBreakpoint = useMediaQuery(768);
          />
         </a>
         </Link>
+        <div>
+          {/* Language switch dropdown here */}
+          <select className={styles.select} onChange={props.handleChange} value={props.currentLocale}>
+            {languages.map(({ name, code }) => (
+              <option key={code} value={code}>
+                {name}
+              </option>
+            ))}
+          </select>
+          </div>
       </div>
       <ActiveLink />
       {props.children}
-
       <Footer />
     </div>
   );
@@ -91,6 +122,16 @@ const isBreakpoint = useMediaQuery(768);
        />
       </a>
       </Link>
+      <div>
+          {/* Language switch dropdown here */}
+          <select className={styles.select} onChange={props.handleChange} value={props.currentLocale}>
+            {languages.map(({ name, code }) => (
+              <option key={code} value={code}>
+                {name}
+              </option>
+            ))}
+          </select>
+          </div>
       </div>
       <ActiveLink />
       {props.children}

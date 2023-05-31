@@ -6,7 +6,6 @@ import Link from 'next/link'
 import styles from '../../styles/Project.module.scss'
 
 import HeadMedia from '../components/works/HeadMedia'
-import TaskDesc from '../components/works/TaskDesc'
 import Media from '../components/works/Media'
 import MainTitle from '../components/works/MainTitle'
 import DescriptionLayout from '../components/works/DescriptionLayout'
@@ -16,6 +15,8 @@ import MdProject from '../components/_MdProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 
+import TaskDescLayout from '../components/works/TaskDescLayout'
+import TaskDesc from '../components/works/TaskDesc'
 
 import head from '../../public/works/coffeiludi/head-present.png'
 import logo from '../../public/works/coffeiludi/logo.png'
@@ -27,12 +28,14 @@ import inst from '../../public/works/coffeiludi/inst.png'
 import poster from '../../public/works/coffeiludi/poster.png'
 import som from '../../public/som.png'
 
+import { FormattedMessage } from "react-intl";
+
 export default function Project(props){
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Fili</title>
+          <title>Egor Filipas</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -44,14 +47,21 @@ export default function Project(props){
         />
 
         <section className={styles.content}>
-          <TaskDesc
-          taskName="Задача"
-          taskDesc="Разработка айдентику и логотипа"
-          >
-          </TaskDesc>
+        <TaskDescLayout>
+            <TaskDesc>
+              <h3 className={styles.TaskDescName}>
+                <FormattedMessage id="taskName" /> 
+              </h3>
+              <p>
+                <FormattedMessage id="coffeeILudiTaskDesc" /> 
+              </p>
+            </TaskDesc>
+          </TaskDescLayout>
 
           <MainTitle>
-            <h1>«Кофе и люди» — это уютная кофейня в центре Самары. Там часто собираются незнакомые люди, чтобы попить вкусный кофе, познакомиться с новыми людьми</h1>
+            <h1>
+            <FormattedMessage id="coffeeILudiHeadline" /> 
+            </h1>
           </MainTitle>
 
           <Media
@@ -62,10 +72,10 @@ export default function Project(props){
 
           <DescriptionLayout>
             <DescriptionTitle>
-             Задача<br /> и цель айдентики
+              <FormattedMessage id="coffeeILudiTask" /> 
             </DescriptionTitle>
             <DescriptionPar>
-              Концепция кофейни в том, чтобы собирать незнакомых людей в одном месте и знакомить их с друг другом. Это место, где нет политики, насилия и обычных бытовых проблем. Есть только вкусный кофе и добрые люди
+              <FormattedMessage id="coffeeILudiTaskPar1" /> 
             </DescriptionPar>
           </DescriptionLayout>
 
@@ -111,14 +121,18 @@ export default function Project(props){
 
         <Suggested>
           <MdProject href="/works/Som" src={som} type="arrow" media="img">
-            <h1>Айдентика<br /> для интеренет издания Сом</h1>
+            <h1>
+            <FormattedMessage id="worksSom" /> 
+            </h1>
           </MdProject>
 
           <MdProject href="/works/CharusLogo"
           src={require("../../public/videos/charus.mp4")}
           type="arrow"
           media="video">
-            <h1>Айдентика<br /> для компании Чарус</h1>
+            <h1>
+              <FormattedMessage id="worksCharusLogo" /> 
+            </h1>
           </MdProject>
           
         </Suggested>

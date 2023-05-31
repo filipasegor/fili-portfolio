@@ -34,7 +34,7 @@ import thumbLip from '../public/thumbLip.png'
 import thumbRunup from '../public/thumbRunup.png'
 import thumbNeosite from '../public/thumbNeosite.png'
 
-
+import { FormattedMessage } from "react-intl";
 
 export default function Projects(props) {
 
@@ -51,7 +51,7 @@ export default function Projects(props) {
       <div className={styles.Projects}>
         <div className={styles.headlineContainer}>
           <h1 className={styles.headline}>
-            Придумываю, проектирую, дизайню, разрабатываю и держусь молодцом
+            <FormattedMessage id="worksH1" />
           </h1>
         </div>
 
@@ -61,7 +61,9 @@ export default function Projects(props) {
         src={require("../public/videos/SberCover.mp4")}
         type="arrow"
         media="video">
-          <h1>Интерфейсы цифровой системы для сотрудников Сбера</h1>
+          <h1>
+            <FormattedMessage id="worksSber" />
+          </h1>
         </MdProject>
 
         <LgProject
@@ -70,14 +72,22 @@ export default function Projects(props) {
         src={require("../public/videos/narayone.mp4")}
         type="logo"
         media="video">
-          <h1>Сайт проекта «На районе»</h1>
-          <p>Работа студии Артемия Лебедева</p>
+          <h1> 
+            <FormattedMessage id="worksNarayone" /> 
+          </h1>
+          <p> 
+            <FormattedMessage id="projectWith" />
+          </p>
         </LgProject>
 
 
         <LgProject href="https://www.artlebedev.ru/rkeeper/interface/" alt="rkeeper-img" src={rkeeper} type="logo" media="img">
-          <h1>Интерфейс приложения «Эркипер»</h1>
-          <p>Работа студии Артемия Лебедева</p>
+          <h1>
+            <FormattedMessage id="worksRkeeper" /> 
+          </h1>
+          <p> 
+            <FormattedMessage id="projectWith" />
+          </p>
         </LgProject>
 
         <MdProject href="/works/CharusSite"
@@ -85,7 +95,9 @@ export default function Projects(props) {
         src={require("../public/works/charus_site/header_media.mp4")}
         type="arrow"
         media="video">
-          <h1>Сайт Чаруса</h1>
+          <h1>
+            <FormattedMessage id="worksCharusSite" />
+          </h1>
         </MdProject>
 
         <MdProject href="/works/CharusLogo"
@@ -93,7 +105,9 @@ export default function Projects(props) {
         src={require("../public/videos/charus.mp4")}
         type="arrow"
         media="video">
-          <h1>Айдентика<br /> для компании Чарус</h1>
+          <h1>
+            <FormattedMessage id="worksCharusLogo" /> 
+          </h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -103,8 +117,12 @@ export default function Projects(props) {
           src={bashnya}
           type="logo"
           media="img">
-            <h1>Логотип мини-отеля «Башня<br /> в Царицыно»</h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <h1> 
+              <FormattedMessage id="worksBashnya" />
+            </h1>
+            <p>
+              <FormattedMessage id="projectWith" />
+            </p>
           </SmProject>
 
           <SmProject
@@ -112,7 +130,9 @@ export default function Projects(props) {
           srcThumb={thumbDeff} altThumb="thumbDeff"
           alt="deff" src={require('../public/videos/deff.mp4')}
           type="arrow" media="video">
-            <h1>Айдентика производителя сантехники Дефф</h1>
+            <h1>
+              <FormattedMessage id="worksDeff" />
+            </h1>
           </SmProject>
         </div>
 
@@ -121,7 +141,9 @@ export default function Projects(props) {
         srcThumb={som} altThumb="thumbDeff"
         src={require('../public/videos/som.mp4')}
         type="arrow" media="video">
-        <h1>Айдентика<br /> для интернет издания Сом</h1>
+        <h1>
+          <FormattedMessage id="worksSom" />
+        </h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -130,7 +152,7 @@ export default function Projects(props) {
           srcThumb={thumbIir} altThumb="thumbIir"
           alt="rkeeper-img" src={require("../public/videos/iir.mp4")} type="arrow" media="video">
             <h1>
-            Интерфейсы<br /> для мобильного приложения Сбера
+              <FormattedMessage id="worksInvest" />
             </h1>
           </SmProject>
 
@@ -140,7 +162,7 @@ export default function Projects(props) {
           src={require("../public/videos/mms.mp4")}
           alt="deff" type="arrow" media="video">
             <h1>
-            Айдентика миграционного центра ММС
+              <FormattedMessage id="worksMmc" />
             </h1>
           </SmProject>
         </div>
@@ -150,8 +172,12 @@ export default function Projects(props) {
         srcThumb={thumbNhs} altThumb="thumbNhs"
         src={require("../public/videos/nhs.mp4")}
          type="logo" media="video">
-          <h1>Сайт компании «Найтхок солюшнс»</h1>
-          <p>Работа студии Артемия Лебедева</p>
+          <h1>
+            <FormattedMessage id="worksNhs" />
+          </h1>
+          <p> 
+            <FormattedMessage id="projectWith" />
+          </p>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -162,9 +188,11 @@ export default function Projects(props) {
           src={require("../public/videos/runup.mp4")} type="logo"
           media="video">
             <h1>
-            Логотип школы бега «Ранап»
+              <FormattedMessage id="worksRunup" />
             </h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <p> 
+            <FormattedMessage id="projectWith" />
+            </p>
           </SmProject>
 
           <SmProject
@@ -172,9 +200,11 @@ export default function Projects(props) {
           src={olimpatlet}
           alt="deff" type="logo" media="img">
             <h1>
-            Логотип компании «Олимп атлет»
+              <FormattedMessage id="worksAo" />
             </h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <p> 
+              <FormattedMessage id="projectWith" />
+            </p>
           </SmProject>
         </div>
 
@@ -182,7 +212,9 @@ export default function Projects(props) {
         href="/works/Neo"
         src={neo}
         type="arrow" media="img">
-        <h1>Айдентика<br /> для HЭО-Бюро</h1>
+        <h1>
+          <FormattedMessage id="worksNeo" />
+        </h1>
         </MdProject>
 
 
@@ -192,9 +224,11 @@ export default function Projects(props) {
           src={beans} type="logo"
           media="img">
             <h1>
-            Логотип сервиса Бинс
+              <FormattedMessage id="worksBeans" />
             </h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <p> 
+              <FormattedMessage id="projectWith" />
+            </p>
           </SmProject>
 
           <SmProject
@@ -203,9 +237,11 @@ export default function Projects(props) {
           src={require("../public/videos/lip.mp4")}
           type="logo" media="video">
             <h1>
-            Логотип фирмы «Левошич<br />и партнеры»
+              <FormattedMessage id="worksLev" />
             </h1>
-            <p>Работа студии Артемия Лебедева</p>
+            <p> 
+              <FormattedMessage id="projectWith" />
+            </p>
           </SmProject>
         </div>
 
@@ -214,8 +250,12 @@ export default function Projects(props) {
         srcThumb={thumbBezlimit} altThumb="thumbBezlimit"
         src={require("../public/videos/bezlimit.mp4")}
          type="logo" media="video">
-          <h1>Сайт «Безлимита»</h1>
-          <p>Работа студии Артемия Лебедева</p>
+          <h1>
+            <FormattedMessage id="worksBezlimit" />
+          </h1>
+          <p> 
+            <FormattedMessage id="projectWith" />
+          </p>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -227,7 +267,7 @@ export default function Projects(props) {
           type="arrow"
           media="video">
             <h1>
-            Промо-страница для НЭО-Бюро
+              <FormattedMessage id="worksNeoSite" />
             </h1>
           </SmProject>
 
@@ -238,7 +278,7 @@ export default function Projects(props) {
           type="arrow"
           media="img">
             <h1>
-              Стратегия и визуализация Бионум
+              <FormattedMessage id="worksBionum" />
             </h1>
           </SmProject>
         </div>
@@ -248,7 +288,9 @@ export default function Projects(props) {
         src={pack}
          type="arrow"
          media="img">
-          <h1>Дизайн упаковки мясокомбината Тримяс</h1>
+          <h1>
+            <FormattedMessage id="worksTrimyas" />
+          </h1>
         </MdProject>
 
         <div className={styles.SmContainer}>
@@ -259,7 +301,7 @@ export default function Projects(props) {
           type="arrow"
           media="img">
             <h1>
-            Интерфейс<br />для личного кабинета НЭО-Бюро
+              <FormattedMessage id="worksNeoLk" />
             </h1>
           </SmProject>
 
@@ -269,7 +311,7 @@ export default function Projects(props) {
           type="arrow"
           media="img">
             <h1>
-            Айдентика<br /> для кофейни Кофе и Люди
+              <FormattedMessage id="worksCoffeiLudi" />
             </h1>
           </SmProject>
         </div>

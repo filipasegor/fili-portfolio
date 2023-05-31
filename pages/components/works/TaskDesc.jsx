@@ -1,27 +1,19 @@
 import styles from '../../../styles/works/TaskDesc.module.scss'
-import Link from 'next/link'
+
+import { FormattedMessage } from "react-intl";
 
 export default function TaskDesc(props) {
 
   return (
-    <>
-    <div className={styles.Wrapper}>
-      <div className={styles.innerWrapper}>
-        <h3 className={styles.name}
+    <div className={styles.innerWrapper}>
+        {/* <h3 className={styles.name}
         >
-        {props.taskName}
+          <FormattedMessage id={props.taskName} />
         </h3>
-        <p>{props.taskDesc}</p>
-      </div>
-      <div className={styles.innerWrapper}>
-        <Link href={props.href ?? ""}>
-          <a className={styles.link}>
-            {props.linkName}
-          </a>
-        </Link>
-        <p>{props.linkDesc}</p>
-      </div>
+        <p>
+          <FormattedMessage id={props.taskDesc} />
+        </p> */}
+        {props.children}
     </div>
-    </>
   );
 }

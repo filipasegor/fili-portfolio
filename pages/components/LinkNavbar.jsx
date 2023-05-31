@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from '../../styles/LinkNavbar.module.scss'
+import { FormattedMessage } from "react-intl";
+
 
 import linkArrow from '../../public/LinkArrow.svg'
 
@@ -18,10 +20,14 @@ function ActiveLink({ children, href }) {
       <>
        <nav className={styles.navbarContainer}>
         <Link href="/">
-          <a className={styles.active}>ПРОФИЛЬ</a>
+          <a className={styles.active}>
+            <FormattedMessage id="profile" />
+          </a>
         </Link>
         <Link href="/Works">
-          <a className={styles.default}>РАБОТЫ</a>
+          <a className={styles.default}>
+            <FormattedMessage id="works" />
+          </a>
         </Link>
       </nav>
       </>
@@ -33,10 +39,14 @@ function ActiveLink({ children, href }) {
       <>
        <nav className={styles.navbarContainer}>
         <Link href="/">
-          <a className={styles.default}>ПРОФИЛЬ</a>
+          <a className={styles.default}>
+            <FormattedMessage id="profile" />
+          </a>
         </Link>
         <Link href="/Works">
-          <a className={styles.active}>РАБОТЫ</a>
+          <a className={styles.active}>
+            <FormattedMessage id="works" />
+          </a>
         </Link>
       </nav>
       </>
@@ -62,10 +72,14 @@ function ActiveLink({ children, href }) {
       </Link>
       <div></div>
       <Link href="/">
-        <a className={styles.default}>ПРОФИЛЬ</a>
+        <a className={styles.default}>
+          <FormattedMessage id="profile" />
+        </a>
       </Link>
       <Link href="/Works">
-        <a className={styles.active}>РАБОТЫ</a>
+        <a className={styles.active}>
+          <FormattedMessage id="works" />
+        </a>
       </Link>
     </nav>
     </>
