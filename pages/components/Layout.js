@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { useRouter } from "next/router";
 
 import { FormattedMessage } from "react-intl";
-import { LOCALES } from "../i18n/locales";
+import { LOCALES } from "../../i18n/locales";
 
 
 export default function Layout(props) {

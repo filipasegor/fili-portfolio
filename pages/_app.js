@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
 import { IntlProvider } from "react-intl";
-import { LOCALES } from "./i18n/locales";
-import { messages } from "./i18n/messages.index";
+import { LOCALES } from "../i18n/locales";
+import { messages } from "../i18n/messages.index";
 
 
 function App({ Component, pageProps }) {

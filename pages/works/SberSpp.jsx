@@ -16,7 +16,6 @@ import LgProject from '../components/_LgProject'
 import Suggested from '../components/works/Suggested'
 import ProjectFooter from '../components/works/ProjectFooter'
 import SubHeading from '../components/works/SubHeading'
-import Bubble from '../components/works/Bubble'
 import Video from '../components/works/Video'
 
 import TaskDescLayout from '../components/works/TaskDescLayout'
@@ -31,7 +30,6 @@ import PrimeResults from '../../public/works/sberspp/PrimeResults.png'
 import MainResults from '../../public/works/sberspp/MainResults.png'
 import Crosses from '../../public/works/sberspp/Crosses.png'
 import ZlsResults from '../../public/works/sberspp/ZlsResults.png'
-import content from '../../public/works/sberspp/content.png'
 
 import thumb_sberProducts from '../../public/works/sberspp/thumb_sberProducts.png'
 import thumb_start from '../../public/works/sberspp/thumb_start.png'
@@ -312,17 +310,6 @@ export default function Project(props){
             media="img"
             src={MainResults}
             alt="MainResults"
-          />
-
-          <SubHeading>
-            <FormattedMessage id="sberH8" />
-          </SubHeading>
-
-          <Media
-            label="false"
-            media="img"
-            src={content}
-            alt="content"
           />
           
           <ProjectFooter date="15.03.2023" />
