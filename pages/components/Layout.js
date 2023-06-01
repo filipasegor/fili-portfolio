@@ -122,7 +122,7 @@ const isBreakpoint = useMediaQuery(768);
        />
       </a>
       </Link>
-      <div>
+        <div>
           {/* Language switch dropdown here */}
           <select className={styles.select} onChange={props.handleChange} value={props.currentLocale}>
             {languages.map(({ name, code }) => (
@@ -131,7 +131,7 @@ const isBreakpoint = useMediaQuery(768);
               </option>
             ))}
           </select>
-          </div>
+        </div>
       </div>
       <ActiveLink />
       {props.children}
