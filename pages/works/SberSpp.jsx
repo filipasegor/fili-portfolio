@@ -22,14 +22,12 @@ import TaskDescLayout from '../components/works/TaskDescLayout'
 import TaskDesc from '../components/works/TaskDesc'
 import TaskLink from '../components/works/TaskLink'
 
-import thumbMain_Page from '../../public/works/charus_site/thumbMain_Page.png'
-import thumbPages from '../../public/works/charus_site/thumbPages.png'
-
 import tasks from '../../public/works/sberspp/tasks.png'
 import PrimeResults from '../../public/works/sberspp/PrimeResults.png'
 import MainResults from '../../public/works/sberspp/MainResults.png'
 import Crosses from '../../public/works/sberspp/Crosses.png'
 import ZlsResults from '../../public/works/sberspp/ZlsResults.png'
+import pages from '../../public/works/sberspp/pages.png'
 
 import thumb_sberProducts from '../../public/works/sberspp/thumb_sberProducts.png'
 import thumb_start from '../../public/works/sberspp/thumb_start.png'
@@ -311,6 +309,17 @@ export default function Project(props){
             src={MainResults}
             alt="MainResults"
           />
+
+          <Media
+            label="true"
+            right="right"
+            altThumb="start"
+            src={pages}
+          >
+            <p>
+            <FormattedMessage id="sberP14" />
+            </p>
+          </Media>
           
           <ProjectFooter date="15.03.2023" />
         </section>

@@ -28,7 +28,7 @@ export default function MainSection(props) {
           TG:@filipas
           </a>
         </Link>
-        <div className={styles.Geo}>
+        {/* <div className={styles.Geo}>
           <Image
            alt="star"
            src={star}
@@ -38,7 +38,7 @@ export default function MainSection(props) {
          />
          <p>Based<br />
          in Moscow</p>
-        </div>
+        </div> */}
       </div>
       <div className={styles.imgContainerMainSection}>
         <Image className={styles.me}
