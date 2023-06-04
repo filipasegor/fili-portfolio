@@ -27,7 +27,7 @@ import PrimeResults from '../../public/works/sberspp/PrimeResults.png'
 import MainResults from '../../public/works/sberspp/MainResults.png'
 import Crosses from '../../public/works/sberspp/Crosses.png'
 import ZlsResults from '../../public/works/sberspp/ZlsResults.png'
-import pages from '../../public/works/sberspp/pages.png'
+import allPages from '../../public/works/sberspp/allPages.png'
 
 import thumb_sberProducts from '../../public/works/sberspp/thumb_sberProducts.png'
 import thumb_start from '../../public/works/sberspp/thumb_start.png'
@@ -312,9 +312,9 @@ export default function Project(props){
 
           <Media
             label="true"
-            right="right"
+            right="r"
             altThumb="start"
-            src={pages}
+            src={allPages}
           >
             <p>
             <FormattedMessage id="sberP14" />
