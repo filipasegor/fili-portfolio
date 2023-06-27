@@ -11,6 +11,8 @@ export default function Video(props){
 
   const [loading, setLoading] = useState(false);
   const [currentVideoTime, setCurrentVideoTime] = useState(0);
+  const [startstop, setStartstop] = useState(true);
+  const [videoDuration, setVideoDuration] = useState(0);
  
 
   function loadingData(){
@@ -23,22 +25,38 @@ export default function Video(props){
     const video = ref.current;
     video.controls = false;
     video.currentTime = currentVideoTime;
-    setCurrentVideoTime(Math.floor(video.currentTime));
+    setVideoDuration(Math.floor(video.duration));
 
-    const intervalId = setInterval(() => {
-      setCurrentVideoTime(video.currentTime + 1);
-    }, 1000)
+    if(startstop){
+      setCurrentVideoTime(Math.floor(video.currentTime));
 
-    return () => {
-      clearInterval(intervalId)
-    }    
+      const intervalId = setInterval(() => {
+        setCurrentVideoTime(video.currentTime + 1);
+      }, 1000)
+
+      return () => {
+        clearInterval(intervalId)
+      }    
+
+      }
   
-  },  [currentVideoTime]);
+  });
 
 
   function handleProgressChange(e){
     setCurrentVideoTime(Number(e.target.value))
+  }
 
+  function handleStopClick() {
+    const video = ref.current;
+    video.pause();
+    setStartstop(false)
+  }
+
+  function handleStartClick() {
+    const video = ref.current;
+    video.play();
+    setStartstop(true)
   }
 
   const label = (
@@ -49,6 +67,14 @@ export default function Video(props){
        {props.children}
       </div>
     </div>
+  );
+
+  const stop = (
+    <button className={styles.stopButton} onClick={handleStopClick}></button>
+  );
+
+  const start = (
+    <button className={styles.startButton} onClick={handleStartClick}></button>
   );
   
   return(
@@ -77,15 +103,27 @@ export default function Video(props){
             className={styles.video}>
             <source src={props.src} />
           </video>
-          <div className={styles.currentTimeWrapper}>{currentVideoTime < 10 ? `0:0${currentVideoTime}` : `0:${currentVideoTime}`}</div>
-          <input
-              className={styles.progressBarInput}
-              type="range"
-              min={props.min}
-              max={props.max}
-              value={currentVideoTime}
-              onChange={(e) => handleProgressChange(e)}
-            />
+            <div className={styles.currentTimeWrapper}>
+              <div className={styles.ButtonWrapper}>
+                {startstop ? stop : start}
+              </div>
+              <div className={styles.timeLineWrapper}>
+                <span className={styles.currentTimeWrapperText}>
+                  {currentVideoTime < 10 ? `0:0${currentVideoTime}` : `0:${currentVideoTime}`}
+                </span>
+                <input
+                className={styles.progressBarInput}
+                type="range"
+                min={props.min}
+                max={props.max}
+                value={currentVideoTime}
+                onChange={(e) => handleProgressChange(e)}
+                />
+                <span className={styles.currentTimeWrapperText}>
+                  {`0:${videoDuration}`}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
