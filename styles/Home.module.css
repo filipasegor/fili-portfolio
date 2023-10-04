@@ -1,7 +1,5 @@
-
 @media (min-width: 10px) {
-
-  .eyesWrapper{
+  .eyesWrapper {
     position: absolute;
     bottom: -25%;
     left: 3%;
@@ -17,7 +15,7 @@
 
     color: #000000;
     border-radius: 15px;
-    background: #FD4C00;
+    background: #fd4c00;
 
     font-family: "BergenMono-Regular";
 
@@ -25,7 +23,7 @@
     align-items: flex-start;
   }
 
-  .eyesTitle{
+  .eyesTitle {
     width: 200px;
   }
 
@@ -33,23 +31,21 @@
     padding-bottom: 30px;
   }
 
-  .mainSection{
+  .mainSection {
     width: 170%;
   }
 
-
-  .headline{
+  .headline {
     margin: 20px 0px 30px 0px;
 
     font-size: 45px;
-
   }
 
-  .par{
+  .par {
     font-size: 18px;
   }
 
-  .section{
+  .section {
     flex-direction: column;
 
     padding: 0px 15px 10vw 15px;
@@ -57,58 +53,57 @@
     justify-content: space-between;
   }
 
-  .buttonContainer{
+  .buttonContainer {
     display: none;
   }
 
-  .linksContainer{
+  .linksContainer {
     top: 810px;
     left: 0px;
   }
 
-  .linksContainer a{
+  .linksContainer a {
     padding: 7px 10px;
 
     border-radius: 10px;
 
     font-size: 16px;
-
   }
-  .linkMainSectionInst{
+  .linkMainSectionInst {
     top: -20px;
     left: 20px;
   }
 
-  .linkMainSectionMail{
+  .linkMainSectionMail {
     top: -90px;
     left: 10px;
   }
 
-  .SkillImageWrapper{
+  .SkillImageWrapper {
     width: 100%;
   }
 
-  .linkMainSectionTg{
+  .linkMainSectionTg {
     top: 60px;
     left: 10px;
   }
 
-  .Geo{
+  .Geo {
     top: 130px;
     left: 10px;
 
     font-size: 16px;
   }
 
-  .imgContainerMainSection{
+  .imgContainerMainSection {
     width: 100%;
   }
 
-  .skillsWrapper{
+  .skillsWrapper {
     position: relative;
   }
 
-  .Skill{
+  .Skill {
     flex-direction: column;
 
     width: 95%;
@@ -117,37 +112,35 @@
     box-shadow: 0px -6px 24px rgba(0, 0, 0, 0.25);
   }
 
-  .Skill:nth-child(2n){
+  .Skill:nth-child(2n) {
     flex-direction: column-reverse;
   }
 
-  .SkillDescContainer{
-    width: 100%
+  .SkillDescContainer {
+    width: 100%;
   }
 
-  .SkillTitle{
+  .SkillTitle {
     margin-bottom: 15px;
 
     font-size: 25px;
   }
 
-  .SkillDesc{
+  .SkillDesc {
     font-size: 16px;
   }
 
-  .left{
+  .left {
     margin-right: 0px;
   }
 
-  .right{
+  .right {
     margin-left: 0px;
   }
-
 }
 
 @media (min-width: 768px) {
-
-  .mainSection{
+  .mainSection {
     width: 100%;
   }
 
@@ -155,7 +148,7 @@
     padding-bottom: 40px;
   }
 
-  .eyesWrapper{
+  .eyesWrapper {
     bottom: -25%;
     left: 41%;
 
@@ -165,19 +158,17 @@
     font-size: 20px;
   }
 
-
-  .headline{
+  .headline {
     margin: 120px 0px 40px 0px;
 
     font-size: 60px;
-
   }
 
-  .par{
+  .par {
     font-size: 25px;
   }
 
-  .section{
+  .section {
     flex-direction: column;
 
     padding: 0px 80px 30px 130px;
@@ -185,96 +176,91 @@
     justify-content: space-between;
   }
 
-
-  .parContainer{
+  .parContainer {
     max-width: 500px;
   }
 
-  .linksContainer{
+  .linksContainer {
     top: 780px;
     left: 110px;
   }
 
-  .linksContainer a{
+  .linksContainer a {
     padding: 10px 15px;
 
     border-radius: 10px;
 
     font-size: 16px;
-
   }
-  .linkMainSectionInst{
+  .linkMainSectionInst {
     top: 50px;
     left: -60px;
   }
 
-  .linkMainSectionMail{
+  .linkMainSectionMail {
     top: -20px;
     left: 10px;
-
   }
 
-  .linkMainSectionTg{
+  .linkMainSectionTg {
     top: 130px;
     left: 70px;
   }
 
-  .Geo{
+  .Geo {
     top: 190px;
     left: 150px;
 
     font-size: 16px;
   }
 
-  .imgContainerMainSection{
+  .imgContainerMainSection {
     width: 65%;
   }
 
-  .Skill{
+  .Skill {
     flex-direction: row;
-
-    padding: 15px 45px;
+    width: 80%;
+    padding: 15px 15px;
   }
 
-  .Skill:nth-child(2n){
+  .Skill:nth-child(2n) {
     flex-direction: row;
   }
 
-  .SkillDescContainer{
-    width: 45%;
+  .SkillDescContainer {
+    width: 70%;
   }
 
-  .SkillTitle{
+  .SkillTitle {
     margin-bottom: 35px;
 
     font-size: 25px;
   }
 
-  .SkillImageWrapper{
+  .SkillImageWrapper {
     width: 60%;
   }
 
-  .SkillDesc{
+  .SkillDesc {
     font-size: 16px;
   }
 
-  .left{
+  .left {
     margin-right: 15px;
   }
 
-  .right{
+  .right {
     margin-left: 15px;
   }
-
 }
 
 @media (min-width: 1024px) {
-
-  .container{
+  .container {
     padding-bottom: 60px;
   }
 
-  .eyesWrapper{
+  .eyesWrapper {
     bottom: -16%;
     left: 50%;
 
@@ -283,226 +269,208 @@
     font-size: 30px;
   }
 
-  .eyesWrapper:hover{
+  .eyesWrapper:hover {
     bottom: -13%;
   }
 
-  .section{
+  .section {
     flex-direction: row;
 
     padding: 30px 40px 0px 0px;
-
   }
 
-  .headline{
+  .headline {
     margin: 0px 0px 0px 0px;
 
     font-family: "RooftopMedium";
     font-size: 50px;
-
   }
 
-  .headlineContainer{
+  .headlineContainer {
     width: 40%;
     margin-left: 30%;
   }
 
-
-  .linksContainer{
+  .linksContainer {
     top: 550px;
     left: 150px;
   }
 
-
-  .linksContainer a{
+  .linksContainer a {
     padding: 10px 15px;
 
     border-radius: 10px;
 
     font-size: 16px;
-
   }
-  .linkMainSectionInst{
+  .linkMainSectionInst {
     top: 50px;
     left: -60px;
   }
 
-  .linkMainSectionMail{
+  .linkMainSectionMail {
     top: -40px;
     left: 60px;
-
   }
 
-  .linkMainSectionTg{
+  .linkMainSectionTg {
     top: 160px;
     left: 120px;
-
   }
 
-  .Geo{
+  .Geo {
     top: 50px;
     left: 210px;
 
     font-size: 16px;
   }
 
-  .linkMainSectionInst{
+  .linkMainSectionInst {
     left: -40px;
   }
 
-  .parContainer{
+  .parContainer {
     width: 45%;
     padding: 10px 0px 0px 20px;
   }
 
-  .par{
-    font-size: 25px;
+  .par {
+    font-size: 21px;
   }
 
-  .Skill{
-    padding: 20px 40px;
+  .Skill {
+    padding: 20px 20px;
   }
 
-  .SkillTitle{
+  .SkillTitle {
     font-size: 30px;
   }
 
-  .SkillDesc{
-    font-size: 20px;
+  .SkillDesc {
+    font-size: 21px;
   }
 
-  .imgContainerMainSection{
+  .imgContainerMainSection {
     width: 60%;
   }
 
-  .left{
-    margin-right: 30px;
+  .left {
+    margin-right: 15px;
   }
 
-  .right{
-    margin-left: 30px;
+  .right {
+    margin-left: 15px;
   }
-
 }
 
-
 @media (min-width: 1300px) {
-
-  .container{
+  .container {
     padding-bottom: 80px;
   }
 
-  .eyesWrapper{
+  .eyesWrapper {
     bottom: -16%;
     left: 61%;
   }
 
-  .section{
+  .section {
     padding: 30px 80px 0px 0px;
-
   }
 
-  .headline{
+  .headline {
     margin: 0px 40px 0px 0px;
 
     font-size: 60px;
   }
 
-  .headlineContainer{
+  .headlineContainer {
     width: 35%;
     margin-left: 27%;
   }
 
-  .linksContainer a{
+  .linksContainer a {
     padding: 10px 25px;
 
     font-size: 20px;
-
   }
 
-  .parContainer{
+  .parContainer {
     width: 40%;
     max-width: none;
     padding: 10px 0px 0px 0px;
   }
 
-  .linkMainSectionInst{
+  .linkMainSectionInst {
     top: 50px;
     left: -60px;
   }
 
-  .linkMainSectionMail{
+  .linkMainSectionMail {
     top: -40px;
     left: 60px;
-
   }
 
-  .linkMainSectionTg{
+  .linkMainSectionTg {
     top: 160px;
     left: 120px;
-
   }
 
-  .Geo{
+  .Geo {
     top: 50px;
     left: 300px;
   }
 
-  .Skill{
-    padding: 40px 30px;
+  .Skill {
+    padding: 20px 20px;
   }
-  .SkillTitle{
-    font-size: 45px;
-  }
-
-  .SkillDesc{
-    font-size: 25px;
+  .SkillTitle {
+    font-size: 40px;
   }
 
-  .linksContainer{
+  .SkillDesc {
+    font-size: 21px;
+  }
+
+  .linksContainer {
     top: 600px;
     left: 230px;
   }
 }
 
-
-.headline{
+.headline {
   font-family: "RooftopMedium";
 }
-
 
 .container {
   overflow-x: hidden;
 
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
 }
 
-.par{
+.par {
   margin: 0px 0px 20px 0px;
 
   font-family: "RooftopRegular";
 }
 
-.button{
+.button {
   padding: 10px 14px;
 
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   background: #202020;
 
   font-family: "RooftopRegular";
   font-size: 15px;
-
 }
 
-.button:hover{
-  background: #6B6B6B;
+.button:hover {
+  background: #6b6b6b;
 }
 
-
-.section{
+.section {
   display: flex;
 
   width: 100%;
@@ -510,27 +478,25 @@
   justify-content: space-between;
 }
 
-.imgContainer{
+.imgContainer {
   width: 25%;
   padding: 16px 0px;
 }
 
-
-
-.buttonContainer{
+.buttonContainer {
   width: 10%;
 
   text-align: right;
 }
 
-.mainSection{
-  display:flex;
+.mainSection {
+  display: flex;
 
   justify-content: flex-end;
   align-items: center;
 }
 
-.linksContainer{
+.linksContainer {
   position: absolute;
   z-index: 2;
 
@@ -543,29 +509,28 @@
   align-items: center;
 }
 
-.linksContainer a{
+.linksContainer a {
   position: absolute;
 
   color: #000000;
-  background: #FD4C00;
+  background: #fd4c00;
 
   font-family: "BergenMono-SemiBold";
-
 }
 
-.linkMainSectionInst{
+.linkMainSectionInst {
   transform: rotate(5.46deg);
 }
 
-.linkMainSectionMail{
-  transform: rotate(12.44deg);;
+.linkMainSectionMail {
+  transform: rotate(12.44deg);
 }
 
-.linkMainSectionTg{
+.linkMainSectionTg {
   transform: rotate(-13deg);
 }
 
-.Geo{
+.Geo {
   position: absolute;
 
   display: flex;
@@ -574,58 +539,54 @@
 
   transform: rotate(-8deg);
 
-  color: #FD4C00;
+  color: #fd4c00;
 
-  font-family: "BergenMono-SemiBold"
+  font-family: "BergenMono-SemiBold";
 }
 
-.Geo p{
+.Geo p {
   margin-left: 10px;
 }
 
-.SkillTitle{
-  font-family: "RooftopBold";
+.SkillTitle {
+  font-family: "RooftopMedium";
   line-height: 120%;
 }
 
-.SkillDesc{
+.SkillDesc {
   margin-bottom: 20px;
 
   font-family: "RooftopRegular";
   line-height: 130%;
 }
 
-.Skill{
+.Skill {
   display: flex;
-
-  width: 93%;
   margin: 0px auto 20px auto;
 
   color: #000000;
   border-radius: 22px;
-  background: #E8E8E8;
+  background: #e8e8e8;
 
   align-items: stretch;
   justify-content: space-between;
 }
 
-
-
-
-.footerContainer{
+.footerContainer {
   display: flex;
 
   width: 100%;
+
   margin: 100px auto 0px auto;
   padding: 0px 40px 0px 40px;
 
-  background: #E8E8E8;
+  background: #e8e8e8;
 
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.footerContainer p{
+.footerContainer p {
   width: 100%;
 
   color: #000000;
@@ -634,11 +595,11 @@
   font-size: 15px;
 }
 
-.footerRights{
+.footerRights {
   text-align: right;
 }
 
-.SkillImageWrapper{
+.SkillImageWrapper {
   display: grid;
 
   border-radius: 15px;

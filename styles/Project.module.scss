@@ -1,14 +1,13 @@
 @import "mixins";
 
-
-.container{
+.container {
   overflow-x: hidden;
 }
-.content{
+.content {
   margin: auto;
 }
 
-.ulList{
+.ulList {
   padding-left: 15px;
 }
 
@@ -25,12 +24,11 @@
 //   text-decoration: underline;
 // }
 
-
-.textWrapper{
+.textWrapper {
   padding: 0px 30px;
 }
 
-.suggestedWrapper{
+.suggestedWrapper {
   width: 100%;
   margin-top: 100px;
   padding: 40px 80px;
@@ -39,7 +37,7 @@
   box-shadow: 0px -6px 19px rgba(0, 0, 0, 0.1);
 }
 
-.suggestedTitle{
+.suggestedTitle {
   margin: 0px 0px 20px 180px;
 
   font-family: "RooftopRegular";
@@ -47,34 +45,28 @@
   line-height: 180%;
 }
 
-
-@include phone(){
-  .content{
+@include phone() {
+  .content {
     padding: 0px 15px 0px 15px;
   }
 
-  .headImageWrapper{
+  .headImageWrapper {
     height: auto;
   }
 }
 
-
-@include tablet(){
-
-  .content{
+@include tablet() {
+  .content {
     padding: 0px 35px;
   }
 
-  .headImageWrapper{
+  .headImageWrapper {
     height: 80vh;
-
   }
-
 }
 
-@include desktop(){
-  .content{
-    padding: 0px 80px;
+@include desktop() {
+  .content {
+    padding: 0px 140px;
   }
-
 }
