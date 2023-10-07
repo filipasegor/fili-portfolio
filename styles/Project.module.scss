@@ -57,7 +57,7 @@
 
 @include tablet() {
   .content {
-    padding: 0px 35px;
+    padding: 0px 80px;
   }
 
   .headImageWrapper {
@@ -67,6 +67,6 @@
 
 @include desktop() {
   .content {
-    padding: 0px 140px;
+    padding: 0px 200px;
   }
 }

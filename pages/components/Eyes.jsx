@@ -1,22 +1,17 @@
-import styles from '../../styles/Home.module.css'
-import Link from 'next/link'
-import Image from 'next/image'
+import styles from "../../styles/Home.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import eyes from '../../public/eyes.svg'
+import Vector from "../../public/Vector.svg";
 
 export default function Eyes(props) {
-
   return (
     <>
       <Link href="/Works">
         <div className={styles.eyesWrapper}>
-          <a className={styles.eyesTitle}>ПОСМОТРЕТЬ ВСЕ РАБОТЫ</a>
+          <a className={styles.eyesTitle}>ПОСМОТРЕТЬ РАБОТЫ</a>
           <div className={styles.imageWrapper}>
-            <Image
-             className={styles.eyesImage}
-             alt={eyes}
-             src={eyes}
-             />
+            <Image className={styles.Vector} alt={Vector} src={Vector} />
           </div>
         </div>
       </Link>

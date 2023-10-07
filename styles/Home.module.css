@@ -1,30 +1,31 @@
 @media (min-width: 10px) {
   .eyesWrapper {
-    position: absolute;
-    bottom: -25%;
-    left: 3%;
-
     display: flex;
+    align-items: center;
 
     width: 80%;
-    padding: 5px 10px 20px 10px;
+    padding: 10px 20px;
+    z-index: 1;
 
     cursor: pointer;
     transition: 0.3s;
-    transform: rotate(-3deg);
+    font-size: 20px;
+    margin-top: 50px;
 
-    color: #000000;
+    border: 2px solid #fff;
+    background: rgba(232, 232, 232, 0.3);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
     border-radius: 15px;
-    background: #fd4c00;
 
     font-family: "BergenMono-Regular";
 
     justify-content: space-between;
-    align-items: flex-start;
   }
 
-  .eyesTitle {
-    width: 200px;
+  .eyesWrapper:hover {
+    background: rgba(232, 232, 232, 1);
+    color: #000000;
   }
 
   .container {
@@ -148,15 +149,11 @@
     padding-bottom: 40px;
   }
 
-  .eyesWrapper {
+  /* .eyesWrapper {
     bottom: -25%;
     left: 41%;
-
-    width: 450px;
-    padding: 5px 10px 20px 10px;
-
     font-size: 20px;
-  }
+  } */
 
   .headline {
     margin: 120px 0px 40px 0px;
@@ -260,14 +257,14 @@
     padding-bottom: 60px;
   }
 
-  .eyesWrapper {
+  /* .eyesWrapper {
     bottom: -16%;
     left: 50%;
 
     padding: 5px 20px 70px 20px;
 
     font-size: 30px;
-  }
+  } */
 
   .eyesWrapper:hover {
     bottom: -13%;
@@ -368,10 +365,10 @@
     padding-bottom: 80px;
   }
 
-  .eyesWrapper {
-    bottom: -16%;
-    left: 61%;
-  }
+  /* .eyesWrapper {
+    bottom: 0;
+    right: 0;
+  } */
 
   .section {
     padding: 30px 80px 0px 0px;
@@ -499,6 +496,7 @@
 .linksContainer {
   position: absolute;
   z-index: 2;
+  top: auto;
 
   display: flex;
   flex-direction: column;
@@ -512,8 +510,9 @@
 .linksContainer a {
   position: absolute;
 
-  color: #000000;
-  background: #fd4c00;
+  color: #fd4c00;
+  border-radius: 10px;
+  border: 2px solid #fd4c00;
 
   font-family: "BergenMono-SemiBold";
 }
