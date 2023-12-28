@@ -1,0 +1,193 @@
+@import "../../../../styles/mixins";
+
+.mainSection {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imgContainerMainSection {
+  width: 100%;
+}
+
+.linksContainer {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 20%;
+
+  align-content: space-between;
+  align-items: center;
+}
+
+.linksContainer a {
+  position: absolute;
+
+  color: #fd4c00;
+  border-radius: 10px;
+  border: 2px solid #fd4c00;
+
+  font-family: "BergenMono-SemiBold";
+}
+
+.linkMainSectionInst {
+  transform: rotate(5.46deg);
+}
+
+.linkMainSectionMail {
+  transform: rotate(12.44deg);
+}
+
+.linkMainSectionTg {
+  transform: rotate(-13deg);
+}
+
+@include phone() {
+  .mainSection {
+    width: 170%;
+  }
+
+  .linksContainer {
+    top: 870px;
+    left: 0px;
+  }
+  .linksContainer a {
+    padding: 7px 10px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .imgContainerMainSection {
+    width: 100%;
+  }
+  .linkMainSectionInst {
+    top: -20px;
+    left: 20px;
+  }
+
+  .linkMainSectionMail {
+    top: -90px;
+    left: 10px;
+  }
+
+  .linkMainSectionTg {
+    top: 60px;
+    left: 10px;
+  }
+}
+
+@include tablet() {
+  .mainSection {
+    width: 100%;
+  }
+
+  .linksContainer {
+    top: 780px;
+    left: 110px;
+  }
+  .linksContainer a {
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+  .imgContainerMainSection {
+    width: 65%;
+  }
+
+  .linkMainSectionInst {
+    top: 50px;
+    left: -60px;
+  }
+
+  .linkMainSectionMail {
+    top: -20px;
+    left: 10px;
+  }
+
+  .linkMainSectionTg {
+    top: 130px;
+    left: 70px;
+  }
+}
+
+@include desktop() {
+  .section {
+    flex-direction: row;
+
+    padding: 30px 80px 0px 0px;
+  }
+
+  .linksContainer {
+    top: 550px;
+    left: 150px;
+  }
+
+  .linksContainer a {
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .imgContainerMainSection {
+    width: 60%;
+  }
+
+  .linkMainSectionInst {
+    top: 50px;
+    left: -60px;
+  }
+
+  .linkMainSectionMail {
+    top: -40px;
+    left: 60px;
+  }
+
+  .linkMainSectionTg {
+    top: 160px;
+    left: 120px;
+  }
+}
+
+@include desktopLg() {
+  .section {
+    flex-direction: row;
+
+    padding: 30px 80px 0px 0px;
+  }
+
+  .linksContainer {
+    top: 600px;
+    left: 230px;
+  }
+
+  .linksContainer a {
+    padding: 10px 25px;
+
+    font-size: 20px;
+  }
+
+  .linkMainSectionInst {
+    top: 50px;
+    left: -60px;
+  }
+  .linkMainSectionMail {
+    top: -40px;
+    left: 60px;
+  }
+
+  .linkMainSectionTg {
+    top: 160px;
+    left: 120px;
+  }
+}

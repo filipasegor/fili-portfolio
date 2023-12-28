@@ -3,15 +3,25 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
-import Header from "./components/Header";
 
-import MainSection from "./components/MainSection";
-import Media from "./components/works/Media";
-import IndexMedia from "./components/works/IndexMedia";
-import SkillDesc from "./components/SkillDesc";
-import SkillImage from "./components/SkillImage";
-import Par from "./components/Par.jsx";
-import Eyes from "./components/Eyes.jsx";
+// import Header from "./components/Header";
+// import MainSection from "./components/MainSection";
+// import IndexMedia from "./components/works/IndexMedia";
+// import SkillDesc from "./components/SkillDesc";
+// import Par from "./components/Par.jsx";
+// import workButton from "./components/main/WorkButton/WorkButton.jsx";
+
+import {
+  Header,
+  MainSection,
+  WorkButton,
+  Par,
+  SkillDesc,
+  SkillImage,
+  IndexMedia,
+  Headline,
+} from "./components/index";
+
 import thumbDevelop from "../public/thumbDevelop.png";
 import { FormattedMessage } from "react-intl";
 
@@ -36,6 +46,7 @@ export default function Home() {
         <div className={styles.headlineContainer}>
           <h1 className={styles.headline}>
             <FormattedMessage id="name" />
+            <br />
             <FormattedMessage id="designer" />
           </h1>
         </div>
@@ -49,7 +60,7 @@ export default function Home() {
           <Par>
             <FormattedMessage id="p3" />
           </Par>
-          <Eyes />
+          <WorkButton />
         </div>
       </Header>
 

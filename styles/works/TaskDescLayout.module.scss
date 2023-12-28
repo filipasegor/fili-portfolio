@@ -1,20 +1,17 @@
 @import "../mixins";
 
-.Wrapper{
+.Wrapper {
   display: flex;
 
   padding: 10px 0px;
 
   justify-content: flex-start;
 
-
-  a{
+  a {
     text-decoration: underline;
-
   }
 
-  p{
-    max-width: 250px;
+  p {
     margin-right: 30px;
     padding: 5px 0px 0px 0px;
 
@@ -24,30 +21,26 @@
   }
 }
 
-
-@include phone(){
-
-  .Wrapper{
+@include phone() {
+  .Wrapper {
+    gap: 10px;
     flex-direction: column;
 
     margin-bottom: 10px;
   }
-
 }
 
-@include tablet(){
-  .Wrapper{
+@include tablet() {
+  .Wrapper {
+    gap: 30px;
     flex-direction: row;
 
     margin: 25px 0px 0px 40px;
   }
-
 }
 
-@include desktop(){
-
-  .Wrapper{
+@include desktop() {
+  .Wrapper {
     margin: 25px 0px 0px 0px;
   }
-
 }

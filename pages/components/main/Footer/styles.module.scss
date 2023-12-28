@@ -1,0 +1,51 @@
+@import "../../../../styles/mixins";
+
+.footerContainer {
+  display: flex;
+
+  width: 100%;
+  margin: 0px auto 0px auto;
+
+  background: radial-gradient(
+    112.23% 90.87% at 50% 100%,
+    #ff5c00 0%,
+    rgba(255, 92, 0, 0) 100%
+  );
+
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footerContainer p {
+  width: 50%;
+  padding-bottom: 10px;
+
+  color: #000000;
+
+  font-family: "RooftopRegular";
+  font-size: 15px;
+}
+
+.footerRights {
+  text-align: right;
+}
+
+.SkillImageContainer {
+  display: block;
+}
+
+.footerImg {
+  width: 6%;
+}
+
+@include phone() {
+  .footerContainer {
+    padding: 300px 10px 0px 10px;
+  }
+}
+
+@include tablet() {
+  .footerContainer {
+    padding: 400px 60px 0px 60px;
+  }
+}

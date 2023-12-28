@@ -1,25 +1,29 @@
-
-
-@mixin desktop(){
-  @media(min-width: 1024px){
+@mixin desktopLg() {
+  @media (min-width: 1300px) {
     @content;
   }
-};
+}
 
-@mixin tablet(){
-  @media(min-width: 768px){
+@mixin desktop() {
+  @media (min-width: 1024px) {
     @content;
   }
-};
+}
 
-@mixin phoneLg(){
-  @media(min-width: 430px){
+@mixin tablet() {
+  @media (min-width: 768px) {
     @content;
   }
-};
+}
 
-@mixin phone(){
-  @media(min-width: 10px){
+@mixin phoneLg() {
+  @media (min-width: 430px) {
     @content;
   }
-};
+}
+
+@mixin phone() {
+  @media (min-width: 10px) {
+    @content;
+  }
+}

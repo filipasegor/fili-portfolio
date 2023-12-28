@@ -3,8 +3,18 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -21,43 +31,52 @@ a {
   box-sizing: border-box;
 }
 
-
-h1, h2, h3, p, ul, li{
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 
   font-size: auto;
 }
 
-
 @font-face {
-    font-family: 'RooftopRegular';
+  font-family: "RooftopRegular";
 
-    src: url("../fonts/RooftopRegular.otf") format('opentype');
+  src: url("../fonts/RooftopRegular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'RooftopBold';
+  font-family: "RooftopBold";
 
-    src: url("../fonts/RooftopBold.otf") format('opentype');
+  src: url("../fonts/RooftopBold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'RooftopMedium';
+  font-family: "RooftopMedium";
 
-    src: url("../fonts/RooftopMedium.otf") format('opentype');
+  src: url("../fonts/RooftopMedium.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BergenMono-SemiBold';
+  font-family: "BergenMono-SemiBold";
 
-    src: url("../fonts/BergenMono-SemiBold.eot") format('opentype');
-    src: url("../fonts/BergenMono-SemiBold.woff2") format('woff2');
+  src: url("../fonts/BergenMono-SemiBold.eot") format("opentype");
+  src: url("../fonts/BergenMono-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'BergenMono-Regular';
+  font-family: "BergenMono-Regular";
 
-    src: url("../fonts/BergenMono-Regular.eot") format('opentype');
-    src: url("../fonts/BergenMono-Regular.woff2") format('woff2');
+  src: url("../fonts/BergenMono-Regular.eot") format("opentype");
+  src: url("../fonts/BergenMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Rubik";
+
+  src: url("../fonts/Rubik-Medium.ttf") format("truetype");
 }

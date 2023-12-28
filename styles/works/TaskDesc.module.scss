@@ -1,6 +1,6 @@
 @import "../mixins";
 
-.Wrapper{
+.Wrapper {
   display: flex;
 
   padding: 10px 0px;
@@ -8,34 +8,24 @@
   justify-content: flex-start;
 }
 
-
-@include phone(){
-
-
-  .innerWrapper{
-    max-width: 450px;
+@include phone() {
+  .innerWrapper {
+    max-width: 600px;
   }
 
-  .innerWrapper:first-child{
+  .innerWrapper:first-child {
     margin: 15px 0px;
   }
-
 }
 
-@include tablet(){
-
-
-  .innerWrapper:first-child{
+@include tablet() {
+  .innerWrapper:first-child {
     margin: 0px 0px;
   }
-
 }
 
-@include desktop(){
-
-  .innerWrapper{
-    max-width: 450px;
+@include desktop() {
+  .innerWrapper {
     margin: 0px 0px;
   }
-
 }

@@ -1,0 +1,22 @@
+@import "../../../../styles/mixins";
+
+.par {
+  margin: 0px 0px 20px 0px;
+  line-height: 120%;
+  font-family: "RooftopRegular";
+}
+
+@include phone() {
+  .par {
+    font-size: 18px;
+  }
+}
+
+@include tablet() {
+  .par {
+    font-size: 21px;
+  }
+}
+
+@include desktopLg() {
+}

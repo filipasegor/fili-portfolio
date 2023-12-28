@@ -1,0 +1,35 @@
+@import "../../../../styles/mixins";
+
+@include phone() {
+  .SkillDescContainer {
+    width: 100%;
+  }
+
+  .left {
+    margin-right: 0px;
+  }
+
+  .right {
+    margin-left: 0px;
+  }
+}
+
+@include tablet() {
+  .SkillDescContainer {
+    width: 70%;
+  }
+
+  .left {
+    margin-right: 15px;
+  }
+
+  .right {
+    margin-left: 15px;
+  }
+}
+
+@include desktop() {
+}
+
+@include desktopLg() {
+}

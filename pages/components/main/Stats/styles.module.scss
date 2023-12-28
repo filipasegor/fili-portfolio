@@ -1,0 +1,39 @@
+@import "../../../../styles/mixins";
+
+.statsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.Headline {
+  font-family: "Rubik";
+  color: #49c61d;
+}
+
+.desc {
+  font-size: 21px;
+  font-family: "RooftopRegular";
+  line-height: 120%;
+}
+
+@include phone() {
+  .Headline {
+    font-size: 50px;
+  }
+}
+
+@include tablet() {
+  .Headline {
+    font-size: 80px;
+  }
+}
+
+@include desktop() {
+  .Headline {
+    font-size: 100px;
+  }
+}

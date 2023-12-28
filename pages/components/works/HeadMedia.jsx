@@ -1,54 +1,51 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react";
 
-import styles from '../../../styles/works/HeadMedia.module.scss'
+import styles from "../../../styles/works/HeadMedia.module.scss";
 
-
-
-export default function HeadMedia(props){
-
+export default function HeadMedia(props) {
   const [loading, setLoading] = useState(false);
 
-  function loadingData(){
+  function loadingData() {
     setLoading(true);
   }
 
   const img = (
-      <div className={styles.headImageWrapper}>
-        <Image
-         className={styles.headMedia}
-         alt="media-img"
-         src={props.src}
-         layout="responsive"
-         objectFit="cover"
-         placeholder="blur"
-       />
+    <div className={styles.headImageWrapper}>
+      <Image
+        className={styles.headMedia}
+        alt="media-img"
+        src={props.src}
+        layout="responsive"
+        objectFit="cover"
+        placeholder="blur"
+      />
     </div>
   );
 
   const video = (
     <div className={styles.headMedia}>
-      <video autoPlay muted loop playsInline
-      className={styles.video}
-      onLoadedData={() => {
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={styles.video}
+        onLoadedData={() => {
           loadingData();
-        }}
-      >
-      <source src={props.src} />
+        }}>
+        <source src={props.src} />
       </video>
     </div>
   );
 
-
-  return(
+  return (
     <>
-      <div
-      className={styles.headMediaWrapper}
-      >
+      <div style={props.style} className={styles.headMediaWrapper}>
         {props.media === "video" ? video : img}
       </div>
     </>
-  )
+  );
 }

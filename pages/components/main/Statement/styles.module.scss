@@ -1,0 +1,52 @@
+@import "../../../../styles/mixins";
+
+.statementWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.upperCaseText {
+  line-height: 120%; /* 36px */
+  text-transform: uppercase;
+  font-family: "RooftopMedium";
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+.headlinetWrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@include phone() {
+  .upperCaseText {
+    font-size: 25px;
+  }
+}
+
+@include tablet() {
+  .statementWrapper {
+    flex-wrap: wrap;
+  }
+
+  .upperCaseText {
+    margin-bottom: 25px;
+  }
+
+  .headlinetWrapper {
+    width: 100%;
+  }
+}
+
+@include desktop() {
+  .statementWrapper {
+    flex-wrap: nowrap;
+  }
+
+  .headlinetWrapper {
+    width: 55%;
+  }
+}

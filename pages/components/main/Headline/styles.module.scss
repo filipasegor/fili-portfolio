@@ -1,0 +1,35 @@
+@import "../../../../styles/mixins";
+
+.headline {
+  font-family: "RooftopMedium";
+  margin-bottom: 20px;
+  line-height: 120%;
+}
+
+.smHeadline {
+  text-transform: uppercase;
+  font-family: "RooftopMedium";
+  margin: 30px 0px;
+}
+
+@include phone() {
+  .headline {
+    font-size: 25px;
+  }
+
+  .smHeadline {
+    font-size: 25px;
+  }
+}
+
+@include tablet() {
+  .headline {
+    font-size: 35px;
+  }
+}
+
+@include desktop() {
+  .headline {
+    font-size: 45px;
+  }
+}

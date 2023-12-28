@@ -1,0 +1,21 @@
+@import "../../../../styles/mixins";
+
+.SkillImageWrapper {
+  display: grid;
+
+  border-radius: 15px;
+  background-color: #000000;
+
+  align-content: center;
+}
+
+@include phone() {
+  .SkillImageWrapper {
+    width: 100%;
+  }
+}
+@include tablet() {
+  .SkillImageWrapper {
+    width: 60%;
+  }
+}
