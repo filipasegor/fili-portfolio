@@ -18,6 +18,11 @@ import ProjectFooter from "../components/works/ProjectFooter";
 import SubHeading from "../components/works/SubHeading";
 import Video from "../components/works/Video";
 
+import Statement from "../components/main/Statement/Statement";
+import Par from "../components/main/Par/Par";
+import Headline from "../components/main/Headline/Headline";
+import Stats from "../components/main/Stats/Stats";
+
 import TaskDescLayout from "../components/works/TaskDescLayout";
 import TaskDesc from "../components/works/TaskDesc";
 import TaskLink from "../components/works/TaskLink";
@@ -30,7 +35,7 @@ import thumbCharus from "../../public/thumbCharus.png";
 import thumbNhs from "../../public/thumbNhs.png";
 import thumbShmot from "../../public/thumbShmot.png";
 
-import { Statement, Par, Headline, Stats } from "../components/index";
+// import { Statement, Par, Headline, Stats } from "../components/index";
 
 import { FormattedMessage } from "react-intl";
 

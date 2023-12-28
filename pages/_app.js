@@ -8,7 +8,7 @@ import { IntlProvider } from "react-intl";
 import { LOCALES } from "../i18n/locales";
 import { messages } from "../i18n/messages.index";
 
-function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   const [currentLocale, setCurrentLocale] = useState(getInitialLocal());
 
   const handleChange = (e) => {
@@ -31,5 +31,3 @@ function App({ Component, pageProps }) {
     </IntlProvider>
   );
 }
-
-export default App;

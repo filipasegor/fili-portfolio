@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 
-const withVideos = require('next-videos')
+const withVideos = require("next-videos");
 
-
-module.exports = 
-  withVideos(),
-  nextConfig
-
-
+(module.exports = withVideos()), nextConfig;
