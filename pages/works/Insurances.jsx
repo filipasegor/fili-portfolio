@@ -248,7 +248,7 @@ export default function Project(props) {
             <Stats headline="-15%" desc="Уменьшился процент по отказам" />
           </Statement>
 
-          <ProjectFooter date="08.07.2023" />
+          <ProjectFooter date="08.06.2023" />
         </section>
 
         <Suggested>
