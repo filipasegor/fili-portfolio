@@ -1,0 +1,14 @@
+export { default as Header } from "../pages/components/main/Header/Header";
+export { default as MainSection } from "../pages/components/main/MainSection/MainSection";
+export { default as WorkButton } from "../pages/components/main/WorkButton/WorkButton";
+export { default as Par } from "../pages/components/main/Par/Par";
+export { default as SkillDesc } from "../pages/components/main/SkillDesc/SkillDesc";
+export { default as SkillImage } from "../pages/components/main/SkillImage/SkillImage";
+export { default as IndexMedia } from "../pages/components/main/IndexMedia/IndexMedia";
+export { default as Headline } from "../pages/components/main/Headline/Headline";
+export { default as SmHeadline } from "../pages/components/main/Headline/SmHeadline";
+export { default as Statement } from "../pages/components/main/Statement/Statement";
+export { default as Stats } from "../pages/components/main/Stats/Stats";
+export { default as DoubleMedia } from "../pages/components/works/DoubleMedia/DoubleMedia";
+export { default as Point } from "../pages/components/works/Point/Point";
+export { default as PointBolded } from "../pages/components/works/Point/PointBolded";

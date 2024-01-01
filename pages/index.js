@@ -4,23 +4,23 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 
-import Header from "./components/main/Header/Header";
-import MainSection from "./components/main/MainSection/MainSection";
-import IndexMedia from "./components/main/IndexMedia/IndexMedia";
-import SkillDesc from "./components/main/SkillDesc/SkillDesc";
-import Par from "./components/main/Par/Par";
-import WorkButton from "./components/main/WorkButton/WorkButton.jsx";
+// import Header from "./components/main/Header/Header";
+// import MainSection from "./components/main/MainSection/MainSection";
+// import IndexMedia from "./components/main/IndexMedia/IndexMedia";
+// import SkillDesc from "./components/main/SkillDesc/SkillDesc";
+// import Par from "./components/main/Par/Par";
+// import WorkButton from "./components/main/WorkButton/WorkButton.jsx";
 
-// import {
-//   Header,
-//   MainSection,
-//   WorkButton,
-//   Par,
-//   SkillDesc,
-//   SkillImage,
-//   IndexMedia,
-//   Headline,
-// } from "./components/index";
+import {
+  Header,
+  MainSection,
+  WorkButton,
+  Par,
+  SkillDesc,
+  SkillImage,
+  IndexMedia,
+  Headline,
+} from "../componentsIndex/index";
 
 import thumbDevelop from "../public/thumbDevelop.png";
 import { FormattedMessage } from "react-intl";
