@@ -1,14 +1,15 @@
 @import "../../../../styles/mixins";
 
 .select {
-  font-family: "BergenMono-Regular";
+  font-family: "RooftopMono-Regular";
   font-size: 20px;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 11px;
   padding: 10px 27px 10px 9px;
   border: none;
   color: black;
-  background: rgba(205, 205, 205, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

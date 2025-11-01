@@ -1,6 +1,6 @@
 @import "../mixins";
 
-.Wrapper{
+.Wrapper {
   display: flex;
   flex-direction: column;
 
@@ -8,7 +8,7 @@
   line-height: 120%;
 }
 
-.Wrapper p:first-child{
+.Wrapper p:first-child {
   margin-bottom: 25px;
 }
 
@@ -16,33 +16,26 @@
   display: flex;
 }
 
-
-@include phone(){
-
-  .Wrapper{
+@include phone() {
+  .Wrapper {
     width: auto;
 
     font-size: 20px;
   }
-
-
 }
 
-@include tablet(){
-  .Wrapper{
+@include tablet() {
+  .Wrapper {
     width: auto;
     padding-top: 0px;
 
     font-size: 25px;
   }
-
 }
 
-@include desktop(){
-
-  .Wrapper{
+@include desktop() {
+  .Wrapper {
     width: 40vw;
     padding-top: 10px;
   }
-
 }

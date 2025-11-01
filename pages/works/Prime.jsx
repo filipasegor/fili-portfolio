@@ -151,8 +151,13 @@ export default function Project(props) {
               информации. Таким образом менеджеры могли фокусировать внимание
               клиента на конкретных сервисах и на конкретной пользе от продукта
             </Par>
-            <Image src={paper}></Image>
-            <Par>
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={paper}
+              layout="responsive"
+              alt="paper"
+            />
+            <Par style={{ paddingTop: "30px" }}>
               Поэтому я решил взять лучшее от бумажной распечатки и разместить
               информацию о продукте со такой же плотностью, чтобы менеджерам
               было привычно пользоваться новым инструментом
@@ -173,8 +178,12 @@ export default function Project(props) {
               подписку, новый лендинг умеет автоматически считать, сколько
               клиент сэкономит, если будет пользоваться СберПраймом.
             </Par>
-            <Link href="https://www.figma.com/proto/n5kuJRF3zYS9bfVxrQ6j4W/Untitled?page-id=0%3A1&type=design&node-id=107-31295&viewport=1535%2C-22%2C0.23&t=wLyDXpBLyLuprBbt-1&scaling=scale-down&starting-point-node-id=107%3A31295&mode=design">
-              <a className={styles.link}>Протестировать прототип</a>
+            <Link
+              href="https://www.figma.com/proto/n5kuJRF3zYS9bfVxrQ6j4W/Untitled?page-id=0%3A1&type=design&node-id=107-31295&viewport=1535%2C-22%2C0.23&t=wLyDXpBLyLuprBbt-1&scaling=scale-down&starting-point-node-id=107%3A31295&mode=design"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer">
+              Протестировать прототип
             </Link>
           </Statement>
 

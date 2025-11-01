@@ -35,6 +35,12 @@ import thumbRunup from "../public/thumbRunup.png";
 import thumbNeosite from "../public/thumbNeosite.png";
 import thumbSelection from "../public/thumbSelection.png";
 import prime from "../public/prime.png";
+import finesApp from "../public/projects/fines-app.png";
+import resumeRedesign from "../public/projects/resume-redesign.png";
+import thumbtollroads from "../public/projects/thumbTollRoads.png";
+import thumbDashboard from "../public/projects/thumbDashboard.png";
+import thumbTempiAi from "../public/projects/thumbTempiAi.png";
+import worksDashboard from "../public/projects/worksDashboard.png";
 
 import { FormattedMessage } from "react-intl";
 
@@ -66,6 +72,38 @@ export default function Projects(props) {
               <FormattedMessage id="worksSber" />
             </h1>
           </MdProject> */}
+
+          <MdProject
+            href="/works/RoadsApp"
+            srcThumb={thumbtollroads}
+            altThumb="roads-app"
+            src={require("../public/projects/worksTollroads.mp4")}
+            type="arrow"
+            media="video">
+            <h1>Платные дороги в Штрафы.ру</h1>
+            <p>Добавление нового сервиса</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/Tempi"
+            srcThumb={thumbTempiAi}
+            altThumb="tempi"
+            src={require("../public/projects/worksTempiAi.mp4")}
+            type="arrow"
+            media="video">
+            <h1>Tempi — редизайн флоу резюме</h1>
+            <p>ИИ-генерация резюме</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/Dashboard"
+            alt="dashboard"
+            src={worksDashboard}
+            type="arrow"
+            media="img">
+            <h1>Редизайн дашборда в Штрафы.ру</h1>
+            <p>Объединение всех сервисов</p>
+          </MdProject>
 
           <MdProject
             href="/works/Prime"

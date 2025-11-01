@@ -21,10 +21,6 @@
 .headlineContainer {
   display: flex;
 
-  margin-bottom: 100px;
-  margin-left: 170px;
-  padding-top: 20px;
-
   color: #ffffff;
 
   justify-content: space-between;
@@ -36,6 +32,15 @@
   width: 10%;
 
   text-align: right;
+}
+
+.aboutTitle {
+  font-family: "RooftopMedium";
+  font-size: 100px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.1;
 }
 
 .button {
@@ -116,10 +121,15 @@
     font-size: 35px;
   }
 
+  .aboutTitle {
+    font-size: 64px;
+    margin-bottom: 0px 0px 0px 0px;
+  }
+
   .headlineContainer {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     margin-left: 0px;
-    padding-top: 10px;
+    padding-top: 50px;
   }
 
   .Projects {
@@ -134,10 +144,16 @@
     font-size: 40px;
   }
 
+  .aboutTitle {
+    font-size: 64px;
+    margin-bottom: 0px 0px 60px 0px;
+    margin-bottom: 120px 0px 60px 180px;
+  }
+
   .headlineContainer {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-left: 0px;
-    padding-top: 120px;
+    padding-top: 130px;
   }
 
   .Projects {
@@ -147,9 +163,14 @@
 
 @include desktop() {
   .headlineContainer {
-    margin-bottom: 160px;
+    margin-bottom: 30px;
     margin-left: 180px;
-    padding-top: 20px;
+    padding-top: 150px;
+  }
+
+  .aboutTitle {
+    font-size: 100px;
+    margin-bottom: 120px 0px 50px 180px;
   }
 
   .headline {

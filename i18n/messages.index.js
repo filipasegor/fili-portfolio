@@ -2,14 +2,40 @@ import { LOCALES } from "./locales";
 
 export const messages = {
   [LOCALES.EN]: {
+    //// New headline (index)
+    headlineName: "EGOR FILIPAS",
+    headlineDesigner: "DESIGNER",
+    headlineProducts: "PRODUCT",
+    headlineUser: "USER",
+    headlineInterfaces: "INTERFACES",
+    headlineAnd: "AND",
     name: "My name is Egor Filipas, ",
     designer: "I am a designer",
-    p1: "I help businesses solve problems through design",
-    p2: "For example: draw attention to a product, design a user experience and interface for an application, or design and launch a website",
-    p3: "Ultimately, I help companies make more money by improving their products and services",
+    p1: "I design interfaces and user scenarios for applications, websites, and other digital systems. I help businesses solve problems with design",
+    p2: "The human is the main guide in any digital product. Therefore, I study what goals and tasks users face, so that design brings them benefit and joy, and business — profit",
+    p3: "In addition to product design skills, I also know how to code and create graphics. Thus, I reduce the cost and facilitate the product design process",
 
     profile: "PROFILE",
     works: "WORKS",
+    about: "ABOUT",
+
+    //////About Page
+    aboutTitle: "ABOUT ME",
+    email: "E-MAIL",
+    emailValue: "filipas@gmail.com",
+    telegram: "TELEGRAM",
+    telegramValue: "@filipas",
+    linkedin: "LINKEDIN",
+    linkedinValue: "Egor Filipas",
+    instagram: "INSTAGRAM",
+    instagramValue: "@filipasssss",
+    currentlyWorking: "CURRENTLY WORKING AT",
+    currentlyWorkingValue: "Shtrafy.ru",
+    competencies: "COMPETENCIES",
+    techSkills: "TECH SKILLS",
+    productDesign: "Product design and interfaces",
+    communicationDesign: "Communication design",
+    systematizationDesign: "Systematization and design development",
 
     //////Index
     skill1Headline: "Digital product design and development",
@@ -18,7 +44,7 @@ export const messages = {
     skill1Par2:
       "I help with the development and launch, so that the final result brought profit to the business, and joy to users",
 
-    eyesButton: "EXPLORE WORKS",
+    eyesButton: "LEARN MORE ABOUT ME",
 
     skill2Headline: "Identity and graphic design",
     skill2Par1:
@@ -34,8 +60,7 @@ export const messages = {
     skill3Par3:
       "My programming skills help me to bring designs into reality and make them low-resources for development and launch",
 
-    worksH1:
-      "Interfaces, websites, mobile apps, design systems, identities, logos, development",
+    worksH1: "ALL MY PROJECTS",
     projectWith: "Project with Art.Lebedev Studio",
     worksSber: "Software interfaces for Sber",
     worksNarayone: "Site For Narayone",
@@ -258,17 +283,60 @@ export const messages = {
     coffeeILudiTask: "Purpose and goal of design",
     coffeeILudiTaskPar1:
       "The concept of the coffee shop is about bringing strangers together in one place and introducing them to each other. It's a place where there's no politics, no violence, and no  routine problems. There is only good coffee and kind people",
+    // ProjectsSection (cards)
+    "projects.roads.title": "Toll Roads App",
+    "projects.roads.desc":
+      "Service for paying toll road fees and route calculation. I was responsible for product design and interfaces",
+    "projects.tempi.title": "Resume Creation Redesign",
+    "projects.tempi.desc":
+      "Tempi — HR startup for job search and part-time work. I improved the resume creation UX and added AI for its automatic filling",
+    "projects.dashboard.title": "Dashboard in Shtrafy.ru app",
+    "projects.dashboard.desc":
+      "Shtrafy.ru is one of the largest services in Russia for finding and paying fines, taxes and OSAGO. In the project I developed a new application dashboard",
+    "projects.metric.retention": "Retention",
+    "projects.metric.mau": "MAU",
+    "projects.metric.arpu": "ARPU",
+    "projects.metric.successRate": "Success rate",
+    "projects.metric.timeToTask": "Time to task",
+    "projects.metric.churn": "CHURN",
+    "projects.metric.crMainAction": "CR(main action)",
+    "projects.viewAll": "See all projects",
   },
 
   [LOCALES.RU]: {
+    //// Новый заголовок (index)
+    headlineName: "ЕГОР ФИЛИПАС",
+    headlineDesigner: "ДИЗАЙНЕР",
+    headlineProducts: "ПРОДУКТОВ",
+    headlineInterfaces: "ИНТЕРФЕЙСОВ",
+    headlineAnd: "и",
     name: "Меня зовут Егор Филипас, ",
     designer: "я дизайнер",
-    p1: "Я помогаю бизнесу решать задачи с помощью дизайна",
-    p2: "Например: привлечь внимание к продукту, спроектировать пользовательский опыт и интерфейс для приложения или разработать и запустить сайт",
-    p3: "В конечном счете, я помогаю компаниям зарабатывать больше, улучшая их продукты и сервисы",
+    p1: "Я проектирую интерфейсы и пользовательские сценарии для приложений, сайтов и для прочих цифровых систем. Помогаю бизнесу решать задачи с помощью дизайна",
+    p2: "Человек — главный ориентир в любых цифровых продуктах. Поэтому я изучаю какие цели и задачи стоят перед пользователями, чтобы дизайн приносил им пользу и радость, а бизнесу — прибыль",
+    p3: "Помимо навыков продуктового дизайна, я еще умею кодить и создавать графику. Так, я удешевляю и облегчаю процесс дизайна продуктов",
 
     profile: "ПРОФИЛЬ",
     works: "РАБОТЫ",
+    about: "ОБО МНЕ",
+
+    //////About Page
+    aboutTitle: "ОБО МНЕ",
+    email: "E-MAIL",
+    emailValue: "filipas@gmail.com",
+    telegram: "TELEGRAM",
+    telegramValue: "@filipas",
+    linkedin: "LINKEDIN",
+    linkedinValue: "Egor Filipas",
+    instagram: "INSTAGRAM",
+    instagramValue: "@filipasssss",
+    currentlyWorking: "СЕЙЧАС РАБОТАЮ В",
+    currentlyWorkingValue: "Shtrafy.ru",
+    competencies: "КОМПЕТЕНЦИИ",
+    techSkills: "TECH SKILLS",
+    productDesign: "Продуктовый дизайн и интерфейсы",
+    communicationDesign: "Коммуникационный дизайн",
+    systematizationDesign: "Систематизация и разработка дизайна",
 
     //////Index
     skill1Headline: "Дизайн и разработка цифровых продуктов",
@@ -277,7 +345,7 @@ export const messages = {
     skill1Par2:
       "Помогу с разработкой и запуском, чтобы итоговый результат приносил прибыль бизнесу, а людям радость",
 
-    eyesButton: "ПОСМОТРЕТЬ РАБОТЫ",
+    eyesButton: "ПОДРОБНЕЕ ПРО МЕНЯ",
 
     skill2Headline: "Айдентинка и графический дизайн",
     skill2Par1:
@@ -294,8 +362,7 @@ export const messages = {
       "Навыки программирования помогают мне воплощать макеты в жизнь и делать дизайн, который не требует больших ресурсов на разработку и запуск",
 
     /////works
-    worksH1:
-      "Интерфейсы, сайты, мобильные приложения, дизайн-системы, айдентики, логотипы, разработка",
+    worksH1: "ВСЕ РАБОТЫ",
     projectWith: "Работа в студии Артемия Лебедева",
     worksSber: "Интерфейсы цифровой системы для сотрудников Сбера",
     worksNarayone: "Сайт проекта «На районе»",
@@ -514,5 +581,23 @@ export const messages = {
     coffeeILudiTask: "Задача и цель айдентики",
     coffeeILudiTaskPar1:
       "Концепция кофейни в том, чтобы собирать незнакомых людей в одном месте и знакомить их с друг другом. Это место, где нет политики, насилия и обычных бытовых проблем. Есть только вкусный кофе и добрые люди",
+    // ProjectsSection (cards)
+    "projects.roads.title": "Приложение платных дорог",
+    "projects.roads.desc":
+      "Сервис для оплаты проездов по платным дорогам и расчёта маршрута. Отвечал за дизайн продукта и интерфейсы",
+    "projects.tempi.title": "Редизайн создания резюме",
+    "projects.tempi.desc":
+      "Tempi — HR-стартап для поиска работы и подработки. Я улучшил UX создания резюме и добавил ИИ для его автоматического заполнения",
+    "projects.dashboard.title": "Дэшборд в приложении Штрафы.ру",
+    "projects.dashboard.desc":
+      "Штрафы.ру — один из крупнейших сервисов в России для поиска и оплаты штрафов, налогов и ОСАГО. В проекте я разработал новый дашборд приложения",
+    "projects.metric.retention": "ARPU",
+    "projects.metric.mau": "MAU",
+    "projects.metric.arpu": "Succes rate",
+    "projects.metric.successRate": "Success rate",
+    "projects.metric.timeToTask": "Time to task",
+    "projects.metric.churn": "CHURN",
+    "projects.metric.crMainAction": "CR(main action)",
+    "projects.viewAll": "Смотреть все проекты",
   },
 };

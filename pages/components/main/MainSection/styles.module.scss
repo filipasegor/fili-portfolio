@@ -1,15 +1,18 @@
 @import "../../../../styles/mixins";
 
-.mainSection {
+/* .mainSection {
   display: flex;
-
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+  min-height: 400px;
 }
 
 .imgContainerMainSection {
-  width: 100%;
-}
+  height: auto;
+  max-width: 250px;
+  max-height: 300px;
+} */
 
 .linksContainer {
   position: absolute;
@@ -32,7 +35,7 @@
   border-radius: 10px;
   border: 2px solid #fd4c00;
 
-  font-family: "BergenMono-SemiBold";
+  font-family: "RooftopMono-Bold";
 }
 
 .linkMainSectionInst {
@@ -47,9 +50,10 @@
   transform: rotate(-13deg);
 }
 
-@include phone() {
+/* @include phone() {
   .mainSection {
-    width: 170%;
+    height: 300px;
+    min-height: 300px;
   }
 
   .linksContainer {
@@ -65,8 +69,13 @@
   }
 
   .imgContainerMainSection {
-    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 200px;
   }
+} */
+
+@include phone() {
   .linkMainSectionInst {
     top: -20px;
     left: 20px;
@@ -83,9 +92,10 @@
   }
 }
 
-@include tablet() {
+/* @include tablet() {
   .mainSection {
-    width: 100%;
+    height: 400px;
+    min-height: 400px;
   }
 
   .linksContainer {
@@ -100,9 +110,13 @@
     font-size: 16px;
   }
   .imgContainerMainSection {
-    width: 65%;
+    height: auto;
+    max-width: 200px;
+    max-height: 250px;
   }
+} */
 
+@include tablet() {
   .linkMainSectionInst {
     top: 50px;
     left: -60px;
@@ -119,11 +133,10 @@
   }
 }
 
-@include desktop() {
-  .section {
-    flex-direction: row;
-
-    padding: 30px 80px 0px 0px;
+/* @include desktop() {
+  .mainSection {
+    height: 500px;
+    min-height: 500px;
   }
 
   .linksContainer {
@@ -140,9 +153,13 @@
   }
 
   .imgContainerMainSection {
-    width: 60%;
+    height: auto;
+    max-width: 200px;
+    max-height: 250px;
   }
+} */
 
+@include desktop() {
   .linkMainSectionInst {
     top: 50px;
     left: -60px;
@@ -159,11 +176,10 @@
   }
 }
 
-@include desktopLg() {
-  .section {
-    flex-direction: row;
-
-    padding: 30px 80px 0px 0px;
+/* @include desktopLg() {
+  .mainSection {
+    height: 500px;
+    min-height: 500px;
   }
 
   .linksContainer {
@@ -176,7 +192,9 @@
 
     font-size: 20px;
   }
+} */
 
+@include desktopLg() {
   .linkMainSectionInst {
     top: 50px;
     left: -60px;

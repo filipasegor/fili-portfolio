@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #000000;
+  color: #ffffff;
 
   font-family:
     -apple-system,
@@ -62,21 +64,37 @@ li {
 }
 
 @font-face {
-  font-family: "BergenMono-SemiBold";
+  font-family: "RooftopMono-Bold";
 
-  src: url("../fonts/BergenMono-SemiBold.eot") format("opentype");
-  src: url("../fonts/BergenMono-SemiBold.woff2") format("woff2");
+  src: url("../fonts/TRIAL_RooftopMono-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "BergenMono-Regular";
+  font-family: "RooftopMono-Regular";
 
-  src: url("../fonts/BergenMono-Regular.eot") format("opentype");
-  src: url("../fonts/BergenMono-Regular.woff2") format("woff2");
+  src: url("../fonts/TRIAL_RooftopMono-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Rubik";
 
   src: url("../fonts/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RooftopMono-Regular";
+
+  src: url("../fonts/TRIAL_RooftopMono-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "RooftopMono-Medium";
+
+  src: url("../fonts/TRIAL_RooftopMono-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "RooftopMono-Bold";
+
+  src: url("../fonts/TRIAL_RooftopMono-Bold.otf") format("opentype");
 }

@@ -9,24 +9,18 @@ import linkArrow from "./LinkArrow.svg";
 function ActiveLink({ children, href }) {
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push();
-  };
-
   if (router.asPath === "/") {
     return (
       <>
         <nav className={styles.navbarContainer}>
-          <Link href="/">
-            <a className={styles.active}>
-              <FormattedMessage id="profile" />
-            </a>
+          <Link href="/" className={styles.active}>
+            <FormattedMessage id="profile" />
           </Link>
-          <Link href="/Works">
-            <a className={styles.default}>
-              <FormattedMessage id="works" />
-            </a>
+          <Link href="/Works" className={styles.default}>
+            <FormattedMessage id="works" />
+          </Link>
+          <Link href="/About" className={styles.default}>
+            <FormattedMessage id="about" />
           </Link>
         </nav>
       </>
@@ -37,15 +31,32 @@ function ActiveLink({ children, href }) {
     return (
       <>
         <nav className={styles.navbarContainer}>
-          <Link href="/">
-            <a className={styles.default}>
-              <FormattedMessage id="profile" />
-            </a>
+          <Link href="/" className={styles.default}>
+            <FormattedMessage id="profile" />
           </Link>
-          <Link href="/Works">
-            <a className={styles.active}>
-              <FormattedMessage id="works" />
-            </a>
+          <Link href="/Works" className={styles.active}>
+            <FormattedMessage id="works" />
+          </Link>
+          <Link href="/About" className={styles.default}>
+            <FormattedMessage id="about" />
+          </Link>
+        </nav>
+      </>
+    );
+  }
+
+  if (router.asPath === "/About") {
+    return (
+      <>
+        <nav className={styles.navbarContainer}>
+          <Link href="/" className={styles.default}>
+            <FormattedMessage id="profile" />
+          </Link>
+          <Link href="/Works" className={styles.default}>
+            <FormattedMessage id="works" />
+          </Link>
+          <Link href="/About" className={styles.active}>
+            <FormattedMessage id="about" />
           </Link>
         </nav>
       </>
@@ -55,30 +66,27 @@ function ActiveLink({ children, href }) {
   return (
     <>
       <nav className={styles.navbarContainer}>
-        <Link href="/Works">
-          <a className={styles.ArrowLink}>
-            <div className={styles.ImageWrapper}>
-              <Image
-                className={styles.Image}
-                alt={linkArrow}
-                src={linkArrow}
-                objectFit="scale-down"
-                width={31}
-                height={17}
-              />
-            </div>
-          </a>
+        <Link href="/Works" className={styles.ArrowLink}>
+          <div className={styles.ImageWrapper}>
+            <Image
+              className={styles.Image}
+              alt={linkArrow}
+              src={linkArrow}
+              objectFit="scale-down"
+              width={31}
+              height={17}
+            />
+          </div>
         </Link>
         <div></div>
-        <Link href="/">
-          <a className={styles.default}>
-            <FormattedMessage id="profile" />
-          </a>
+        <Link href="/" className={styles.default}>
+          <FormattedMessage id="profile" />
         </Link>
-        <Link href="/Works">
-          <a className={styles.active}>
-            <FormattedMessage id="works" />
-          </a>
+        <Link href="/Works" className={styles.default}>
+          <FormattedMessage id="works" />
+        </Link>
+        <Link href="/About" className={styles.default}>
+          <FormattedMessage id="about" />
         </Link>
       </nav>
     </>

@@ -1,0 +1,416 @@
+.container {
+  overflow-x: hidden;
+  min-height: 100vh;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0;
+}
+
+/* Header Section */
+.headerSection {
+  padding: 130px 40px 40px 40px;
+}
+
+.aboutTitle {
+  font-family: "RooftopMedium";
+  font-size: 100px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.1;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactLabel {
+  font-family: "RooftopMono-Bold";
+  font-size: 20px;
+  color: #651e00;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contactValue {
+  font-family: "RooftopMono-Bold";
+  font-size: 20px;
+  color: #ff6b35;
+  font-weight: 500;
+}
+
+/* Competencies Section */
+.competenciesSection {
+  display: flex;
+  padding: 0 40px 80px 40px;
+  gap: 30%;
+  justify-content: space-between;
+}
+
+.competenciesTitle {
+  font-family: "RooftopMedium";
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.competenciesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.competenciesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.competency {
+  background-color: transparent;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.competencyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 0 40px 0;
+}
+
+.competencyTitle {
+  font-family: "RooftopMedium";
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.competencyDesc {
+  font-family: "RooftopRegular";
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.competencyText {
+  text-align: left;
+  width: 100%;
+}
+
+.competencyMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+/* Tech Skills Section */
+.techSkillsSection {
+  padding: 80px 40px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.techSkillsTitle {
+  font-family: "RooftopMedium";
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.techSkillsGrid {
+  width: 60%;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.techSkill {
+  font-family: "RooftopRegular";
+  font-size: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #333333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.techSkill::before {
+  content: "•";
+  color: #ff6b35;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.techSkill:hover {
+  border-color: #ff6b35;
+  background-color: rgba(255, 107, 53, 0.1);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .headerSection {
+    padding: 110px 20px 30px 20px;
+  }
+
+  .aboutTitle {
+    font-size: 64px;
+    margin-bottom: 30px;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .contactItem {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contactLabel {
+    font-size: 18px;
+  }
+
+  .contactValue {
+    font-size: 18px;
+  }
+
+  .competenciesSection {
+    flex-direction: column;
+    padding: 0 20px 60px 20px;
+    gap: 40px;
+  }
+
+  .competenciesTitle {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .competenciesContent {
+    gap: 40px;
+  }
+
+  .competencyContent {
+    padding: 0 0 20px 0;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .competencyTitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .competencyDesc {
+    font-size: 16px;
+  }
+
+  .competencyMedia {
+    height: 400px;
+  }
+
+  .techSkillsSection {
+    padding: 60px 20px;
+  }
+
+  .techSkillsTitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .techSkillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+  }
+
+  .techSkill {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .techSkillsSection {
+    flex-direction: column;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .headerSection {
+    padding: 130px 30px 40px 30px;
+  }
+
+  .aboutTitle {
+    font-size: 80px;
+  }
+
+  .contactInfo {
+    gap: 30px;
+  }
+
+  .competenciesSection {
+    flex-direction: column;
+    padding: 0 30px 60px 30px;
+    gap: 40px;
+  }
+
+  .competenciesTitle {
+    font-size: 28px;
+  }
+
+  .competenciesContent {
+    gap: 50px;
+    width: 100%;
+  }
+
+  .competencyContent {
+    padding: 0 0 30px 0;
+    gap: 30px;
+  }
+
+  .competencyTitle {
+    font-size: 28px;
+  }
+
+  .competencyDesc {
+    font-size: 17px;
+  }
+
+  .competencyMedia {
+    height: 450px;
+  }
+
+  .techSkillsSection {
+    padding: 60px 30px;
+    flex-direction: column;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .headerSection {
+    padding: 150px 40px 60px 40px;
+  }
+
+  .aboutTitle {
+    font-size: 100px;
+  }
+
+  .contactInfo {
+    gap: 40px;
+  }
+
+  .competenciesSection {
+    padding: 0 40px 100px 40px;
+    gap: 60px;
+  }
+
+  .competenciesTitle {
+    font-size: 32px;
+  }
+
+  .competenciesContent {
+    gap: 60px;
+    width: 60%;
+  }
+
+  .competencyContent {
+    padding: 0 0 40px 0;
+    gap: 40px;
+  }
+
+  .competencyTitle {
+    font-size: 32px;
+  }
+
+  .competencyDesc {
+    font-size: 18px;
+  }
+
+  .competencyMedia {
+    height: 500px;
+  }
+
+  .techSkillsSection {
+    padding: 100px 40px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1300px) {
+  .headerSection {
+    padding: 170px 60px 80px 60px;
+  }
+
+  .aboutTitle {
+    font-size: 120px;
+  }
+
+  .contactInfo {
+    gap: 50px;
+  }
+
+  .competenciesSection {
+    padding: 0 60px 120px 60px;
+    gap: 80px;
+  }
+
+  .competenciesTitle {
+    font-size: 36px;
+  }
+
+  .competenciesContent {
+    gap: 80px;
+  }
+
+  .competencyContent {
+    padding: 0 0 50px 0;
+    gap: 50px;
+  }
+
+  .competencyTitle {
+    font-size: 36px;
+  }
+
+  .competencyDesc {
+    font-size: 20px;
+  }
+
+  .competencyMedia {
+    height: 500px;
+  }
+
+  .techSkillsSection {
+    padding: 120px 60px;
+  }
+}

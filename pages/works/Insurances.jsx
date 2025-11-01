@@ -147,8 +147,12 @@ export default function Project(props) {
               Также клиент видит какую скидку он получает, если оформляет сразу
               несколько страховок.
             </Par>
-            <Link href="https://www.figma.com/proto/9d8VrzafQtCAAXBixTIi0v/work?page-id=301%3A6902&type=design&node-id=315-119526&viewport=-1249%2C2586%2C0.15&t=HvNirKFqUKEp2gPC-1&scaling=scale-down&starting-point-node-id=315%3A119526">
-              <a className={styles.link}>Протестировать прототип</a>
+            <Link
+              href="https://www.figma.com/proto/9d8VrzafQtCAAXBixTIi0v/work?page-id=301%3A6902&type=design&node-id=315-119526&viewport=-1249%2C2586%2C0.15&t=HvNirKFqUKEp2gPC-1&scaling=scale-down&starting-point-node-id=315%3A119526"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer">
+              Протестировать прототип
             </Link>
           </Statement>
 

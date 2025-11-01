@@ -50,10 +50,8 @@ export default function Layout(props) {
   const withBlackLogo = (
     <div className={router.asPath === "/" ? styles.body : ""}>
       <div className={styles.imgContainer}>
-        <Link href="/">
-          <a className={styles.logoWrapper}>
-            <Image className={styles.logo} alt="logo" src={blacklogo} />
-          </a>
+        <Link href="/" className={styles.logoWrapper}>
+          <Image className={styles.logo} alt="logo" src={blacklogo} />
         </Link>
         <div>
           {/* Language switch dropdown */}
@@ -78,10 +76,8 @@ export default function Layout(props) {
   const withWhiteLogo = (
     <div className={router.asPath === "/" ? styles.body : ""}>
       <div className={styles.imgContainer}>
-        <Link href="/">
-          <a className={styles.logoWrapper}>
-            <Image className={styles.logo} alt="logo" src={logo} />
-          </a>
+        <Link href="/" className={styles.logoWrapper}>
+          <Image className={styles.logo} alt="logo" src={logo} />
         </Link>
         <div>
           {/* Language switch dropdown here */}
@@ -106,10 +102,8 @@ export default function Layout(props) {
   const blackBg = (
     <div className={styles.body}>
       <div className={styles.imgContainer}>
-        <Link href="/">
-          <a className={styles.logoWrapper}>
-            <Image className={styles.logo} alt="logo" src={logo} />
-          </a>
+        <Link href="/" className={styles.logoWrapper}>
+          <Image className={styles.logo} alt="logo" src={logo} />
         </Link>
         <div>
           {/* Language switch dropdown here */}
@@ -132,6 +126,9 @@ export default function Layout(props) {
   );
 
   if (router.asPath === "/Works") {
+    return blackBg;
+  }
+  if (router.asPath === "/About") {
     return blackBg;
   }
   if (router.asPath === "/") {

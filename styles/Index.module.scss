@@ -1,44 +1,41 @@
 @import "mixins";
 
-
 .container {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
 }
 
-.headline{
+.headline {
   margin: 0px 0px;
 
   font-family: "RooftopMedium";
   font-size: 60px;
 }
 
-.par{
+.par {
   margin: 0px 0px 20px 0px;
 
   font-family: "RooftopRegular";
   font-size: 21px;
 }
 
-.button{
+.button {
   padding: 10px 14px;
 
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   background: #202020;
 
   font-family: "RooftopRegular";
   font-size: 15px;
-
 }
 
-.button:hover{
-  background: #6B6B6B;
+.button:hover {
+  background: #6b6b6b;
 }
 
-
-.section{
+.section {
   display: flex;
 
   width: 100%;
@@ -47,23 +44,23 @@
   justify-content: space-between;
 }
 
-.imgContainer{
+.imgContainer {
   width: 50%;
   padding: 16px 0px;
 }
 
-.headlineContainer{
+.headlineContainer {
   width: 50%;
   margin-left: 30%;
 }
 
-.parContainer{
+.parContainer {
   width: 30%;
   padding: 10px 0px;
 }
 
-.mainSection{
-  display:flex;
+.mainSection {
+  display: flex;
 
   width: 100%;
 
@@ -71,7 +68,7 @@
   align-items: center;
 }
 
-.linksContainer{
+.linksContainer {
   z-index: 2;
 
   display: flex;
@@ -83,7 +80,7 @@
   align-items: center;
 }
 
-.linksContainer a{
+.linksContainer a {
   position: absolute;
 
   margin: 15px;
@@ -91,35 +88,34 @@
 
   color: #000000;
   border-radius: 10px;
-  background: #FD4C00;
+  background: #fd4c00;
 
-  font-family: "BergenMono-SemiBold";
+  font-family: "RooftopMono-Bold";
   font-size: 20px;
-
 }
 
-.linkMainSectionInst{
+.linkMainSectionInst {
   top: 567px;
   left: 324.19px;
 
   transform: rotate(5.46deg);
 }
 
-.linkMainSectionMail{
+.linkMainSectionMail {
   top: 664px;
   left: 177px;
 
-  transform: rotate(12.44deg);;
+  transform: rotate(12.44deg);
 }
 
-.linkMainSectionTg{
+.linkMainSectionTg {
   top: 803px;
   left: 356px;
 
   transform: rotate(-9.79deg);
 }
 
-.Geo{
+.Geo {
   position: absolute;
   top: 673px;
   left: 534.92px;
@@ -130,17 +126,17 @@
 
   transform: rotate(6.64deg);
 
-  color: #FD4C00;
+  color: #fd4c00;
 
-  font-family: "BergenMono-SemiBold";
+  font-family: "RooftopMono-Bold";
   font-size: 20px;
 }
 
-.Geo p{
+.Geo p {
   margin-left: 10px;
 }
 
-.SkillTitle{
+.SkillTitle {
   margin-bottom: 35px;
 
   font-family: "RooftopMedium";
@@ -148,13 +144,13 @@
   line-height: 120%;
 }
 
-.SkillDesc{
+.SkillDesc {
   font-family: "RooftopRegular";
   font-size: 21px;
   line-height: 130%;
 }
 
-.Skill{
+.Skill {
   display: flex;
 
   width: 80%;
@@ -163,14 +159,13 @@
 
   color: #000000;
   border-radius: 22px;
-  background: #E8E8E8;
+  background: #e8e8e8;
 
   align-items: flex-start;
   justify-content: space-between;
   justify-content: space-between;
 }
 
-
-.SkillDescContainer{
-  width: 45%
+.SkillDescContainer {
+  width: 45%;
 }

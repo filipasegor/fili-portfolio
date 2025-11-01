@@ -1,43 +1,32 @@
 @import "../mixins";
 
-
 .Wrapper {
   font-family: "RooftopMedium";
   font-size: 40px;
   line-height: 180%;
-
 }
 
-
-@include phone(){
-
-  .Wrapper{
+@include phone() {
+  .Wrapper {
     width: auto;
     margin: 0px 20px 20px 0px;
 
     font-size: 20px;
   }
-
 }
 
-@include tablet(){
+@include tablet() {
   .Wrapper {
     width: auto;
     margin: 0px 0px 20px 0px;
 
     font-size: 30px;
   }
-
 }
 
-@include desktop(){
-
+@include desktop() {
   .Wrapper {
     width: 60vw;
     margin: 0px 50px 0px 0px;
-
   }
-
-
-
 }

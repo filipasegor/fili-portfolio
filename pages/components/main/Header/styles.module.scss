@@ -2,36 +2,108 @@
 
 .section {
   display: flex;
-
+  flex-direction: column;
   width: 100%;
-
-  justify-content: space-between;
 }
 
-@include phone() {
+.topSection {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+  gap: 5vw;
+}
+
+.headlineContainer {
+  width: 60%;
+  margin-bottom: 24px;
+}
+
+.videoContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
   .section {
     flex-direction: column;
-
     padding: 0px 15px 10vw 15px;
+  }
 
-    justify-content: space-between;
+  .topSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .headlineContainer {
+    width: 100%;
+  }
+
+  .videoContainer {
+    width: 100%;
+    margin-top: 0;
   }
 }
 
-@include tablet() {
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1023px) {
   .section {
     flex-direction: column;
+    padding: 100px 80px 100px 80px;
+  }
 
-    padding: 0px 80px 30px 130px;
+  .topSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 4vw;
+    padding: 0px 5vw;
+  }
 
-    justify-content: space-between;
+  .headlineContainer {
+    width: 60%;
+    margin-bottom: 24px;
+  }
+
+  .videoContainer {
+    width: 40%;
   }
 }
 
-@include desktop() {
+/* Десктоп */
+@media (min-width: 1024px) {
   .section {
-    flex-direction: row;
+    flex-direction: column;
+    padding: 170px 70px 100px 70px;
+  }
 
-    padding: 30px 80px 0px 0px;
+  .topSection {
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    gap: 6vw;
+  }
+
+  .headlineContainer {
+    width: 60%;
+    margin-bottom: 24px;
+  }
+
+  .videoContainer {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .section {
+    padding: 170px 150px 100px 150px;
   }
 }

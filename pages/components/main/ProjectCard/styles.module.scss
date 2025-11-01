@@ -1,0 +1,288 @@
+.projectCardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    .projectCard {
+      transform: translateY(-6px);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.projectCard {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  padding: 40px;
+  background: #020203;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 400px;
+  transition: all 0.3s ease;
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 79px;
+  width: 100%;
+  // max-width: 280px;
+}
+
+.projectHeader {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.projectTitle {
+  font-family: "RooftopMedium";
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.projectMetrics {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: fit-content;
+}
+
+.metricGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 180px;
+  height: auto;
+}
+
+.metricValue {
+  font-family: "RooftopMedium";
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.2em;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.metricLabel {
+  font-family: "RooftopMedium";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #ffffff;
+}
+
+.projectImage {
+  width: 645px; /* 430px * 1.5 */
+  height: 782px; /* 521px * 1.5 */
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1201px) {
+  .projectImage {
+    width: 400px;
+    height: 550px;
+    flex-shrink: 0;
+  }
+}
+
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  gap: 511px;
+  width: 100%;
+  // max-width: 230px;
+}
+
+.projectDescription p {
+  font-family: "RooftopRegular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.projectDescriptionText {
+  font-family: "RooftopRegular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1200px) {
+  .projectCard {
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .projectImage {
+    width: 250px;
+    height: 303px;
+    order: 2;
+  }
+
+  .projectContent {
+    order: 1;
+    gap: 20px;
+  }
+
+  .projectDescription {
+    order: 3;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .projectMetrics {
+    flex-direction: row;
+    gap: 25px;
+    justify-content: stretch;
+  }
+
+  .metricGroup {
+    flex: 1;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 20px;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .projectImage {
+    width: 250px;
+    height: 303px;
+    order: 2;
+  }
+
+  .projectTitle {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .metricValue {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .metricLabel {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .projectDescription p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .projectContent {
+    order: 1;
+    gap: 20px;
+  }
+
+  .projectDescription {
+    order: 3;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .projectMetrics {
+    flex-direction: row;
+    gap: 25px;
+    justify-content: stretch;
+  }
+
+  .metricGroup {
+    flex: 1;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .projectCard {
+    padding: 20px;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .projectImage {
+    width: 200px;
+    height: 242px;
+    order: 2;
+  }
+
+  .projectTitle {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .metricValue {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .metricLabel {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .projectDescription p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .projectContent {
+    order: 1;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .projectDescription {
+    order: 3;
+    gap: 16px;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .projectMetrics {
+    flex-direction: row;
+    gap: 0px;
+    justify-content: stretch;
+    width: 100%;
+  }
+
+  .metricGroup {
+    flex: 1;
+  }
+}

@@ -1,26 +1,26 @@
 @import "mixins";
 
-
-.select{
-  font-family: "BergenMono-Regular";
+.select {
+  font-family: "RooftopMono-Regular";
   font-size: 20px;
-  backdrop-filter: blur(4px);
-  border-radius: 11px;
+  border-radius: 10px;
   padding: 10px 27px 10px 9px;
   border: none;
   color: black;
   background: rgba(205, 205, 205, 0.4);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('../public/select-arrow.svg');
+  background-image: url("../public/select-arrow.svg");
   background-repeat: no-repeat;
-  background-position: calc(100% - 7px)center;
+  background-position: calc(100% - 7px) center;
   background-size: 13px;
+  height: 54px;
 }
 
-
-.imgContainer{
+.imgContainer {
   position: absolute;
   z-index: 11;
 
@@ -29,21 +29,19 @@
   width: 100%;
 }
 
-.logo{
+.logo {
   mix-blend-mode: difference;
 }
 
-.body{
+.body {
   background-color: black;
 }
 
-
-@include phone(){
-
-  .logoWrapper{
+@include phone() {
+  .logoWrapper {
     width: 120px;
   }
-  .imgContainer{
+  .imgContainer {
     position: relative;
     top: 0px;
 
@@ -56,47 +54,51 @@
     justify-content: space-between;
   }
 
-  .select{
+  .select {
     margin: 0px 10px 0px 10px;
   }
-
-
 }
 
-@include tablet(){
-
-  .logoWrapper{
-    width: 100%;
+@include tablet() {
+  .logoWrapper {
+    width: auto;
   }
 
-  .imgContainer{
-    position: absolute;
+  .imgContainer {
+    position: fixed;
     top: 20px;
+    left: 0px;
 
     flex-direction: row;
+    align-items: center;
 
     height: auto;
     margin-bottom: 20px;
-    padding: 16px 0px;
+    padding: 0px;
 
     margin: 0px;
 
     justify-content: flex-start;
   }
 
-  .select{
-    margin: 0px 30px 0px 30px;
+  .select {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    margin: 0px;
   }
 
-  @include desktop(){
-
-    .imgContainer{
-      flex-direction: column;
+  @include desktop() {
+    .imgContainer {
+      flex-direction: row;
+      align-items: center;
     }
 
-    .select{
-      margin: 130px 10px 10px 10px;
+    .select {
+      position: fixed;
+      top: 20px;
+      right: 50px;
+      margin: 0px;
     }
   }
-
 }

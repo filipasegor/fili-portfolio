@@ -1,71 +1,73 @@
 @import "../mixins";
 
 @keyframes color {
-  0%   { background: #F4F4F4; }
-  50% { background: #E0E0E0; }
-  100%   { background: #F4F4F4; }
+  0% {
+    background: #f4f4f4;
+  }
+  50% {
+    background: #e0e0e0;
+  }
+  100% {
+    background: #f4f4f4;
+  }
 }
 
-.headMedia{
+.headMedia {
   width: 100%;
 }
 
-.headImageWrapper{
+.headImageWrapper {
   display: flex;
   flex-direction: column;
 
   width: 100%;
+
+  img {
+    background-color: #000000;
+  }
 }
 
-.headMediaWrapper{
+.headMediaWrapper {
   width: 100%;
 
   animation: color 1.5s infinite linear;
 }
 
-.video{
+.video {
   width: 100%;
 
   object-fit: cover;
 }
 
-
-
-@include phone(){
-
-  .headImageWrapper{
+@include phone() {
+  .headImageWrapper {
     top: 0;
 
     height: auto;
-
   }
 
-  .video{
+  .video {
     height: auto;
   }
-
 }
 
-@include tablet(){
-  .headImageWrapper{
+@include tablet() {
+  .headImageWrapper {
     position: relative;
     top: 0;
 
     height: auto;
-
   }
 
-  .video{
+  .video {
     top: 0;
 
     height: 800px;
   }
-
 }
 
-@include desktop(){
-  .headImageWrapper{
+@include desktop() {
+  .headImageWrapper {
     height: auto;
-
   }
 }

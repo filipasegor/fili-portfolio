@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import { useState, useEffect, useRef } from "react";
@@ -54,6 +53,28 @@ export default function Video(props) {
     setStartstop(true);
   }
 
+  function handleVideoClick(e) {
+    // Предотвращаем срабатывание при клике на кнопки управления и элементы управления
+    const target = e.target;
+    if (
+      target.tagName === "BUTTON" ||
+      target.tagName === "INPUT" ||
+      target.closest("button") ||
+      target.closest("input")
+    ) {
+      return;
+    }
+
+    const video = ref.current;
+    if (!video) return;
+
+    if (startstop) {
+      handleStopClick();
+    } else {
+      handleStartClick();
+    }
+  }
+
   const label = (
     <div
       className={styles.labelWrapper}
@@ -63,7 +84,12 @@ export default function Video(props) {
   );
 
   const stop = (
-    <button className={styles.playStopButton} onClick={handleStopClick}>
+    <button
+      className={styles.playStopButton}
+      onClick={(e) => {
+        e.stopPropagation();
+        handleStopClick();
+      }}>
       <svg className={styles.svg}>
         <path
           transform="translate(-10,-3)"
@@ -73,8 +99,12 @@ export default function Video(props) {
   );
 
   const start = (
-    // <button className={styles.startButton} onClick={handleStartClick}></button>
-    <button className={styles.playStopButton} onClick={handleStartClick}>
+    <button
+      className={styles.playStopButton}
+      onClick={(e) => {
+        e.stopPropagation();
+        handleStartClick();
+      }}>
       <svg className={styles.svg}>
         <path
           transform="translate(-10, -3)"
@@ -89,7 +119,7 @@ export default function Video(props) {
         className={styles.mediaWrapper}
         style={{ marginTop: props.label === "true" ? "60px" : "0px" }}>
         {props.label === "true" && label}
-        <div className={styles.videoWrapper}>
+        <div className={styles.videoWrapper} onClick={handleVideoClick}>
           <div
             className={styles.thumbWrapper}
             style={{ display: loaded ? "none" : "block" }}>
@@ -132,6 +162,7 @@ export default function Video(props) {
                   max={props.max}
                   value={currentVideoTime}
                   onChange={(e) => handleProgressChange(e)}
+                  onClick={(e) => e.stopPropagation()}
                 />
                 <span className={styles.currentTimeWrapperText}>
                   {`0:${videoDuration}`}

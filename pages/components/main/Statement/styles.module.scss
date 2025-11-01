@@ -17,11 +17,19 @@
 
 .headlinetWrapper {
   display: flex;
-  gap: 10px;
+  // gap: 10px;
   flex-wrap: wrap;
 }
 
 @include phone() {
+  .statementWrapper {
+    flex-wrap: wrap;
+  }
+
+  .upperCaseText {
+    margin-bottom: 25px;
+  }
+
   .upperCaseText {
     font-size: 25px;
   }

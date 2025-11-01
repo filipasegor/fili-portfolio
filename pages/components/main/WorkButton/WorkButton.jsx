@@ -9,15 +9,15 @@ import Vector from "./Vector.svg";
 export default function WorkButton(props) {
   return (
     <>
-      <Link href="/Works">
-        <div className={styles.eyesWrapper}>
-          <a className={styles.eyesTitle}>
+      <Link legacyBehavior href="/About">
+        <a className={styles.eyesWrapper}>
+          <div className={styles.eyesTitle}>
             <FormattedMessage id="eyesButton" />
-          </a>
+          </div>
           <div className={styles.imageWrapper}>
             <Image className={styles.Vector} alt={Vector} src={Vector} />
           </div>
-        </div>
+        </a>
       </Link>
     </>
   );

@@ -1,0 +1,141 @@
+.projectsSection {
+  background: #171717;
+  padding: 60px 150px;
+  width: 100%;
+}
+
+/* Mobile container width */
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 60px 5px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: "RooftopMedium";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1200px) {
+  .projectsSection {
+    padding: 40px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+    width: 100%;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 30px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+  }
+
+  .projectsGrid {
+    gap: 30px;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .projectsSection {
+    padding: 20px 10px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .projectsGrid {
+    gap: 20px;
+  }
+}
+
+.viewAllButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  width: 844px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fd4c00;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "RooftopRegular";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+
+  &:hover {
+    background: #ff5a1a;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(253, 76, 0, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .viewAllButton {
+    width: 100%;
+    max-width: 600px;
+    font-size: 26px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .viewAllButton {
+    font-size: 22px;
+    padding: 20px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .viewAllButton {
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+}

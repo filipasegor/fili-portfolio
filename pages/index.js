@@ -1,31 +1,45 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
-// import Header from "./components/main/Header/Header";
-// import MainSection from "./components/main/MainSection/MainSection";
-// import IndexMedia from "./components/main/IndexMedia/IndexMedia";
-// import SkillDesc from "./components/main/SkillDesc/SkillDesc";
-// import Par from "./components/main/Par/Par";
-// import WorkButton from "./components/main/WorkButton/WorkButton.jsx";
-
-import {
-  Header,
-  MainSection,
-  WorkButton,
-  Par,
-  SkillDesc,
-  SkillImage,
-  IndexMedia,
-  Headline,
-} from "../componentsIndex/index";
+import Header from "./components/main/Header/Header";
+import MainSection from "./components/main/MainSection/MainSection";
+import IndexMedia from "./components/main/IndexMedia/IndexMedia";
+import SkillDesc from "./components/main/SkillDesc/SkillDesc";
+import Par from "./components/main/Par/Par";
+import WorkButton from "./components/main/WorkButton/WorkButton.jsx";
+import ProjectsSection from "./components/main/ProjectsSection/ProjectsSection";
+import VideoPlayer from "./components/main/VideoPlayer/VideoPlayer";
 
 import thumbDevelop from "../public/thumbDevelop.png";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function Home() {
+  const { locale } = useIntl();
+  const isEnglish = (locale || "").toLowerCase().startsWith("en");
+  const [visibleElements, setVisibleElements] = useState([]);
+
+  useEffect(() => {
+    // Последовательность появления: сверху вниз
+    const elements = isEnglish
+      ? ["name", "products", "and", "user", "interfaces", "designer"]
+      : ["name", "designer", "products", "and", "interfaces"];
+
+    let currentIndex = 0;
+
+    const interval = setInterval(() => {
+      if (currentIndex < elements.length) {
+        setVisibleElements((prev) => [...prev, elements[currentIndex]]);
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100); // Скорость появления 300ms
+
+    return () => clearInterval(interval);
+  }, [isEnglish]);
   return (
     <div className={styles.container}>
       <Head>
@@ -43,29 +57,126 @@ export default function Home() {
       </Head>
 
       <Header>
-        <div className={styles.headlineContainer}>
-          <h1 className={styles.headline}>
-            <FormattedMessage id="name" />
-            <br />
-            <FormattedMessage id="designer" />
-          </h1>
+        <div className={styles.topSection}>
+          <div
+            className={`${styles.headlineContainer} ${
+              isEnglish ? styles.headlineEN : styles.headlineRU
+            }`}>
+            <div
+              className={`${styles.headlineName} ${
+                visibleElements.includes("name")
+                  ? styles.animateIn
+                  : styles.animateOut
+              }`}>
+              <FormattedMessage id="headlineName" />
+            </div>
+            {isEnglish ? (
+              <h1 className={styles.headlineBlock}>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("products")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineProducts" />
+                </span>
+                <span
+                  className={`${styles.headlineAnd} ${
+                    visibleElements.includes("and")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineAnd" />
+                </span>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("user")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineUser" />
+                </span>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("interfaces")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineInterfaces" />
+                </span>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("designer")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineDesigner" />
+                </span>
+              </h1>
+            ) : (
+              <h1 className={styles.headlineBlock}>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("designer")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineDesigner" />
+                </span>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("products")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineProducts" />
+                </span>
+                <span
+                  className={`${styles.headlineAnd} ${
+                    visibleElements.includes("and")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineAnd" />
+                </span>
+                <span
+                  className={`${styles.headlineLine} ${
+                    visibleElements.includes("interfaces")
+                      ? styles.animateIn
+                      : styles.animateOut
+                  }`}>
+                  <FormattedMessage id="headlineInterfaces" />
+                </span>
+              </h1>
+            )}
+          </div>
+          <div className={styles.videoContainer}>
+            <VideoPlayer />
+          </div>
         </div>
         <div className={styles.parContainer}>
-          <Par>
-            <FormattedMessage id="p1" />
-          </Par>
-          <Par>
-            <FormattedMessage id="p2" />
-          </Par>
-          <Par>
-            <FormattedMessage id="p3" />
-          </Par>
-          <WorkButton />
+          <div className={styles.parColumn}>
+            <Par>
+              <FormattedMessage id="p1" />
+            </Par>
+          </div>
+          <div className={styles.parColumn}>
+            <Par>
+              <FormattedMessage id="p2" />
+            </Par>
+          </div>
+          <div className={styles.parColumn}>
+            <Par>
+              <FormattedMessage id="p3" />
+            </Par>
+            <WorkButton />
+          </div>
         </div>
       </Header>
 
-      <MainSection />
-      <section className={styles.skillsWrapper}>
+      <ProjectsSection />
+
+      {/* <section className={styles.skillsWrapper}>
         <section className={styles.Skill}>
           <SkillDesc side="left">
             <h2 className={styles.SkillTitle}>
@@ -122,7 +233,7 @@ export default function Home() {
             src={require("../public/videos/develop.mp4")}
           />
         </section>
-      </section>
+      </section> */}
     </div>
   );
 }

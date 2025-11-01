@@ -80,18 +80,18 @@ export default function LgProject(props) {
 
   return (
     <>
-      <Link href={props.href ?? ""}>
-        <a
-          className={styles.WrapperLink}
-          target={props.type === "logo" && "_blank"}>
-          <div className={styles.Wrapper}>
-            <div className={styles.Desc}>
-              {props.children}
-              {props.type === "logo" ? logoButton : arrowButton}
-            </div>
-            {props.media === "video" ? video : img}
+      <Link
+        href={props.href ?? ""}
+        className={styles.WrapperLink}
+        target={props.type === "logo" ? "_blank" : undefined}
+        rel={props.type === "logo" ? "noopener noreferrer" : undefined}>
+        <div className={styles.Wrapper}>
+          <div className={styles.Desc}>
+            {props.children}
+            {props.type === "logo" ? logoButton : arrowButton}
           </div>
-        </a>
+          {props.media === "video" ? video : img}
+        </div>
       </Link>
     </>
   );
