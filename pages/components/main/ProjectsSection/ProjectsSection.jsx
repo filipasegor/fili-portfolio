@@ -107,6 +107,28 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
+              id="projects.tempiApp.title"
+              defaultMessage="Tempi App"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.tempiApp.desc"
+              defaultMessage="Мобильное приложение для поиска работы и подработки. Я переделал основной пользовательский флоу и улучшил общий UX."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.tempiApp.badge"
+              defaultMessage="Проект под NDA 😥 С удовольствием покажу детали лично"
+            />
+          ),
+          imageBackground: "/projects/TempiAppBg.png",
+          projectId: "TempiApp",
+        },
+        {
+          title: (
+            <FormattedMessage
               id="projects.dashboard.title"
               defaultMessage="Дэшборд в приложении Штрафы.ру"
             />
@@ -149,6 +171,28 @@ const ProjectsSection = () => {
           imageSrc: "/projects/fines-app.png",
           imageAlt: "Дэшборд Штрафы.ру",
           projectId: "Dashboard",
+        },
+        {
+          title: (
+            <FormattedMessage
+              id="projects.sber.title"
+              defaultMessage="Редизайн продуктовых страниц в Сбере"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.sber.desc"
+              defaultMessage="Обновил страницы финансовых продуктов — вкладов, акций, счетов и облигаций. Цель редизайна — выделить доходность и мотивировать клиентов копить больше."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.sber.badge"
+              defaultMessage="Проект под NDA🚫 С удовольствием покажу детали лично"
+            />
+          ),
+          videoBackground: "/projects/SberProductScreen.mp4",
+          projectId: "Sber",
         },
       ]
     : [
@@ -247,6 +291,28 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
+              id="projects.tempiApp.title"
+              defaultMessage="Tempi App"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.tempiApp.desc"
+              defaultMessage="Mobile app for job search and part-time work. I redesigned the main user flow and improved the overall UX."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.tempiApp.badge"
+              defaultMessage="Project under NDA 😥 I'll be happy to show details personally"
+            />
+          ),
+          imageBackground: "/projects/TempiAppBg.png",
+          projectId: "TempiApp",
+        },
+        {
+          title: (
+            <FormattedMessage
               id="projects.dashboard.title"
               defaultMessage="Dashboard in Shtrafy.ru app"
             />
@@ -290,6 +356,28 @@ const ProjectsSection = () => {
           imageAlt: "Shtrafy.ru Dashboard",
           projectId: "Dashboard",
         },
+        {
+          title: (
+            <FormattedMessage
+              id="projects.sber.title"
+              defaultMessage="Product Pages Redesign in Sber"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.sber.desc"
+              defaultMessage="Updated financial product pages — deposits, stocks, accounts and bonds. The goal of the redesign is to highlight profitability and motivate customers to save more."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.sber.badge"
+              defaultMessage="Project under NDA🚫 I'll be happy to show details personally"
+            />
+          ),
+          videoBackground: "/projects/SberProductScreen.mp4",
+          projectId: "Sber",
+        },
       ];
 
   return (
@@ -308,6 +396,9 @@ const ProjectsSection = () => {
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
               videoSrc={project.videoSrc}
+              videoBackground={project.videoBackground}
+              imageBackground={project.imageBackground}
+              textBadge={project.textBadge}
               projectId={project.projectId}
             />
           ))}

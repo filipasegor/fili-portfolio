@@ -293,6 +293,16 @@ export const messages = {
     "projects.dashboard.title": "Dashboard in Shtrafy.ru app",
     "projects.dashboard.desc":
       "Shtrafy.ru is one of the largest services in Russia for finding and paying fines, taxes and OSAGO. In the project I developed a new application dashboard",
+    "projects.sber.title": "Product Pages Redesign in Sber",
+    "projects.sber.desc":
+      "Updated financial product pages — deposits, stocks, accounts and bonds. The goal of the redesign is to highlight profitability and motivate customers to save more.",
+    "projects.sber.badge":
+      "Project under NDA🚫 I'll be happy to show details personally",
+    "projects.tempiApp.title": "Design leading in Tempi",
+    "projects.tempiApp.desc":
+      "Leading design processes in a startup for job search and part-time work Tempi App. Design of key scenarios, UX research and data analysis, design system.",
+    "projects.tempiApp.badge":
+      "Project under NDA 😥 I'll be happy to show details personally",
     "projects.metric.retention": "Retention",
     "projects.metric.mau": "MAU",
     "projects.metric.arpu": "ARPU",
@@ -591,6 +601,16 @@ export const messages = {
     "projects.dashboard.title": "Дэшборд в приложении Штрафы.ру",
     "projects.dashboard.desc":
       "Штрафы.ру — один из крупнейших сервисов в России для поиска и оплаты штрафов, налогов и ОСАГО. В проекте я разработал новый дашборд приложения",
+    "projects.sber.title": "Редизайн продуктовых страниц в Сбере",
+    "projects.sber.desc":
+      "Обновил страницы финансовых продуктов — вкладов, акций, счетов и облигаций. Цель редизайна — выделить доходность и мотивировать клиентов копить больше.",
+    "projects.sber.badge":
+      "Проект под NDA🚫 С удовольствием покажу детали лично",
+    "projects.tempiApp.title": "Design leading in Tempi",
+    "projects.tempiApp.desc":
+      "Лидирование дизайн-процессов в стартапе по поиску работы и подработки Tempi App. Дизайн ключевых сценариев, UX-исследования и анализ данных, дизайн-система.",
+    "projects.tempiApp.badge":
+      "Проект под NDA 😥 С удовольствием покажу детали лично",
     "projects.metric.retention": "ARPU",
     "projects.metric.mau": "MAU",
     "projects.metric.arpu": "Succes rate",

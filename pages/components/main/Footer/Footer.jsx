@@ -6,10 +6,8 @@ export default function Footer(props) {
   return (
     <>
       <footer className={styles.footerContainer}>
-        <p>@fili 2024</p>
-        <div className={styles.footerImg}>
-          <Image alt="footer-logo" src={footerLogo} layout="responsive" />
-        </div>
+        <p>@fili 2025</p>
+        <p>Made by Egor Filipas</p>
         <p className={styles.footerRights}>All Rights Reserved</p>
       </footer>
     </>

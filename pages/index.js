@@ -43,16 +43,43 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Egor Filipas</title>
-        <meta name="description" />
-        <meta property="og:title" content="Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
+        <title>Egor Filipas — Product Designer</title>
         <meta
-          property="og:image"
-          content="https://filipas-portfolio.vercel.app/public/Opengraph.jpg"
+          name="description"
+          content="Портфолио продуктового дизайнера: UX/UI, дизайн-системы, цифровые сервисы"
         />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://filipas.xyz/" />
+        <meta property="og:title" content="Egor Filipas — Product Designer" />
+        <meta
+          property="og:description"
+          content="Портфолио продуктового дизайнера: UX/UI, дизайн-системы, цифровые сервисы"
+        />
+        <meta property="og:image" content="https://filipas.xyz/preview.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Egor Filipas — Product Designer Portfolio"
+        />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:locale:alternate" content="en_US" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://filipas.xyz/" />
+        <meta name="twitter:title" content="Egor Filipas — Product Designer" />
+        <meta
+          name="twitter:description"
+          content="Портфолио продуктового дизайнера: UX/UI, дизайн-системы, цифровые сервисы"
+        />
+        <meta name="twitter:image" content="https://filipas.xyz/preview.jpg" />
+        <meta
+          name="twitter:image:alt"
+          content="Egor Filipas — Product Designer Portfolio"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
