@@ -107,28 +107,6 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
-              id="projects.tempiApp.title"
-              defaultMessage="Tempi App"
-            />
-          ),
-          description: (
-            <FormattedMessage
-              id="projects.tempiApp.desc"
-              defaultMessage="Мобильное приложение для поиска работы и подработки. Я переделал основной пользовательский флоу и улучшил общий UX."
-            />
-          ),
-          textBadge: (
-            <FormattedMessage
-              id="projects.tempiApp.badge"
-              defaultMessage="Проект под NDA 😥 С удовольствием покажу детали лично"
-            />
-          ),
-          imageBackground: "/projects/TempiAppBg.png",
-          projectId: "TempiApp",
-        },
-        {
-          title: (
-            <FormattedMessage
               id="projects.dashboard.title"
               defaultMessage="Дэшборд в приложении Штрафы.ру"
             />
@@ -171,6 +149,28 @@ const ProjectsSection = () => {
           imageSrc: "/projects/fines-app.png",
           imageAlt: "Дэшборд Штрафы.ру",
           projectId: "Dashboard",
+        },
+        {
+          title: (
+            <FormattedMessage
+              id="projects.tempiApp.title"
+              defaultMessage="Tempi App"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.tempiApp.desc"
+              defaultMessage="Мобильное приложение для поиска работы и подработки. Я переделал основной пользовательский флоу и улучшил общий UX."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.tempiApp.badge"
+              defaultMessage="Проект под NDA 😥 С удовольствием покажу детали лично"
+            />
+          ),
+          imageBackground: "/projects/TempiAppBg.png",
+          projectId: "TempiApp",
         },
         {
           title: (
@@ -291,28 +291,6 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
-              id="projects.tempiApp.title"
-              defaultMessage="Tempi App"
-            />
-          ),
-          description: (
-            <FormattedMessage
-              id="projects.tempiApp.desc"
-              defaultMessage="Mobile app for job search and part-time work. I redesigned the main user flow and improved the overall UX."
-            />
-          ),
-          textBadge: (
-            <FormattedMessage
-              id="projects.tempiApp.badge"
-              defaultMessage="Project under NDA 😥 I'll be happy to show details personally"
-            />
-          ),
-          imageBackground: "/projects/TempiAppBg.png",
-          projectId: "TempiApp",
-        },
-        {
-          title: (
-            <FormattedMessage
               id="projects.dashboard.title"
               defaultMessage="Dashboard in Shtrafy.ru app"
             />
@@ -355,6 +333,28 @@ const ProjectsSection = () => {
           imageSrc: "/projects/fines-app.png",
           imageAlt: "Shtrafy.ru Dashboard",
           projectId: "Dashboard",
+        },
+        {
+          title: (
+            <FormattedMessage
+              id="projects.tempiApp.title"
+              defaultMessage="Tempi App"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.tempiApp.desc"
+              defaultMessage="Mobile app for job search and part-time work. I redesigned the main user flow and improved the overall UX."
+            />
+          ),
+          textBadge: (
+            <FormattedMessage
+              id="projects.tempiApp.badge"
+              defaultMessage="Project under NDA 😥 I'll be happy to show details personally"
+            />
+          ),
+          imageBackground: "/projects/TempiAppBg.png",
+          projectId: "TempiApp",
         },
         {
           title: (

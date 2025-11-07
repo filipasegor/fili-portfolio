@@ -4,7 +4,7 @@
 
 .topSection {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 /* Мобильные устройства и планшеты */
@@ -544,7 +544,7 @@
 .headlineRU .headlineAnd {
   /* и */
   font-size: 40px;
-  transform: rotate(-6deg) translateX(140px) translateY(-48px);
+  transform: rotate(-6deg) translateX(140px) translateY(-8px);
 }
 .headlineRU .headlineLine:nth-child(4) {
   /* ИНТЕРФЕЙСОВ */
@@ -564,15 +564,15 @@
 }
 .headlineEN .headlineLine:nth-child(3) {
   /* USER */
-  transform: rotate(-3deg) translateX(142px) translateY(-80px);
+  transform: rotate(-3deg) translateX(142px) translateY(-40px);
 }
 .headlineEN .headlineLine:nth-child(4) {
   /* INTERFACES */
-  transform: rotate(-3deg) translateX(41px) translateY(-80px);
+  transform: rotate(-3deg) translateX(41px) translateY(-50px);
 }
 .headlineEN .headlineLine:nth-child(5) {
   /* DESIGNER */
-  transform: rotate(-6deg) translateX(10px) translateY(-90px);
+  transform: rotate(-6deg) translateX(10px) translateY(-50px);
 }
 
 .headlineName {
@@ -622,7 +622,7 @@
     transform: rotate(2deg) translateX(15px) translateY(0px);
   }
   .headlineEN .headlineLine:nth-child(3) {
-    transform: rotate(-1deg) translateX(60px) translateY(-40px);
+    transform: rotate(-1deg) translateX(90px) translateY(-40px);
   }
   .headlineEN .headlineLine:nth-child(4) {
     transform: rotate(-1deg) translateX(20px) translateY(-40px);
@@ -649,7 +649,7 @@
   }
   .headlineRU .headlineAnd {
     font-size: 35px;
-    transform: rotate(-4deg) translateX(100px) translateY(-35px);
+    transform: rotate(-4deg) translateX(100px) translateY(-5px);
   }
   .headlineRU .headlineLine:nth-child(4) {
     transform: rotate(4deg) translateX(0px) translateY(-1px);
