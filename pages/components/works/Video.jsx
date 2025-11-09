@@ -145,7 +145,11 @@ export default function Video(props) {
               className={styles.video}>
               <source src={props.src} />
             </video>
-            <div className={styles.currentTimeWrapper}>
+            <div
+              style={{
+                display: props.hideControls === "true" ? "none" : "flex",
+              }}
+              className={styles.currentTimeWrapper}>
               <div className={styles.ButtonWrapper}>
                 {startstop ? stop : start}
               </div>

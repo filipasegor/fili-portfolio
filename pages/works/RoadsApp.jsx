@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Project.module.scss";
+import Image from "next/image";
 
 import HeadMedia from "../components/works/HeadMedia";
 import Headline from "../components/main/Headline/Headline";
@@ -25,6 +26,8 @@ import onboarding from "../../public/works/toll_roads/Onboarding.png";
 import calc from "../../public/works/toll_roads/Calc.png";
 import calcScnd from "../../public/works/toll_roads/CalcScnd.png";
 import dark from "../../public/works/toll_roads/Dark.png";
+import searches from "../../public/works/toll_roads/searches.png";
+import CJM from "../../public/works/toll_roads/CJM.png";
 import insurances from "../../public/insurances.png";
 import deposits from "../../public/deposits.png";
 import { cacheLife } from "next/dist/server/use-cache/cache-life";
@@ -76,12 +79,53 @@ export default function Project(props) {
               Пользователи часто не знают, что за неоплату проезда по трассам
               (М-4, М-11, ЦКАД и др.) назначается штраф до 5000 ₽. Быстрой
               официальной проверки и оплаты в одном месте не хватало.
+              Расчитывать стоимость будущих поездок тоже было неудобно.
             </Par>
             <Par>
-              Для решения этой проблемы, я внедрил в экосистему сервиса
-              Штрафы.ру новый востребованный сценарий — проверку и оплату
-              неоплаченных проездов по платным трассам, а также расчёт стоимости
-              будущих поездок.
+              Для решения этой проблемы я внедрил в экосистему сервиса Штрафы.ру
+              новый востребованный сценарий — проверку и оплату неоплаченных
+              проездов по платным трассам, а также расчёт стоимости будущих
+              поездок.
+            </Par>
+          </Statement>
+
+          <Statement text="Исследование">
+            <Headline>Анализ пользовательских запросов</Headline>
+            <Par>
+              Cобрал и проанализировал поисковые фразы из Google, Яндекса, App
+              Store и Google Play. Это помогло понять высокий интерес к теме, но
+              отсутствие понятного, официального сервиса проверки и оплаты в
+              одном месте.
+            </Par>
+            <Par style={{ paddingTop: "30px" }}>Наиболее частые запросы:</Par>
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={searches}
+              layout="responsive"
+              alt="searches"
+            />
+          </Statement>
+
+          <Statement text=" ">
+            <Headline>Карта пути пользователя</Headline>
+            <Par>
+              Построил CJM на основе интервью и наблюдений за пользователями,
+              попавшими в ситуацию с неоплаченным проездом. Ключевые этапы пути:
+            </Par>
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={CJM}
+              layout="responsive"
+              alt="CJM"
+            />
+          </Statement>
+
+          <Statement text=" ">
+            <Headline>Вывод</Headline>
+            <Par>
+              Пользователям нужен единый, официальный и простой способ быстро
+              проверить неоплаченные проезды и оплатить их. Также нужен сервис,
+              который поможет рассчитать стоимость будущих поездок.
             </Par>
           </Statement>
 
@@ -91,8 +135,7 @@ export default function Project(props) {
             <Par>
               Цель: быстро объяснить, про что сервис, и сократить путь до
               результата. Первый экран с вводом госномера, затем СТС и email для
-              квитанций/уведомлений. Официальные источники (ГИБДД, ФССП,
-              Казначейство) повышают доверие.
+              квитанций/уведомлений.
             </Par>
           </Statement>
 
@@ -102,9 +145,9 @@ export default function Project(props) {
           <Statement text="Решение">
             <Headline>Дэшборд</Headline>
             <Par>
-              После онбординга — дэшборд с результатами проверки: штрафы,
-              налоги, ОСАГО, платные дороги. Усиливает ценность сервиса «всё в
-              одном месте».
+              Для прошедших онбординг — сплеш-анимация и сразу показывем дэшборд
+              с результатами проверки: штрафы, налоги, ОСАГО, платные дороги.
+              Усиливает ценность сервиса «всё в одном месте».
             </Par>
           </Statement>
 

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Project.module.scss";
+import Image from "next/image";
 
 import Headline from "../components/main/Headline/Headline";
 import Media from "../components/works/Media";
@@ -24,6 +25,7 @@ import roadsAppImage from "../../public/projects/roads-app.png";
 import insurances from "../../public/insurances.png";
 import deposits from "../../public/deposits.png";
 import ux from "../../public/works/tempiAi/ux.png";
+import answers from "../../public/works/tempiAi/Answers.png";
 import ui from "../../public/works/tempiAi/ui.png";
 import resumeThumb from "../../public/works/tempiAi/resumeThumb.png";
 
@@ -97,6 +99,42 @@ export default function Project(props) {
             min="0"
             max="12"
           />
+
+          <Statement text="Исследование">
+            <Headline>Анализ поведения и UX-метрик</Headline>
+            <Par>
+              Из данных аналитики и вебвизора было видно, что: <br />
+              — более 60% пользователей покидали форму после некоторых попыток
+              ввода данных о себе , <br /> — среднее время на заполнение
+              превышало 3-4 минуты, <br />— доля завершений (CR) в созданное
+              резюме — около 3%.
+            </Par>
+          </Statement>
+
+          <Statement text="">
+            <Headline>Глубинные интервью и UX-тестирование</Headline>
+            <Par>
+              Провел несколько сессий с пользователями, которые
+              регистрировались, но не создавали резюме. Выявили основные
+              причины, почему они не заполняли резюме:
+            </Par>
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={answers}
+              layout="responsive"
+              alt="answers"
+            />
+          </Statement>
+
+          {/* <Statement text="">
+            <Headline>Сравнение с лучшими практиками</Headline>
+            <Par>
+              Изучили паттерны других HR-сервисов(HeadHunter, Profi ru, Ozon
+              Job). Отметили, что они акцентируются на кратком пути и не
+              заставляют пользователя вводить много данных о себе.
+            </Par>
+          </Statement> */}
+
           {/* 
           <div
             style={{
@@ -117,9 +155,9 @@ export default function Project(props) {
           <Statement text="Цель">
             <Headline>Что мы хотели достичь</Headline>
             <Par>
-              Сократить путь до результата и увеличить долю заполненных
-              профилей, не теряя качество данных: сделать создание резюме
-              быстрым, понятным и мотивирующим к докрутке.
+              Сократить путь до результата и увеличить долю заполненных резюме,
+              не теряя качество данных. Сделать создание резюме быстрым,
+              понятным и мотивирующим к докрутке.
             </Par>
           </Statement>
 
@@ -143,7 +181,7 @@ export default function Project(props) {
           <Statement text="Решение">
             <Headline>Магия с нейросетью</Headline>
             <Par>
-              Добавили опцию «Создать резюме с нейросетью». ИИ генерирует
+              Добавил кнопку «Создать резюме с нейросетью». ИИ генерирует
               базовое резюме по профессии и опыту. После чего пользователь может
               редактировать и улучшать результат. Добавили рейтинг качества
               резюме и позитивные состояния (успех/подсказки), разбили флоу на
@@ -185,11 +223,9 @@ export default function Project(props) {
               <br />
               2) Создание резюме: заполнить вручную или создать с нейросетью.
               <br />
-              3) Быстрый заполнение профессии, опыта, навыков
+              3) Быстрое заполнение профессии, опыта, навыков
               <br />
-              4) Лоадер генерации → готовый черновик.
-              <br />
-              5) Доработка, оценка качества, рекомендации «что добавить».
+              5) Оценка качества, доработка, рекомендации «что добавить».
               <br />
               6) Сохранение → экран успеха → резюме прикладывается к откликам.
             </Par>
@@ -225,8 +261,8 @@ export default function Project(props) {
           <Statement>
             <Headline>UX-решения</Headline>
             <Par>
-              — Пошаговая структура: один фокус на экран (снижение когнитивной
-              нагрузки).
+              — Пошаговая структура: фокус на один экран, чтобы не отвлекать
+              пользователя, когда он заполняет навыки или опыт работы.
               <br />
               — Пропуск шагов: не блокируем движение вперёд.
               <br />
@@ -259,7 +295,7 @@ export default function Project(props) {
             <Headline>Визуальные улучшения</Headline>
             <Par>
               Чище типографика, контрастные CTA, меньше «визуального шума».
-              Состояния успеха — в брендовой палитре, с доброжелательной
+              Состояния успеха — яркая анимация, с доброжелательной
               тональностью. Экран «Выбор резюме для отклика» — с мини-карточками
               и краткими статами (доход, опыт), чтобы сразу понять, какое резюме
               отправлять.
@@ -327,7 +363,7 @@ export default function Project(props) {
               <Stats headline="3% → 17%" desc="CR в заполненное резюме" />
             </div>
             <Stats
-              headline="< 2 минуты"
+              headline="< 1,5 минуты"
               desc="Среднее время до успешного результата"
             />
             <Stats headline="-27%" desc="Churn" />

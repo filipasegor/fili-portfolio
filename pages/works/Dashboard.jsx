@@ -31,13 +31,14 @@ import Main from "../../public/works/dashboard/Main.png";
 import States from "../../public/works/dashboard/States.png";
 import Dark from "../../public/works/dashboard/Dark.png";
 import dashboard from "../../public/works/dashboard/dashboard.mp4";
+import webvisor from "../../public/works/dashboard/webvisor.mp4";
 
 export default function Project(props) {
   return (
     <>
       <div className={styles.container}>
         <Head>
-          <title>Редизайн дашборда в Штрафы.ру | Egor Filipas</title>
+          <title>Дизайн дашборда в Штрафы.ру | Egor Filipas</title>
           <meta
             name="description"
             content="Редизайн дашборда в Штрафы.ру для объединения всех сервисов"
@@ -81,7 +82,7 @@ export default function Project(props) {
 
           {/* Слайд 2 — Проблема и цель проекта */}
           <Statement text="Проблема">
-            <Headline>Почему нужен редизайн</Headline>
+            <Headline>Зачем нужен дэшборд</Headline>
             <Par>
               Пользователи оплачивали только штрафы и не переходили к другим
               продуктам — налогам, ОСАГО и платным дорогам. Из-за этого бизнес
@@ -101,8 +102,35 @@ export default function Project(props) {
 
           <Media type="img" src={Purpose} />
 
+          <Statement text="Исследование">
+            <Headline>Анализ аналитики</Headline>
+            <Par>
+              До редизайна основная навигация находилась внизу экрана, и
+              переходы между разделами почти не происходили. <br /> По данным
+              аналитики:
+            </Par>
+            <Par style={{ paddingTop: "0px" }}>
+              — только 3% пользователей открывали другие сервисы (налоги,
+              дороги, ОСАГО), <br /> — средняя глубина просмотра не превышала
+              2,5 экрана, <br /> — более 80% сессий заканчивались после оплаты
+              штрафа.
+            </Par>
+          </Statement>
+
+          <Statement text=" ">
+            <Headline>Что показал вебвизор:</Headline>
+            <Par>
+              На записях Web сессий было видно, как пользователи в начале
+              взаимодействия замечают разделы внизу, но быстро возвращаются к
+              странице «Штрафы» и проводят всё время именно там. Навигация не
+              вызывала интереса и не помогала обнаружить другие возможности
+              сервиса.
+            </Par>
+            <Video src={webvisor} hideControls="true" />
+          </Statement>
+
           {/* Слайд 3 — Задачи дизайна */}
-          <Statement text="Задачи">
+          {/* <Statement text="Задачи">
             <Headline>Основные задачи дизайна</Headline>
             <Par>
               — Спроектировать универсальные карточки для всех сервисов: штрафы,
@@ -114,7 +142,7 @@ export default function Project(props) {
               <br />— Повысить Retention за счёт прозрачного статуса
               пользователя.
             </Par>
-          </Statement>
+          </Statement> */}
 
           {/* Слайд 4 — Экран дашборда */}
           <Statement text="Решение">
@@ -124,15 +152,29 @@ export default function Project(props) {
               ОСАГО. Пользователь видит статусы, ошибки и уведомления сразу. Это
               повышает доверие и экономит время.
             </Par>
+            <Par>
+              Также добавил блок с призывом включить пуши для получения
+              уведомлений. Это помогло увеличить CR во включение пушей, а значит
+              и в оплату.
+            </Par>
           </Statement>
 
-          <Video src={dashboard} />
+          {/* <Video src={dashboard} /> */}
+          <Video
+            label="false"
+            right="right"
+            srcThumb={Main}
+            altThumb="thumbProceed"
+            src={require("../../public/works/dashboard/dashboard.mp4")}
+            min="0"
+            max="13"
+          />
 
           {/* Слайд 5 — Виджеты и состояния */}
           <Statement>
             <Headline>Продуманная логика состояний</Headline>
             <Par>
-              Каждый сервис имеет свои состояния: загрузка, ошибка, чисто,
+              Каждый сервис имеет свои состояния: загрузка, ошибка, нет долгов,
               найден долг. Проработаны редкие кейсы — нет данных, некорректный
               документ.
             </Par>
@@ -145,7 +187,7 @@ export default function Project(props) {
             <Headline>Унификация карточек</Headline>
             <Par>
               Все карточки приведены к единой системе: сетка, иконки, тени,
-              цветовые статусы. Интерфейс стал цельным и узнаваемым.
+              цветовые статусы. Интерфейс стал цельным и системным.
             </Par>
           </Statement>
 
@@ -156,7 +198,7 @@ export default function Project(props) {
             <Headline>Тёмная тема</Headline>
             <Par>
               Карточки и основные кнопки оптимизированы под комфортное
-              использование в темноте и для тех, у кого установлена темна тема.
+              использование в темноте и для тех, у кого установлена темная тема.
             </Par>
           </Statement>
 
@@ -166,12 +208,13 @@ export default function Project(props) {
           <Statement text="Результат">
             <Headline>Метрики и достижения</Headline>
             <Par>
-              Редизайн дашборда показал значительные улучшения в ключевых
-              метриках продукта.
-            </Par>
-            <Par>
-              Пользователи стали чаще оплачивать всё в одном месте. Приложение
-              укрепило позицию как единый центр для автомобилистов.
+              Провели A/B-тесты на сегментах пользователей, у которых есть
+              начисления не только по штрафам, но и по остальным сервисам.
+              Результаты показал, что пользователи стали чаще оплачивать
+              дополнительные начисления: налоги, дороги или ОСАГО. Также со
+              временем вырос Retention, посколько пользователи стали чаще
+              возвращаться в приложение, потому что помнили, что у них есть
+              долги.
             </Par>
             <div className={styles.stasWrapper}>
               <Stats headline="3% → 9%" desc="Оплата других услуг" />
