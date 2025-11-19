@@ -4,41 +4,98 @@ import { useState, useEffect, useRef } from "react";
 
 import styles from "../../../styles/works/Video.module.scss";
 
+function formatTime(seconds) {
+  if (!seconds || isNaN(seconds)) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+
 export default function Video(props) {
   const [loaded, setLoaded] = useState(false);
-
   const [currentVideoTime, setCurrentVideoTime] = useState(0);
   const [startstop, setStartstop] = useState(true);
   const [videoDuration, setVideoDuration] = useState(0);
-
-  function loadedData() {
-    setLoaded(true);
-    console.log("Video loaded!");
-  }
+  const [isDragging, setIsDragging] = useState(false);
 
   const ref = useRef(null);
 
+  function loadedData() {
+    setLoaded(true);
+    if (ref.current) {
+      setVideoDuration(ref.current.duration || 0);
+    }
+    console.log("Video loaded!");
+  }
+
   useEffect(() => {
     const video = ref.current;
+    if (!video) return;
+
     video.controls = false;
-    video.currentTime = currentVideoTime;
-    setVideoDuration(Math.floor(video.duration));
 
-    if (startstop) {
-      setCurrentVideoTime(Math.floor(video.currentTime));
+    // Получаем длительность видео когда оно загрузится
+    const handleLoadedMetadata = () => {
+      setVideoDuration(video.duration || 0);
+    };
 
-      const intervalId = setInterval(() => {
-        setCurrentVideoTime(video.currentTime + 1);
-      }, 1000);
+    // Плавное обновление времени при воспроизведении
+    const handleTimeUpdate = () => {
+      if (!isDragging) {
+        setCurrentVideoTime(video.currentTime);
+      }
+    };
 
-      return () => {
-        clearInterval(intervalId);
-      };
-    }
-  });
+    // Обновляем длительность при изменении
+    const handleDurationChange = () => {
+      setVideoDuration(video.duration || 0);
+    };
+
+    video.addEventListener("loadedmetadata", handleLoadedMetadata);
+    video.addEventListener("timeupdate", handleTimeUpdate);
+    video.addEventListener("durationchange", handleDurationChange);
+
+    return () => {
+      video.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+      video.removeEventListener("durationchange", handleDurationChange);
+    };
+  }, [isDragging]);
 
   function handleProgressChange(e) {
-    setCurrentVideoTime(Number(e.target.value));
+    const newTime = Number(e.target.value);
+    setCurrentVideoTime(newTime);
+    if (ref.current) {
+      ref.current.currentTime = newTime;
+    }
+  }
+
+  function handleProgressClick(e) {
+    e.stopPropagation();
+    // Клик на input range уже обрабатывается через onChange
+    // Эта функция нужна для клика на область вокруг input
+    const input = e.currentTarget.querySelector(`.${styles.progressBarInput}`);
+    if (input && e.target !== input) {
+      const rect = input.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const percentage = Math.max(0, Math.min(1, clickX / rect.width));
+      const newTime = percentage * videoDuration;
+
+      if (ref.current && !isNaN(newTime) && videoDuration > 0) {
+        setCurrentVideoTime(newTime);
+        ref.current.currentTime = newTime;
+        // Обновляем значение input программно
+        input.value = newTime;
+      }
+    }
+  }
+
+  function handleProgressMouseDown() {
+    setIsDragging(true);
+  }
+
+  function handleProgressMouseUp() {
+    setIsDragging(false);
   }
 
   function handleStopClick() {
@@ -155,21 +212,38 @@ export default function Video(props) {
               </div>
               <div className={styles.timeLineWrapper}>
                 <span className={styles.currentTimeWrapperText}>
-                  {currentVideoTime < 10
-                    ? `0:0${currentVideoTime}`
-                    : `0:${currentVideoTime}`}
+                  {formatTime(currentVideoTime)}
                 </span>
-                <input
-                  className={styles.progressBarInput}
-                  type="range"
-                  min={props.min}
-                  max={props.max}
-                  value={currentVideoTime}
-                  onChange={(e) => handleProgressChange(e)}
-                  onClick={(e) => e.stopPropagation()}
-                />
+                <div
+                  className={styles.progressBarContainer}
+                  onClick={handleProgressClick}>
+                  <input
+                    className={styles.progressBarInput}
+                    type="range"
+                    min="0"
+                    max={videoDuration || 0}
+                    step="0.1"
+                    value={currentVideoTime}
+                    onChange={(e) => {
+                      e.stopPropagation();
+                      handleProgressChange(e);
+                    }}
+                    onInput={(e) => {
+                      e.stopPropagation();
+                      handleProgressChange(e);
+                    }}
+                    onMouseDown={handleProgressMouseDown}
+                    onMouseUp={handleProgressMouseUp}
+                    onTouchStart={handleProgressMouseDown}
+                    onTouchEnd={handleProgressMouseUp}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleProgressChange(e);
+                    }}
+                  />
+                </div>
                 <span className={styles.currentTimeWrapperText}>
-                  {`0:${videoDuration}`}
+                  {formatTime(videoDuration)}
                 </span>
               </div>
             </div>

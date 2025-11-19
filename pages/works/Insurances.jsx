@@ -117,7 +117,15 @@ export default function Project(props) {
               Вот примеры сфер жизни, которые больше всего нуждаются в защите с
               точки зрения клиентов
             </Par>
-            <Image src={research}></Image>
+            <Image
+              src={research}
+              style={{
+                width: "100%",
+                height: "auto",
+                border: "1px solid #FFFFFF",
+                borderRadius: "5%",
+              }}
+            />
             <Headline style={{ marginTop: "80px" }}>
               Разным клиентам нужны страховые программы на разное время
             </Headline>

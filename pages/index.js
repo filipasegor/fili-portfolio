@@ -58,17 +58,25 @@ export default function Home() {
           content="Портфолио продуктового дизайнера: UX/UI, дизайн-системы, цифровые сервисы"
         />
         <meta property="og:image" content="https://filipas.xyz/preview.jpg" />
+        <meta
+          property="og:image:secure_url"
+          content="https://filipas.xyz/preview.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
           content="Egor Filipas — Product Designer Portfolio"
         />
+        <meta property="og:site_name" content="Egor Filipas Portfolio" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:locale:alternate" content="en_US" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@filipas" />
+        <meta name="twitter:creator" content="@filipas" />
         <meta name="twitter:url" content="https://filipas.xyz/" />
         <meta name="twitter:title" content="Egor Filipas — Product Designer" />
         <meta
@@ -80,6 +88,10 @@ export default function Home() {
           name="twitter:image:alt"
           content="Egor Filipas — Product Designer Portfolio"
         />
+
+        {/* Additional meta for better compatibility */}
+        <meta name="theme-color" content="#000000" />
+        <link rel="canonical" href="https://filipas.xyz/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

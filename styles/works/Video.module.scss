@@ -51,6 +51,13 @@
   justify-content: center;
   width: 100%;
   align-items: center;
+  gap: 10px;
+}
+
+.progressBarContainer {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
 }
 
 // .stopButton {
@@ -78,6 +85,9 @@
 .progressBarInput {
   -webkit-appearance: none;
   width: 100%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .progressBarInput:focus {

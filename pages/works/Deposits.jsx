@@ -117,7 +117,7 @@ export default function Project(props) {
           <Statement text="Исследования">
             <Headline>Что говорят клиенты:</Headline>
             <Par>70% клиентов отказывают потому что:</Par>
-            <Image src={research}></Image>
+            <Image src={research} style={{ width: "100%", height: "auto" }} />
           </Statement>
 
           <Statement text="Решение">
