@@ -377,7 +377,6 @@ export default function Project(props) {
               headline="< 1,5 минуты"
               desc="Среднее время до успешного результата"
             />
-            <Stats headline="-27%" desc="Churn" />
             {/* <Stats headline="+15%" desc="Retention" /> */}
           </Statement>
 
