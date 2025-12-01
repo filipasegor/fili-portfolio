@@ -28,6 +28,8 @@ import ux from "../../public/works/tempiAi/ux.png";
 import answers from "../../public/works/tempiAi/Answers.png";
 import ui from "../../public/works/tempiAi/ui.png";
 import resumeThumb from "../../public/works/tempiAi/resumeThumb.png";
+import old from "../../public/works/tempiAi/old.png";
+import clickMap from "../../public/works/tempiAi/clickMap.png";
 
 export default function Project(props) {
   return (
@@ -90,7 +92,9 @@ export default function Project(props) {
             </Par>
           </Statement>
 
-          <Video
+          <Media type="img" src={old} />
+
+          {/* <Video
             label="false"
             right="right"
             srcThumb={resumeThumb}
@@ -98,7 +102,7 @@ export default function Project(props) {
             src={require("../../public/works/tempiAi/old.mp4")}
             min="0"
             max="12"
-          />
+          /> */}
 
           <Statement text="Исследование">
             <Headline>Анализ поведения и UX-метрик</Headline>
@@ -109,9 +113,16 @@ export default function Project(props) {
               превышало 3-4 минуты, <br />— доля завершений (CR) в созданное
               резюме — около 3%.
             </Par>
+
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={clickMap}
+              layout="responsive"
+              alt="answers"
+            />
           </Statement>
 
-          <Statement text="">
+          <Statement text="Общение с клиентами">
             <Headline>Глубинные интервью и UX-тестирование</Headline>
             <Par>
               Провел несколько сессий с пользователями, которые
@@ -353,11 +364,11 @@ export default function Project(props) {
           <Statement text="Результат">
             <Headline>Метрики и достижения</Headline>
             <Par>
-              Для оценки результатов мы ориентировались прежде всего на
-              UX-метрики: процент заполненных резюме, время до первого
-              результата, возвращаемость. Использовали A/B-тесты и глубинные
-              интервью для проверки новых решений и выявления реальных проблем
-              пользователей
+              Для оценки результатов мы ориентировались прежде всего на процент
+              успешного заполненного резюме, конверсию, на процент отказов в
+              заполнении резюме, время на заполнение. Использовали A/B-тесты и
+              юзабилити тесты интервью для проверки новых решений и выявления
+              новых точек роста
             </Par>
             <div className={styles.stasWrapper}>
               <Stats headline="3% → 17%" desc="CR в заполненное резюме" />
@@ -367,7 +378,7 @@ export default function Project(props) {
               desc="Среднее время до успешного результата"
             />
             <Stats headline="-27%" desc="Churn" />
-            <Stats headline="+15%" desc="Retention" />
+            {/* <Stats headline="+15%" desc="Retention" /> */}
           </Statement>
 
           {/* Финальное резюме */}
