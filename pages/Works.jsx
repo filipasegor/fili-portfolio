@@ -43,6 +43,8 @@ import thumbTempiAi from "../public/projects/thumbTempiAi.png";
 import worksDashboard from "../public/projects/worksDashboard.png";
 import tempiAppBg from "../public/projects/TempiAppBgProject.png";
 import thumbSberProducts from "../public/thumbSberProducts.png";
+import tempiAppBg from "../public/projects/TempiAppBgProject.png";
+import thumbSberProducts from "../public/thumbSberProducts.png";
 
 import { FormattedMessage } from "react-intl";
 
