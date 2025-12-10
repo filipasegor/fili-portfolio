@@ -15,7 +15,7 @@
     "@vercel/analytics": "^0.1.5",
     "classnames": "^2.3.2",
     "figma-api": "^2.1.0-beta",
-    "next": "^15.5.2",
+    "next": "15.5.7",
     "next-videos": "^1.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
