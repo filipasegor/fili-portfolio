@@ -28,6 +28,8 @@ import ux from "../../public/works/tempiAi/ux.png";
 import answers from "../../public/works/tempiAi/Answers.png";
 import ui from "../../public/works/tempiAi/ui.png";
 import resumeThumb from "../../public/works/tempiAi/resumeThumb.png";
+import old from "../../public/works/tempiAi/old.png";
+import clickMap from "../../public/works/tempiAi/clickMap.png";
 
 export default function Project(props) {
   return (
@@ -90,7 +92,9 @@ export default function Project(props) {
             </Par>
           </Statement>
 
-          <Video
+          <Media type="img" src={old} />
+
+          {/* <Video
             label="false"
             right="right"
             srcThumb={resumeThumb}
@@ -98,20 +102,28 @@ export default function Project(props) {
             src={require("../../public/works/tempiAi/old.mp4")}
             min="0"
             max="12"
-          />
+          /> */}
 
           <Statement text="Исследование">
             <Headline>Анализ поведения и UX-метрик</Headline>
             <Par>
               Из данных аналитики и вебвизора было видно, что: <br />
-              — более 60% пользователей покидали форму после некоторых попыток
-              ввода данных о себе , <br /> — среднее время на заполнение
-              превышало 3-4 минуты, <br />— доля завершений (CR) в созданное
-              резюме — около 3%.
+              — более 70% пользователей отваливались после некоторых попыток
+              ввода профессии
+              <br /> — среднее время на заполнение превышало 3-4 минуты, <br />—
+              доля завершений (CR) в созданное резюме — около 3%.
+              <br /> — Часто происходил «бездумные клики» в поля
             </Par>
+
+            <Image
+              style={{ width: "100%", height: "auto" }}
+              src={clickMap}
+              layout="responsive"
+              alt="answers"
+            />
           </Statement>
 
-          <Statement text="">
+          <Statement text="Общение с клиентами">
             <Headline>Глубинные интервью и UX-тестирование</Headline>
             <Par>
               Провел несколько сессий с пользователями, которые
@@ -353,11 +365,10 @@ export default function Project(props) {
           <Statement text="Результат">
             <Headline>Метрики и достижения</Headline>
             <Par>
-              Для оценки результатов мы ориентировались прежде всего на
-              UX-метрики: процент заполненных резюме, время до первого
-              результата, возвращаемость. Использовали A/B-тесты и глубинные
-              интервью для проверки новых решений и выявления реальных проблем
-              пользователей
+              Для оценки результатов мы ориентировались прежде всего на процент
+              успешного заполненного резюме, конверсию, на процент отказов в
+              заполнении резюме, время на заполнение. Использовали A/B-тесты и
+              юзабилити-тестирование для проверки новых решений
             </Par>
             <div className={styles.stasWrapper}>
               <Stats headline="3% → 17%" desc="CR в заполненное резюме" />
@@ -366,8 +377,7 @@ export default function Project(props) {
               headline="< 1,5 минуты"
               desc="Среднее время до успешного результата"
             />
-            <Stats headline="-27%" desc="Churn" />
-            <Stats headline="+15%" desc="Retention" />
+            {/* <Stats headline="+15%" desc="Retention" /> */}
           </Statement>
 
           {/* Финальное резюме */}
@@ -376,8 +386,10 @@ export default function Project(props) {
             <Par>
               Редизайн превратил создание резюме из длинной анкеты в быстрый и
               мотивирующий флоу. Пользователи быстрее получают результат и чаще
-              возвращаются, бизнес видит рост качества откликов и ключевых
-              метрик.
+              возвращаются, бизнес видит рост качественных откликов. Улучшение
+              ключевого сценария также привело к росту глобальных ключевых
+              метрик сервиса: вырос Retention и MAU, и снизился Сhurn после
+              регистрации
             </Par>
           </Statement>
 

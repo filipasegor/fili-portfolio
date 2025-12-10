@@ -41,7 +41,8 @@ import thumbtollroads from "../public/projects/thumbTollRoads.png";
 import thumbDashboard from "../public/projects/thumbDashboard.png";
 import thumbTempiAi from "../public/projects/thumbTempiAi.png";
 import worksDashboard from "../public/projects/worksDashboard.png";
-import tempiAppBg from "../public/projects/TempiAppBg.png";
+import tempiAppBg from "../public/projects/TempiAppBgProject.png";
+import thumbSberProducts from "../public/thumbSberProducts.png";
 
 import { FormattedMessage } from "react-intl";
 
@@ -107,24 +108,24 @@ export default function Projects(props) {
           </MdProject>
 
           <MdProject
-            href="/works/Sber"
-            srcThumb={thumbSber}
-            altThumb="sber-product"
-            src={require("../public/projects/SberProductScreen.mp4")}
-            type="arrow"
-            media="video">
-            <h1>Редизайн продуктовых страниц в Сбере</h1>
-            <p>Проект под NDA🚫 Покажу детали лично</p>
-          </MdProject>
-
-          <MdProject
             href="/works/TempiApp"
             alt="tempi-app"
             src={tempiAppBg}
             type="arrow"
             media="img">
             <h1>Design leading in Tempi</h1>
-            <p>Кейс в работе ⚒️ Покажу детали лично</p>
+            <p>Кейс в работе 🔒 Покажу детали лично</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/Sber"
+            srcThumb={thumbSberProducts}
+            altThumb="sber-product"
+            src={require("../public/projects/SberProductScreenProject.mp4")}
+            type="arrow"
+            media="video">
+            <h1>Редизайн продуктовых страниц в Сбере</h1>
+            <p>Проект под NDA 🚫 Покажу детали лично</p>
           </MdProject>
 
           <MdProject
