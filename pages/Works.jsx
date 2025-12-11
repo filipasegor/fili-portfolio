@@ -43,6 +43,7 @@ import thumbTempiAi from "../public/projects/thumbTempiAi.png";
 import worksDashboard from "../public/projects/worksDashboard.png";
 import tempiAppBg from "../public/projects/TempiAppBgProject.png";
 import thumbSberProducts from "../public/thumbSberProducts.png";
+import TempiB2B from "../public/projects/TempiB2B.png";
 
 import { FormattedMessage } from "react-intl";
 
@@ -126,6 +127,16 @@ export default function Projects(props) {
             media="video">
             <h1>Редизайн продуктовых страниц в Сбере</h1>
             <p>Проект под NDA 🚫 Покажу детали лично</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/TempiApp"
+            alt="tempi-app"
+            src={TempiB2B}
+            type="arrow"
+            media="img">
+            <h1>B2B Tempi App</h1>
+            <p>Кейс в работе 🔒 Покажу детали лично</p>
           </MdProject>
 
           <MdProject
