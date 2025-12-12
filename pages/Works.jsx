@@ -91,11 +91,11 @@ export default function Projects(props) {
             href="/works/Tempi"
             srcThumb={thumbTempiAi}
             altThumb="tempi"
-            src={require("../public/projects/worksTempiAi.mp4")}
+            src={require("../public/projects/worksTempiAi1.mp4")}
             type="arrow"
             media="video">
-            <h1>Tempi — редизайн флоу резюме</h1>
-            <p>ИИ-генерация резюме</p>
+            <h1>Редизайн флоу резюме</h1>
+            <p>Улучшил и упростил создание резюме</p>
           </MdProject>
 
           <MdProject

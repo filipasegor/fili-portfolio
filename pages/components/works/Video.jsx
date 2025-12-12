@@ -13,6 +13,7 @@ function formatTime(seconds) {
 
 export default function Video(props) {
   const [loaded, setLoaded] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const [currentVideoTime, setCurrentVideoTime] = useState(0);
   const [startstop, setStartstop] = useState(true);
   const [videoDuration, setVideoDuration] = useState(0);
@@ -26,6 +27,11 @@ export default function Video(props) {
       setVideoDuration(ref.current.duration || 0);
     }
     console.log("Video loaded!");
+  }
+
+  function handleCanPlayThrough() {
+    setVideoReady(true);
+    loadedData();
   }
 
   useEffect(() => {
@@ -51,16 +57,41 @@ export default function Video(props) {
       setVideoDuration(video.duration || 0);
     };
 
+    // Отслеживаем прогресс загрузки
+    const handleProgress = () => {
+      if (video.buffered.length > 0) {
+        const bufferedEnd = video.buffered.end(video.buffered.length - 1);
+        const duration = video.duration;
+        if (duration > 0 && bufferedEnd >= duration * 0.9) {
+          // Видео загружено на 90% или больше
+          if (!videoReady) {
+            setVideoReady(true);
+            loadedData();
+          }
+        }
+      }
+    };
+
+    // Обработчик полной готовности видео
+    const handleCanPlayThroughEvent = () => {
+      setVideoReady(true);
+      loadedData();
+    };
+
     video.addEventListener("loadedmetadata", handleLoadedMetadata);
     video.addEventListener("timeupdate", handleTimeUpdate);
     video.addEventListener("durationchange", handleDurationChange);
+    video.addEventListener("canplaythrough", handleCanPlayThroughEvent);
+    video.addEventListener("progress", handleProgress);
 
     return () => {
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
       video.removeEventListener("timeupdate", handleTimeUpdate);
       video.removeEventListener("durationchange", handleDurationChange);
+      video.removeEventListener("canplaythrough", handleCanPlayThroughEvent);
+      video.removeEventListener("progress", handleProgress);
     };
-  }, [isDragging]);
+  }, [isDragging, videoReady]);
 
   function handleProgressChange(e) {
     const newTime = Number(e.target.value);
@@ -177,6 +208,11 @@ export default function Video(props) {
         style={{ marginTop: props.label === "true" ? "60px" : "0px" }}>
         {props.label === "true" && label}
         <div className={styles.videoWrapper} onClick={handleVideoClick}>
+          {!videoReady && (
+            <div className={styles.shimmerWrapper}>
+              <div className={styles.shimmer}></div>
+            </div>
+          )}
           <div
             className={styles.thumbWrapper}
             style={{ display: loaded ? "none" : "block" }}>
@@ -190,9 +226,6 @@ export default function Video(props) {
           </div>
           <div style={{ display: loaded ? "block" : "none" }}>
             <video
-              onCanPlayThrough={() => {
-                loadedData();
-              }}
               ref={ref}
               autoPlay
               muted

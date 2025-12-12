@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/About.module.css";
+import indexMediaStyles from "../pages/components/main/IndexMedia/styles.module.scss";
 
 import { SkillDesc, IndexMedia } from "../componentsIndex/index";
 
 import thumbDevelop from "../public/thumbDevelop.png";
+import analysisImage from "../public/analysis.png";
 import { FormattedMessage } from "react-intl";
 
 export default function About() {
@@ -92,6 +94,36 @@ export default function About() {
         </h2>
 
         <div className={styles.competenciesContent}>
+          {/* Competency 4 */}
+          <section className={styles.competency}>
+            <div className={styles.competencyContent}>
+              <div className={styles.competencyText}>
+                <h3 className={styles.competencyTitle}>
+                  <FormattedMessage id="skill4Headline" />
+                </h3>
+                <p className={styles.competencyDesc}>
+                  <FormattedMessage id="skill4Par1" />
+                </p>
+                <p className={styles.competencyDesc}>
+                  <FormattedMessage id="skill4Par2" />
+                </p>
+              </div>
+              <div className={styles.competencyMedia}>
+                <div className={indexMediaStyles.mediaWrapper}>
+                  <div className={indexMediaStyles.videoWrapper}>
+                    <Image
+                      src={analysisImage}
+                      alt="Analysis"
+                      layout="responsive"
+                      objectFit="contain"
+                      className={indexMediaStyles.video}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Competency 1 */}
           <section className={styles.competency}>
             <div className={styles.competencyContent}>

@@ -60,6 +60,12 @@ export const messages = {
     skill3Par3:
       "My programming skills help me to bring designs into reality and make them low-resources for development and launch",
 
+    skill4Headline: "Working at the intersection of design and analytics",
+    skill4Par1:
+      "I analyze user needs, their user stories and behavioral scenarios, comparing them with business and UX metrics. I study funnels, drop-off points, heatmaps and click maps to see how people actually interact with the product. I complement quantitative data with qualitative — conduct in-depth interviews, surveys, collect CJM and test hypotheses at each stage.",
+    skill4Par2:
+      "This way I translate a chaotic, abstract task with many unknowns into a sequential, justified design solution that brings measurable value to the business and closes real user needs.",
+
     worksH1: "ALL MY PROJECTS",
     projectWith: "Project with Art.Lebedev Studio",
     worksSber: "Software interfaces for Sber",
@@ -370,6 +376,12 @@ export const messages = {
       "Например: в процессе проектирования сайтов или приложений я создаю дизайн-систему всех элементов интерфейса и композиций, поэтому страницы быстро и легко собираются",
     skill3Par3:
       "Навыки программирования помогают мне воплощать макеты в жизнь и делать дизайн, который не требует больших ресурсов на разработку и запуск",
+
+    skill4Headline: "Работаю на стыке дизайна и аналитики",
+    skill4Par1:
+      "Анализирую потребности пользователей, их user stories и поведенческие сценарии, сопоставляя их с бизнес- и UX-метриками. Изучаю воронки, точки потерь, вебвизоры и карты кликов, чтобы видеть, как люди реально взаимодействуют с продуктом. Дополняю количественные данные качественными — провожу глубинные интервью, опросы, собираю CJM и проверяю гипотезы на каждом этапе.",
+    skill4Par2:
+      "Так я перевожу хаотичную, абстрактную задачу с множеством неизвестных в последовательное, обоснованное дизайн-решение, которое приносит бизнесу измеримую пользу, а пользователям — закрывает их реальные потребности.",
 
     /////works
     worksH1: "ВСЕ РАБОТЫ",
