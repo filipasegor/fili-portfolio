@@ -130,7 +130,7 @@ export default function Projects(props) {
           </MdProject>
 
           <MdProject
-            href="/works/TempiApp"
+            href="/works/TempB2B"
             alt="tempi-app"
             src={TempiB2B}
             type="arrow"

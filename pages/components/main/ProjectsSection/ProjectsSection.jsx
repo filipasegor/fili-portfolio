@@ -141,31 +141,16 @@ const ProjectsSection = () => {
           ),
           metrics: [
             {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.retention"
-                  defaultMessage="Retention"
-                />
-              ),
-              value: "+14%",
+              label: "",
+              value: "",
             },
             {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.arpu"
-                  defaultMessage="ARPU"
-                />
-              ),
-              value: "+8%",
+              label: "",
+              value: "",
             },
             {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.mau"
-                  defaultMessage="MAU"
-                />
-              ),
-              value: "+12%",
+              label: "",
+              value: "",
             },
           ],
           imageBackground: "/projects/TempiAppBg.png",
