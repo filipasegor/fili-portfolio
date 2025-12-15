@@ -21,13 +21,13 @@ import Stats from "../components/main/Stats/Stats";
 
 import { FormattedMessage } from "react-intl";
 
-import Flow from "../../public/works/tempiApp/Flow.png";
-import ClickMap from "../../public/works/tempiApp/ClickMap.png";
-import OldRegistration from "../../public/works/tempiApp/OldRegistration.png";
-import header from "../../public/works/tempiApp/header.png";
-import Table from "../../public/works/tempiApp/Table.png";
-import Answers from "../../public/works/tempiApp/Answers.png";
-import MainScreens from "../../public/works/tempiApp/MainScreens.png";
+import Flow from "../../public/works/TempiApp/Flow.png";
+import ClickMap from "../../public/works/TempiApp/Clickmap.png";
+import OldRegistration from "../../public/works/TempiApp/OldRegistration.png";
+import header from "../../public/works/TempiApp/header.png";
+import Table from "../../public/works/TempiApp/Table.png";
+import Answers from "../../public/works/TempiApp/Answers.png";
+import MainScreens from "../../public/works/TempiApp/MainScreens.png";
 
 export default function Project(props) {
   return (
@@ -167,7 +167,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/registration.mp4")}
+            src={require("../../public/works/TempiApp/Registration.mp4")}
             min="0"
             max="17"
           />
@@ -186,7 +186,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/professions.mp4")}
+            src={require("../../public/works/TempiApp/professions.mp4")}
             min="0"
             max="18"
           />
@@ -249,7 +249,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/MainSearch.mp4")}
+            src={require("../../public/works/TempiApp/Mainsearch.mp4")}
             min="0"
             max="30"
           />
@@ -268,7 +268,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/Shifts.mp4")}
+            src={require("../../public/works/TempiApp/Shifts.mp4")}
             min="0"
             max="16"
           />
@@ -342,7 +342,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/Vacancie.mp4")}
+            src={require("../../public/works/TempiApp/Vacancie.mp4")}
             min="0"
             max="23"
           />
@@ -377,7 +377,7 @@ export default function Project(props) {
             right="right"
             srcThumb={Flow}
             altThumb="resumeThumb"
-            src={require("../../public/works/tempiApp/Profile.mp4")}
+            src={require("../../public/works/TempiApp/Profile.mp4")}
             min="0"
             max="10"
           />
