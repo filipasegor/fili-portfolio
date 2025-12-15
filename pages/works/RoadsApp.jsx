@@ -56,7 +56,7 @@ export default function Project(props) {
             </TaskDesc>
             <TaskDesc>
               <h3>Role</h3>
-              <p>Product Designer</p>
+              <p>Senior Product Designer</p>
             </TaskDesc>
             <TaskDesc>
               <h3>Scope</h3>

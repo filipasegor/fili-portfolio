@@ -99,23 +99,13 @@ export default function Projects(props) {
           </MdProject>
 
           <MdProject
-            href="/works/Dashboard"
-            alt="dashboard"
-            src={worksDashboard}
-            type="arrow"
-            media="img">
-            <h1>Дэшборд в приложении Штрафы.ру</h1>
-            <p>Объединение всех сервисов</p>
-          </MdProject>
-
-          <MdProject
             href="/works/TempiApp"
             alt="tempi-app"
             src={tempiAppBg}
             type="arrow"
             media="img">
             <h1>Design leading in Tempi</h1>
-            <p>Кейс в работе 🔒 Покажу детали лично</p>
+            <p>Дизайн ключевых сценариев</p>
           </MdProject>
 
           <MdProject
@@ -126,7 +116,17 @@ export default function Projects(props) {
             type="arrow"
             media="video">
             <h1>Редизайн продуктовых страниц в Сбере</h1>
-            <p>Проект под NDA 🚫 Покажу детали лично</p>
+            <p>Проект под NDA 🔒 Покажу детали лично</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/Dashboard"
+            alt="dashboard"
+            src={worksDashboard}
+            type="arrow"
+            media="img">
+            <h1>Дэшборд в приложении Штрафы.ру</h1>
+            <p>Объединение всех сервисов</p>
           </MdProject>
 
           <MdProject
