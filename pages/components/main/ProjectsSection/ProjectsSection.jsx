@@ -16,6 +16,51 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
+              id="projects.tempi.title"
+              defaultMessage="Редизайн создания резюме"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.tempi.desc"
+              defaultMessage="Tempi — HR-стартап для поиска работы и подработки. Я улучшил UX создания резюме и добавил ИИ для его автоматического заполнения"
+            />
+          ),
+          metrics: [
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.successRate"
+                  defaultMessage="Success rate"
+                />
+              ),
+              value: "+14%",
+            },
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.timeToTask"
+                  defaultMessage="Время до задачи"
+                />
+              ),
+              value: "< 2 min",
+            },
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.churn"
+                  defaultMessage="CHURN"
+                />
+              ),
+              value: "-27%",
+            },
+          ],
+          videoSrc: "/projects/tempiAi.mp4",
+          projectId: "Tempi",
+        },
+        {
+          title: (
+            <FormattedMessage
               id="projects.roads.title"
               defaultMessage="Приложение платных дорог"
             />
@@ -58,51 +103,6 @@ const ProjectsSection = () => {
           videoSrc: "/projects/Tollroads.mp4",
           imageAlt: "Приложение платных дорог",
           projectId: "RoadsApp",
-        },
-        {
-          title: (
-            <FormattedMessage
-              id="projects.tempi.title"
-              defaultMessage="Редизайн создания резюме"
-            />
-          ),
-          description: (
-            <FormattedMessage
-              id="projects.tempi.desc"
-              defaultMessage="Tempi — HR-стартап для поиска работы и подработки. Я улучшил UX создания резюме и добавил ИИ для его автоматического заполнения"
-            />
-          ),
-          metrics: [
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.successRate"
-                  defaultMessage="Success rate"
-                />
-              ),
-              value: "+14%",
-            },
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.timeToTask"
-                  defaultMessage="Время до задачи"
-                />
-              ),
-              value: "< 2 min",
-            },
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.churn"
-                  defaultMessage="CHURN"
-                />
-              ),
-              value: "-27%",
-            },
-          ],
-          videoSrc: "/projects/tempiAi.mp4",
-          projectId: "Tempi",
         },
         {
           title: (
@@ -207,52 +207,6 @@ const ProjectsSection = () => {
         {
           title: (
             <FormattedMessage
-              id="projects.roads.title"
-              defaultMessage="Toll Roads App"
-            />
-          ),
-          description: (
-            <FormattedMessage
-              id="projects.roads.desc"
-              defaultMessage="Service for paying toll road fees and route calculation. I was responsible for product design and interfaces"
-            />
-          ),
-          metrics: [
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.retention"
-                  defaultMessage="Retention"
-                />
-              ),
-              value: "+5%",
-            },
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.mau"
-                  defaultMessage="MAU"
-                />
-              ),
-              value: "+6%",
-            },
-            {
-              label: (
-                <FormattedMessage
-                  id="projects.metric.arpu"
-                  defaultMessage="ARPU"
-                />
-              ),
-              value: "+10%",
-            },
-          ],
-          videoSrc: "/projects/Tollroads.mp4",
-          imageAlt: "Toll Roads App",
-          projectId: "RoadsApp",
-        },
-        {
-          title: (
-            <FormattedMessage
               id="projects.tempi.title"
               defaultMessage="Resume Creation Redesign"
             />
@@ -295,6 +249,52 @@ const ProjectsSection = () => {
           imageSrc: "/projects/resume-redesign.png",
           imageAlt: "Resume Creation Redesign",
           projectId: "Tempi",
+        },
+        {
+          title: (
+            <FormattedMessage
+              id="projects.roads.title"
+              defaultMessage="Toll Roads App"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="projects.roads.desc"
+              defaultMessage="Service for paying toll road fees and route calculation. I was responsible for product design and interfaces"
+            />
+          ),
+          metrics: [
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.retention"
+                  defaultMessage="Retention"
+                />
+              ),
+              value: "+5%",
+            },
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.mau"
+                  defaultMessage="MAU"
+                />
+              ),
+              value: "+6%",
+            },
+            {
+              label: (
+                <FormattedMessage
+                  id="projects.metric.arpu"
+                  defaultMessage="ARPU"
+                />
+              ),
+              value: "+10%",
+            },
+          ],
+          videoSrc: "/projects/Tollroads.mp4",
+          imageAlt: "Toll Roads App",
+          projectId: "RoadsApp",
         },
         {
           title: (

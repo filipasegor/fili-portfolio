@@ -77,17 +77,6 @@ export default function Projects(props) {
           </MdProject> */}
 
           <MdProject
-            href="/works/RoadsApp"
-            srcThumb={thumbtollroads}
-            altThumb="roads-app"
-            src={require("../public/projects/worksTollroads.mp4")}
-            type="arrow"
-            media="video">
-            <h1>Платные дороги в Штрафы.ру</h1>
-            <p>Добавление нового сервиса</p>
-          </MdProject>
-
-          <MdProject
             href="/works/Tempi"
             srcThumb={thumbTempiAi}
             altThumb="tempi"
@@ -96,6 +85,17 @@ export default function Projects(props) {
             media="video">
             <h1>Редизайн флоу резюме</h1>
             <p>Улучшил и упростил создание резюме</p>
+          </MdProject>
+
+          <MdProject
+            href="/works/RoadsApp"
+            srcThumb={thumbtollroads}
+            altThumb="roads-app"
+            src={require("../public/projects/worksTollroads.mp4")}
+            type="arrow"
+            media="video">
+            <h1>Платные дороги в Штрафы.ру</h1>
+            <p>Добавление нового сервиса</p>
           </MdProject>
 
           <MdProject
